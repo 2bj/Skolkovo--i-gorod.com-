@@ -1,0 +1,207 @@
+.u-eip-edit-box, .u-eip-meta-box {
+	background-color:		LightYellow !important;
+	border:				LightBlue 1px dashed !important;
+	cursor:				pointer;
+	border:				darkblue 1px dashed !important;
+}
+
+.u-eip-edit-box-hover, .u-eip-meta-box-hover {
+	background-color:	#c2e8fa !important;
+}
+
+.u-eip-add-box {
+	display: none;
+}
+
+.u-eip-add-box-hover {
+	background-color:	#c2e8fa;
+	opacity:			0.5;
+	filter:				alpha(opacity = 50);
+	display:			block;
+}
+
+.eip-wysiwyg-toolbox {
+	border:				red 1px solid;
+	height:				28px;
+	z-index:			520;
+	width:				473px;
+}
+
+.u-eip-modified {
+	background-color:		#fbdbdb !important;
+}
+
+
+.u-eip-editing {
+	border:				darkblue 1px dashed !important;
+}
+
+	.u-eip-editing table td {
+		border: 1px #333 dashed !important;
+		empty-cells: show;
+	}
+
+
+
+#ui-datepicker-div {
+	z-index: 3000;
+} 
+
+input.eip-ui-element, select.eip-ui-element {
+	border:				#AA0044 1px solid;
+}
+
+.u-eip-add-button {
+	width:				79;
+	height:				23;
+	cursor:				pointer;
+	z-index:			510;
+	position:			absolute;
+	opacity:			0.7;
+	filter:				alpha(opacity = 70);
+}
+
+.u-eip-add-button-hover {
+	opacity:			1;
+	filter:				alpha(opacity = 100);
+}
+
+.eip-del-button {
+	position:			absolute;
+	right:				2px;
+	top:				2px;
+	background-image:	 url('/images/cms/eip/del-button.png');
+	width:				20px;
+	height:				20px;
+	z-index:			20000;
+	cursor:				pointer;
+}
+
+.u-eip-empty-field {
+	color:				#888	!important;
+	font-style: 		italic	!important;
+}
+
+html.u-eip {
+	padding-top: 25px;
+}
+
+.eip-wysiwyg_tip {
+	border: none;
+	background-color: #308fba;
+	color : #fff;
+	height: 25px;
+	font-weight : bold;
+	text-align : center;
+	padding: 5px;
+	position: absolute;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.eip-wysiwyg_buttons {
+	border: #e3e3e3 solid 1px;
+	background: #f9f9f9;
+	height: 25px;
+	padding: 0 10px;
+	position: absolute;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.eip-wysiwyg_buttons a {
+	width: 19px;
+	height: 19px;
+	top: 3px;
+	margin: 0 3px;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	background: url(/images/cms/eip/wysiwyg.gif) no-repeat;
+}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_Bold {background-position: -1px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_Italic {background-position: -24px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_Underline {background-position: -47px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_JustifyLeft {background-position: -75px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_JustifyCenter {background-position: -99px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_JustifyRight {background-position: -123px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_InsertOrderedList {background-position: -295px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_InsertUnorderedList {background-position: -270px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_j {background-position: -146px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_xmloff {background-position: -171px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_addlink {background-position: -196px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_unlink {background-position: -221px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_insertimage {background-position: -246px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_clipboardpaste {background-position: -318px 0;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_tcreate {background-position: -2px -29px;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_tdelete {background-position: -26px -29px;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_tdelcol {background-position: -47px -29px;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_tdelrow {background-position: -75px -29px;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_tinsrowbefore {background-position: -170px -29px;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_tinsrowafter {background-position: -145px -29px;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_tinscolbefore {background-position: -122px -29px;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_tinscolafter {background-position: -99px -29px;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_tmergevcells {background-position: -222px -30px;}
+.eip-wysiwyg_buttons .eip-wysiwyg_button_tmergehcells {background-position: -197px -30px;}
+
+.eip-wysiwyg_buttons a.act {
+	border: gray solid 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	top: 2px;
+	margin: 0 2px;
+	background-color: #ddd;
+}
+
+.eip-wysiwyg_select_format {
+	float: left;
+	margin-top: 3px;
+	margin-right: 2px;
+}
+
+.u-eip-modified {
+	background-color: #fbdbdb;
+}
+
+.u-eip-deleted {
+	text-decoration: line-through !important;
+}
+
+.u-eip-edit-box, .u-eip-edit-box-hover {
+	cursor: text;
+}
+.u-eip-edit-box-inversed {
+	color: #666 !important;
+}
+
+.relationAutosuggest {
+	background-color : #fff;
+	border  		 : 1px solid #000;
+	border-top		 : 0;
+	padding			 : 0;
+}
+
+.relationAutosuggest ul {
+	padding : 0;
+	margin  : 0;
+}
+
+.relationAutosuggest ul li {
+	list-style: none;
+	padding: 5px 10px;
+	margin : 0;
+}
+
+.relationAutosuggest ul li.active {
+	background: #ceeaf6;
+}
+
+.relationAddButton {
+	cursor     : pointer;
+	width      : 16px;
+	height     : 16px;
+	background : url("/images/cms/admin/mac/tree/ico_add.png") no-repeat;
+	border     : 0;
+}

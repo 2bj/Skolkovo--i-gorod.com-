@@ -1,0 +1,2 @@
+<?php
+ interface iRegedit {public function getKey($vd4c18838d606531e28b9f694e066b003, $v5809e03a3657bacd238321e736b9e85d = 0);public function getVal($vd4c18838d606531e28b9f694e066b003);public function setVar($vd4c18838d606531e28b9f694e066b003, $v2063c1608d6e0baf80249c42e2be5804);public function setVal($vd4c18838d606531e28b9f694e066b003, $v2063c1608d6e0baf80249c42e2be5804);public function delVar($vd4c18838d606531e28b9f694e066b003);public function getList($vd4c18838d606531e28b9f694e066b003);};?>

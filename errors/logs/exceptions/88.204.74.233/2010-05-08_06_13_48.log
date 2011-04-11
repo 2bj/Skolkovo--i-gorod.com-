@@ -1,0 +1,38 @@
+[_COOKIE]
+	[stat_id]
+	(string) 0e05715813b10f600a53e57042b0d140
+
+	[user_captcha]
+	(string) 36ef4g
+
+	[__utmz]
+	(string) 73111947.1272982659.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+
+	[__utma]
+	(string) 73111947.2039361997.1272982659.1273204896.1273226254.8
+
+
+[_SESSION]
+	[user_id]
+	(string) 2373
+
+	[is_admin]
+	(array) ['']
+
+	[errors_1273299228]
+	(array) ['['Вы ввели неверный код с картинки', '', '']']
+
+
+[_GET]
+	[path]
+	(string) webforms/send/
+
+
+[0.0006509]	Can't find error redirect string
+[0.0008531]	#0 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2): def_module-&gt;errorPanic()
+#1 /www_servers/utemp/pub/htdocs/classes/modules/webforms/class.php(2): def_module-&gt;errorNewMessage('%errors_wrong_c...')
+#2 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2): webforms-&gt;send()
+#3 /www_servers/utemp/pub/htdocs/libs/def_macroses.php(2): def_module-&gt;cms_callMethod('send', NULL)
+#4 /www_servers/utemp/pub/htdocs/libs/root-src/index.php(2): macros_content()
+#5 /www_servers/utemp/pub/htdocs/index.php(2): require('/www_servers/ut...')
+#6 {main}

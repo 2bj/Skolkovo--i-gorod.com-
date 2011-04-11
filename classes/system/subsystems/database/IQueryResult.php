@@ -1,0 +1,2 @@
+<?php
+interface IQueryResult extends IteratorAggregate {const FETCH_ARRAY  = 0;const FETCH_ROW    = 1;const FETCH_ASSOC  = 2;const FETCH_OBJECT = 3;public function __construct($_ResultResource, $_fetchType = self::FETCH_ARRAY);public function setFetchType($v78897dfaf41a79226c8c760832b0f4ba);public function getFetchType();public function fetch();};interface IQueryResultIterator extends Iterator {};?>

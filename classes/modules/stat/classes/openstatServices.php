@@ -1,0 +1,13 @@
+<?php
+class openstatServices extends simpleStat{protected $params = array('source_id' => 0, 'campaign_id' => 0);public function get()    {$v26542fb18a8b14c9775aa475f23c909f = array();foreach (array('source_id', 'campaign_id') as $v3a6d0284e743dc4a9b86f97d6dd1a3bf) {if ((int)$this->params[$v3a6d0284e743dc4a9b86f97d6dd1a3bf] > 0) {$v26542fb18a8b14c9775aa475f23c909f[] = '`os`.`' . $v3a6d0284e743dc4a9b86f97d6dd1a3bf . '` = ' . (int)$this->params[$v3a6d0284e743dc4a9b86f97d6dd1a3bf];}}$v21cbbb8571024abbb93b1eb4deb62cd2 = '';if (sizeof($v26542fb18a8b14c9775aa475f23c909f)) {$v21cbbb8571024abbb93b1eb4deb62cd2 = ' AND ' . implode(' AND ', $v26542fb18a8b14c9775aa475f23c909f);}l_mysql_query("SET @cnt := (SELECT COUNT(*) FROM `cms_stat_sources_openstat` `os`
+                                     INNER JOIN `cms_stat_paths` `p` ON `p`.`id` = `os`.`path_id`
+                                       WHERE `p`.`date` BETWEEN " . $this->getQueryInterval() . " " . $this->getHostSQL("p") . $this->getUserFilterWhere('p') . $v21cbbb8571024abbb93b1eb4deb62cd2 . ")");$result = $this->simpleQuery("SELECT COUNT(*) AS `abs` FROM `cms_stat_sources_openstat` `os`
+                                    INNER JOIN `cms_stat_paths` `p` ON `p`.`id` = `os`.`path_id`
+                                     INNER JOIN `cms_stat_sources_openstat_service` `s` ON `s`.`id` = `os`.`service_id`
+                                      WHERE `p`.`date` BETWEEN " . $this->getQueryInterval() . "  " . $this->getHostSQL("p") . $this->getUserFilterWhere('p') . $v21cbbb8571024abbb93b1eb4deb62cd2);$v8016fd3f91b68b651801a7c279f41ea4 = (isset($result[0]['total'])) ? (int) $result[0]['total'] : 0;$v9b207167e5381c47682c6b4f58a623fb = $this->simpleQuery("SELECT SQL_CALC_FOUND_ROWS COUNT(*) AS `abs`, COUNT(*) / @cnt * 100 AS `rel`, `s`.`name`, `s`.`id` AS 'service_id' FROM `cms_stat_sources_openstat` `os`
+                                    INNER JOIN `cms_stat_paths` `p` ON `p`.`id` = `os`.`path_id`
+                                     INNER JOIN `cms_stat_sources_openstat_service` `s` ON `s`.`id` = `os`.`service_id`
+                                      WHERE `p`.`date` BETWEEN " . $this->getQueryInterval() . " " . $this->getHostSQL("p") . $this->getUserFilterWhere('p') . $v21cbbb8571024abbb93b1eb4deb62cd2 . "
+                                       GROUP BY `s`.`id`
+                                        ORDER BY `abs` DESC
+                                         LIMIT " . $this->offset . ", " . $this->limit, true);return array("all"=>$v9b207167e5381c47682c6b4f58a623fb['result'], "summ"=>$v8016fd3f91b68b651801a7c279f41ea4, "total"=>$v9b207167e5381c47682c6b4f58a623fb['FOUND_ROWS']);}}?>

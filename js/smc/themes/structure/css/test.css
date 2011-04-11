@@ -1,0 +1,192 @@
+table.table-container {
+	background-image: url('/js/smc/themes/structure/img/table-bg.gif');
+
+		z-index: 5;
+		position: relative;
+		-moz-user-select: none;
+		-khtml-user-select: none;
+/*	margin: 100px;*/
+}
+
+table.tbody {
+	position: relative;
+}
+
+	td.toggle {
+		width: 30px;
+	}
+
+	a.ti-expand-btn {
+		display:block;
+		float: left;
+		width: 30px;
+		height: 18px;
+		background: url('/js/smc/themes/structure/img/arrow-right.gif') 8px 3px no-repeat;
+	}
+
+	a.ti-collapse-btn {
+		display:block;
+		float: left;
+		width: 30px;
+		height: 18px;
+		background: url('/js/smc/themes/structure/img/arrow-bottom.gif') 8px 3px no-repeat;
+	}
+
+	a.ti-expand-disabled-btn {
+		display: none;
+	}
+	
+	table.table-container td.icon {
+		vertical-align: top;
+		padding: 0;
+		height: 18px;
+	}
+	
+	table.table-container td {
+		padding: 0;
+	}
+	
+	table.table-container td.icon {
+		width: 30px;
+	}
+
+
+			table.table-container img.ti-icon {
+			}
+			
+			table.table-container td {
+				color: black;
+				font-family: Tahoma, Helvetica, Sans-Serif;
+				font-size: 11px;
+				margin: 0;
+			}
+			
+			table.table-container a.ti {
+				color: black;
+				text-decoration: none;
+				white-space: nowrap;
+			}
+			
+			td.testColumn {
+				width: 200px;
+			}
+			
+			table.table-container table {
+				width: 100%;
+			}
+
+table.table-container th {
+	height: 18px;
+	font-weight: bold;
+	color: black;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	white-space: nowrap;
+}
+	table.table-container th a.order {
+		color: black !important;
+	}
+
+
+table.table-container a.order {
+		float: left;
+		display:block;
+		width: 95px;
+		height: 18px;
+		background: url('/js/smc/themes/structure/img/arrow-bottom.gif') 60px 4px no-repeat;	
+		color: #000;
+		text-decoration: none;
+		padding: 0;
+		margin: 0;
+}
+
+table.table-container th.void {
+	width: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.tree-container, .ti-childs-container {
+		list-style: none;
+	}
+
+	.tree-highlight {
+		display: block;
+		height: 16px;
+		width: 100%;
+		background-color: transparent;
+		list-style: none;
+	}
+
+	.tree_toolbar {
+		width: 230px;
+		height:20px;
+		right: 0;
+		padding-top: 2px;
+		background-color: transparent;
+		list-style: none;
+		border: red 1px solid;
+	}
+
+		a.tree_toolbtn {
+			display: block;
+			float: right;
+			margin-left: 10px;
+			width: 22px;
+			height: 16px;
+		}
+
+	.hover {
+		border-bottom: 1px dashed red;
+	}
+
+	
+
+
+/* indicators */
+.page_status_publish {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+.page_status_preunpublish {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+
+.page_status_unpublish {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}

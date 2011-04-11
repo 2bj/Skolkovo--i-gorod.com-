@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="CommerceML.biz" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="CommerceML.biz" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:element name="КоммерческаяИнформация" type="КоммерческаяИнформация"/>
+	<xsd:element name="Каталог" type="Каталог"/>
+	<xsd:element name="Контрагент" type="Контрагент"/>
+	<xsd:element name="РасчетныйСчет" type="РасчетныйСчет"/>
+	<xsd:element name="Банк" type="Банк"/>
+	<xsd:element name="Склад" type="Склад"/>
+	<xsd:element name="Контакт" type="Контакт"/>
+	<xsd:element name="КонтактноеЛицо" type="КонтактноеЛицо"/>
+	<xsd:element name="Телефон" type="Телефон"/>
+	<xsd:element name="Факс" type="Факс"/>
+	<xsd:element name="Почта" type="Почта"/>
+	<xsd:element name="ICQ" type="ICQ"/>
+	<xsd:element name="ДополнительныйРеквизит" type="ДополнительныйРеквизит"/>
+	<xsd:element name="НаборСвойств" type="НаборСвойств"/>
+	<xsd:element name="СсылкаНаНаборСвойств" type="СсылкаНаНаборСвойств"/>
+	<xsd:element name="Свойство" type="Свойство"/>
+	<xsd:element name="СсылкаНаСвойство" type="СсылкаНаСвойство"/>
+	<xsd:element name="ВариантСвойства" type="ВариантСвойства"/>
+	<xsd:element name="Товар" type="Товар"/>
+	<xsd:element name="Группа" type="Группа"/>
+	<xsd:element name="СсылкаНаГруппу" type="СсылкаНаГруппу"/>
+	<xsd:element name="СсылкаНаТовар" type="СсылкаНаТовар"/>
+	<xsd:element name="Аналог" type="Аналог"/>
+	<xsd:element name="ПакетПредложений" type="ПакетПредложений"/>
+	<xsd:element name="Предложение" type="Предложение"/>
+	<xsd:element name="ЗначениеСвойства" type="ЗначениеСвойства"/>
+	<xsd:element name="Документ" type="Документ"/>
+	<xsd:element name="ПредприятиеВДокументе" type="ПредприятиеВДокументе"/>
+	<xsd:element name="ТоварнаяПозиция" type="ТоварнаяПозиция"/>
+	<xsd:element name="СуммаНалога" type="СуммаНалога"/>
+	<xsd:element name="ДополнительныйРасход" type="ДополнительныйРасход"/>
+	<xsd:complexType name="Телефон" mixed="true">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Контрагент">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="Контакт" type="Контакт" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="РасчетныйСчет" type="РасчетныйСчет" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ДополнительныйРеквизит" type="ДополнительныйРеквизит" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Идентификатор" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+		<xsd:attribute name="ОтображаемоеНаименование" type="xsd:string" use="required"/>
+		<xsd:attribute name="Адрес" type="xsd:string" use="optional"/>
+		<xsd:attribute name="ЮридическийАдрес" type="xsd:string" use="optional"/>
+		<xsd:attribute name="ОсновнойКонтакт" type="xsd:IDREF"/>
+		<xsd:attribute name="Сайт" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Комментарий" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="РасчетныйСчет">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="ДополнительныйРеквизит" type="ДополнительныйРеквизит" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="НомерСчета" type="xsd:string" use="required"/>
+		<xsd:attribute name="Банк" type="xsd:IDREF" use="required"/>
+		<xsd:attribute name="БанкКорреспондент" type="xsd:IDREF"/>
+		<xsd:attribute name="Комментарий" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="ПакетПредложений">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="Предложение" type="Предложение" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ЗначениеСвойства" type="ЗначениеСвойства" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="ИдентификаторКаталога" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="Владелец" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="ДействительноС" type="xsd:date"/>
+		<xsd:attribute name="ДействительноДо" type="xsd:date"/>
+		<xsd:attribute name="Описание" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Валюта" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="СсылкаНаНаборСвойств">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="ИдентификаторКаталога" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="ИдентификаторНабора" type="xsd:string" use="required"/>
+		<xsd:attribute name="Обязательно" type="xsd:boolean" default="0"/>
+		<xsd:attribute name="ЗаполняетсяПродавцом" type="xsd:boolean" default="0"/>
+	</xsd:complexType>
+	<xsd:complexType name="ТоварнаяПозиция">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="СуммаНалога" type="СуммаНалога" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ДополнительныйРасход" type="ДополнительныйРасход" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ДополнительныйРеквизит" type="ДополнительныйРеквизит" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Каталог" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="Товар" type="xsd:string" use="required"/>
+		<xsd:attribute name="Единица" type="xsd:string" use="required"/>
+		<xsd:attribute name="Количество" type="xsd:double" use="optional"/>
+		<xsd:attribute name="Цена" type="xsd:double" use="optional"/>
+		<xsd:attribute name="Сумма" type="xsd:double" use="optional"/>
+		<xsd:attribute name="Описание" type="xsd:string" use="optional"/>
+		<xsd:attribute name="СтранаПроисхождения" type="xsd:string" use="optional"/>
+		<xsd:attribute name="ГТД" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="Факс" mixed="true">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="СуммаНалога">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Налог" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:whiteSpace value="collapse"/>
+					<xsd:enumeration value="AVT"/>
+					<xsd:enumeration value="ST"/>
+					<xsd:enumeration value="OT"/>
+					<xsd:enumeration value="Excise"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Ставка" type="xsd:double" use="required"/>
+		<xsd:attribute name="Сумма" type="xsd:double" use="required"/>
+		<xsd:attribute name="ВключенВСумму" type="xsd:boolean" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="СсылкаНаГруппу">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="ИдентификаторКаталога" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="ИдентификаторВКаталоге" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ЗначениеСвойства">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="ИдентификаторКаталога" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="ИдентификаторСвойства" type="xsd:string" use="required"/>
+		<xsd:attribute name="Значение" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="СсылкаНаСвойство">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="ИдентификаторКаталога" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="ИдентификаторСвойства" type="xsd:string" use="required"/>
+		<xsd:attribute name="Обязательно" type="xsd:boolean" default="0"/>
+		<xsd:attribute name="ЗаполняетсяПродавцом" type="xsd:boolean" default="0"/>
+	</xsd:complexType>
+	<xsd:complexType name="Почта" mixed="true">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="Свойство">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="ВариантСвойства" type="ВариантСвойства" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Идентификатор" type="xsd:string" use="required"/>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+		<xsd:attribute name="ТипДанных" default="string">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:whiteSpace value="collapse"/>
+					<xsd:enumeration value="string"/>
+					<xsd:enumeration value="number"/>
+					<xsd:enumeration value="float"/>
+					<xsd:enumeration value="datetime"/>
+					<xsd:enumeration value="money"/>
+					<xsd:enumeration value="enumeration"/>
+					<xsd:enumeration value="filename"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Отображается" type="xsd:boolean" default="1"/>
+		<xsd:attribute name="Множественность" type="xsd:boolean" default="0"/>
+		<xsd:attribute name="МинимальноеЗначение" type="xsd:string" use="optional"/>
+		<xsd:attribute name="МаксимальноеЗначение" type="xsd:string" use="optional"/>
+		<xsd:attribute name="ЗначениеПоУмолчанию" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="НаборСвойств">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="СсылкаНаНаборСвойств" type="СсылкаНаНаборСвойств" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="СсылкаНаСвойство" type="СсылкаНаСвойство" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="ИдентификаторНабора" type="xsd:string" use="required"/>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="Каталог">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="Группа" type="Группа" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Товар" type="Товар" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Свойство" type="Свойство" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="НаборСвойств" type="НаборСвойств" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="СсылкаНаНаборСвойств" type="СсылкаНаНаборСвойств" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="СсылкаНаСвойство" type="СсылкаНаСвойство" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Идентификатор" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+		<xsd:attribute name="Владелец" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="Описание" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Единица" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="Склад">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="ДополнительныйРеквизит1" type="ДополнительныйРеквизит" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Контакт" type="Контакт" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ДополнительныйРеквизит" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Идентификатор" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+		<xsd:attribute name="Адрес" type="xsd:string" use="optional"/>
+		<xsd:attribute name="ОсновнойКонтакт" type="xsd:IDREF"/>
+		<xsd:attribute name="Комментарий" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="Аналог">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="СсылкаНаТовар" type="СсылкаНаТовар"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Описание" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Сайт" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="Группа">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="СсылкаНаНаборСвойств" type="СсылкаНаНаборСвойств" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="СсылкаНаСвойство" type="СсылкаНаСвойство" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="СсылкаНаГруппу" type="СсылкаНаГруппу" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ЗначениеСвойства" type="ЗначениеСвойства" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Идентификатор" type="xsd:ID" use="required"/>
+		<xsd:attribute name="ИдентификаторВКаталоге" type="xsd:string" use="required"/>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+		<xsd:attribute name="Родитель" type="xsd:IDREF"/>
+		<xsd:attribute name="Единица" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="Предложение">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="СсылкаНаТовар" type="СсылкаНаТовар" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ЗначениеСвойства" type="ЗначениеСвойства" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="ИдентификаторТовара" type="xsd:IDREF"/>
+		<xsd:attribute name="Цена" type="xsd:double"/>
+		<xsd:attribute name="НормаУпаковки" type="xsd:double"/>
+		<xsd:attribute name="Количество" type="xsd:double"/>
+		<xsd:attribute name="Единица" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Валюта" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="Контакт">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="КонтактноеЛицо" type="КонтактноеЛицо" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Телефон" type="Телефон" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Факс" type="Факс" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Почта" type="Почта" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ICQ" type="ICQ" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Идентификатор" type="xsd:ID" use="required"/>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+		<xsd:attribute name="Комментарий" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="ДополнительныйРеквизит">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+		<xsd:attribute name="Значение" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="Банк">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="ДополнительныйРеквизит" type="ДополнительныйРеквизит" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Идентификатор" type="xsd:ID" use="required"/>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+		<xsd:attribute name="Местонахождение" type="xsd:string" use="optional"/>
+		<xsd:attribute name="БИК" type="xsd:string" use="optional"/>
+		<xsd:attribute name="НомерСчета" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Адрес" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Телефон" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Комментарий" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="ПредприятиеВДокументе">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Роль" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:whiteSpace value="collapse"/>
+					<xsd:enumeration value="Saler"/>
+					<xsd:enumeration value="Buyer"/>
+					<xsd:enumeration value="Payer"/>
+					<xsd:enumeration value="Recipient"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Контрагент" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="РасчетныйСчет" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Склад" type="xdr.uuid" use="optional"/>
+		<xsd:attribute name="Контакт" type="xsd:IDREF" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="КонтактноеЛицо" mixed="true">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="КоммерческаяИнформация">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="Контрагент" type="Контрагент" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Склад" type="Склад" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Банк" type="Банк" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Каталог" type="Каталог" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ПакетПредложений" type="ПакетПредложений" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Документ" type="Документ" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Комментарий" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="ICQ" mixed="true">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="ВариантСвойства">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Идентификатор" type="xsd:string" use="required"/>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="Документ">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="ПредприятиеВДокументе" type="ПредприятиеВДокументе" maxOccurs="unbounded"/>
+			<xsd:element name="ТоварнаяПозиция" type="ТоварнаяПозиция" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="СуммаНалога" type="СуммаНалога" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ДополнительныйРасход" type="ДополнительныйРасход" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ДополнительныйРеквизит" type="ДополнительныйРеквизит" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="ХозОперация" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:whiteSpace value="collapse"/>
+					<xsd:enumeration value="Order"/>
+					<xsd:enumeration value="PayableBill"/>
+					<xsd:enumeration value="Sale"/>
+					<xsd:enumeration value="Invoice"/>
+					<xsd:enumeration value="BackSale"/>
+					<xsd:enumeration value="Comission"/>
+					<xsd:enumeration value="BackComission"/>
+					<xsd:enumeration value="ReportComission"/>
+					<xsd:enumeration value="Cash"/>
+					<xsd:enumeration value="BackCash"/>
+					<xsd:enumeration value="Payment"/>
+					<xsd:enumeration value="BackPayment"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Номер" type="xsd:string" use="required"/>
+		<xsd:attribute name="Дата" type="xsd:date" use="required"/>
+		<xsd:attribute name="Время" type="xdr.time" use="optional"/>
+		<xsd:attribute name="СрокПлатежа" type="xsd:date" use="optional"/>
+		<xsd:attribute name="Сумма" type="xsd:double" use="optional"/>
+		<xsd:attribute name="Комментарий" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Валюта" type="xsd:string" use="optional"/>
+		<xsd:attribute name="Курс" type="xsd:double" use="optional"/>
+		<xsd:attribute name="Кратность" type="xsd:double" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="СсылкаНаТовар">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="ИдентификаторКаталога" type="xdr.uuid" use="required"/>
+		<xsd:attribute name="ИдентификаторВКаталоге" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="Товар">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="СсылкаНаНаборСвойств" type="СсылкаНаНаборСвойств" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="СсылкаНаСвойство" type="СсылкаНаСвойство" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="СсылкаНаГруппу" type="СсылкаНаГруппу" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ЗначениеСвойства" type="ЗначениеСвойства" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Аналог" type="Аналог" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##local" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Идентификатор" type="xsd:ID" use="required"/>
+		<xsd:attribute name="ИдентификаторВКаталоге" type="xsd:string" use="required"/>
+		<xsd:attribute name="Наименование" type="xsd:string" use="required"/>
+		<xsd:attribute name="Родитель" type="xsd:IDREF"/>
+		<xsd:attribute name="Единица" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:complexType name="ДополнительныйРасход">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Сумма" type="xsd:double" use="required"/>
+		<xsd:attribute name="Комментарий" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:simpleType name="xdr.time">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="collapse"/>
+			<xsd:pattern value="\d\d:\d\d(:\d\d)?"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="xdr.uuid">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="collapse"/>
+			<xsd:pattern value="[0-9A-Fa-f]{8}\-[0-9A-Fa-f]{4}\-[0-9A-Fa-f]{4}\-[0-9A-Fa-f]{4}\-[0-9A-Fa-f]{12}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

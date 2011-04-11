@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry id="error_occured">An error occured</entry>
+	<entry id="information">Information</entry>
+	<entry id="cant_recieve">Can not recieve data </entry>
+	<entry id="no_source">Data source is not defined</entry>
+	<entry id="no_info">Report information for specified period is absent </entry>
+	
+	<entry id="copy_to_clipboard">Copy to clipboard</entry>
+	
+	<entry id="average_per_period">Average</entry>
+	
+	<entry id="help_link"></entry>
+	
+	<entry id="january">Jan</entry>
+	<entry id="february">Feb</entry>
+	<entry id="march">Mar</entry>
+	<entry id="april">Apr</entry>
+	<entry id="may">May</entry>
+	<entry id="june">Jun</entry>
+	<entry id="july">Jul</entry>
+	<entry id="august">Aug</entry>
+	<entry id="september">Sep</entry>
+	<entry id="october">Oct</entry>
+	<entry id="november">Nov</entry>
+	<entry id="december">Dec</entry>
+	
+</language>

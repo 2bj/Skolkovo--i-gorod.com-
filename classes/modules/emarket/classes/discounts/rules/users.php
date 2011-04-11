@@ -1,0 +1,2 @@
+<?php
+ class usersDiscountRule extends discountRule implements orderDiscountRule, itemDiscountRule {public function validateOrder(order $v70a17ffa722a3985b86d30b034ad06d7) {return $this->validate();}public function validateItem(iUmiHierarchyElement $v8e2dcfd7e7e24b1ca76c1193f645902b) {return $this->validate();}public function validate() {if(is_array($this->users)) {$v91ec1f9324753048c0096d036a694f86 = customer::get();return in_array($v91ec1f9324753048c0096d036a694f86->id, $this->users);}else return false;}};?>

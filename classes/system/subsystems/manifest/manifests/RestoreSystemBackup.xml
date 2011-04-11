@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<enviroment>
+		<temporary-directory path="./manifest/temp/" />
+		<backup-directory path="./manifest/backup/" />
+		<logger-directory path="./manifest/logs/" />
+	</enviroment>
+	
+	<route>
+		<transaction name="restore_system_backup">
+			<title>Restore system backup</title>
+
+			<action name="DecompressDirectory">
+				<title>Decompress backup zip-archive</title>
+				
+				<param name="archive-filepath" value="./manifest/backup/{external-archive-filepath}" />
+				<param name="target-directory" value="./manifest/temp/system-backup/" />
+			</action>
+
+			<action name="CompareDirectoriesPermissions">
+				<title>Compare permissions</title>
+				
+				<param name="source-directory" value="./manifest/temp/system-backup" />
+				<param name="target-directory" value="./" />
+			</action>
+
+			<action name="CopyDirectory">
+				<title>Copy decompressed files</title>
+				
+				<param name="source-directory" value="./manifest/temp/system-backup" />
+				<param name="target-directory" value="./" />
+			</action>
+
+			<action name="RemoveDirectory">
+				<title>Remove temporary files</title>
+				
+				<param name="target-directory" value="./manifest/temp/system-backup" />
+			</action>
+			
+			<action name="DeleteFilesByPattern">
+				<title>Delete temporary files</title>
+				
+				<param name="target-directory" value="./" />
+				<param name="pattern" value="/\.bak$/" />
+			</action>
+		
+		</transaction>
+	</route>
+</manifest>

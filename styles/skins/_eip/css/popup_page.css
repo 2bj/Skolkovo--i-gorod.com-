@@ -1,0 +1,104 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma;
+	color: #707070;
+	font-size: 12px;
+	background: #f9f9f9;
+}
+h3 {
+	margin: 0 0 20px 0;
+	font-size: 12px;
+}
+img {
+	border: none;
+}
+form {
+	margin: 0;
+}
+fieldset {
+	border: none;
+}
+fieldset a {
+	color: gray;
+}
+fieldset ul li {
+	list-style: none;
+}
+fieldset label {
+	margin-bottom: 15px;
+}
+fieldset div.cifi select {
+	width: 80%;
+}
+fieldset label input,
+fieldset label textarea,
+fieldset label select,
+fieldset label table {
+	width: 80%;
+	display: block;
+}
+fieldset label select {
+
+}
+fieldset label table.mceLayout {
+	width: 80%!important;
+}
+fieldset label select.fileControlSelect {
+	display : inline-block;
+}
+fieldset label input.relation-search {
+	display    : inline-block;
+}
+fieldset label input.relation-add {
+	display    : inline-block;
+	width      : auto;
+	background : url("/images/cms/admin/mac/tree/ico_add.png") no-repeat;
+	border     : 0;
+	cursor	   : pointer;
+	width      : 16px;
+	height     : 16px;
+}
+.clear {
+	clear:both;
+	height: 10px;
+}
+.eip_page_type_choice {
+	height: 112px;
+	width: 112px;
+	background: url(/images/cms/eip/add_page_bg.png) no-repeat;
+	margin: 0 10px 20px 10px;
+	float: left;
+	cursor: pointer;
+	text-align: center;
+}
+.eip_page_type_choice img {
+	margin: 5px 0;
+}
+.eip_page_type_choice .eip_page_type_choice_title {
+	padding: 0 10px;
+}
+.eip_buttons {
+	padding: 20px 0;
+}
+.eip_buttons input {
+	float: right;
+	margin-right: 20px;
+	cursor: pointer;
+	color: #555;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: Tahoma;
+	padding: 5px 10px 6px 40px;
+	*padding: 5px 0px 6px 25px;
+	border: #e3e3e3 solid 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.eip_buttons input.ok {
+	background: white url(/images/cms/eip/buttons_bg.png) no-repeat 5px -1px;
+}
+.eip_buttons input.back {
+	background: white url(/images/cms/eip/buttons_bg.png) no-repeat 5px -31px;
+}

@@ -1,0 +1,2 @@
+<?php
+ class domainWrapper extends translatorWrapper {public function translate($v8d777f385d3dfec8815d20f7496026dc) {return $this->translateData($v8d777f385d3dfec8815d20f7496026dc);}protected function translateData(iDomain $vad5f82e879a9c5d6b5b442eb37e50551) {return array(    'attribute:id'  => $vad5f82e879a9c5d6b5b442eb37e50551->getId(),    'attribute:host' => $vad5f82e879a9c5d6b5b442eb37e50551->getHost(),    'attribute:lang-id' => $vad5f82e879a9c5d6b5b442eb37e50551->getDefaultLangId()   );}};?>

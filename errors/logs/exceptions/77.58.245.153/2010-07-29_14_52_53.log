@@ -1,0 +1,56 @@
+[_COOKIE]
+	[__utma]
+	(string) 73111947.1207526536.1280410803.1280413243.1280415067.3
+
+	[__utmb]
+	(string) 73111947.1.10.1280415067
+
+	[__utmc]
+	(string) 73111947
+
+	[__utmz]
+	(string) 73111947.1280410803.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+
+	[PHPSESSID]
+	(string) 2ede8b87985757748898bf60a9955d24
+
+	[stat_id]
+	(string) 2ede8b87985757748898bf60a9955d24
+
+
+[_SESSION]
+	[user_id]
+	(string) 2373
+
+	[is_admin]
+	(array) ['']
+
+	[old_logged_in_value]
+	(boolean) 
+
+	[stat]
+	(array) ['', '2ede8b87985757748898bf60a9955d24', '2', '61402', '88268', '4', '2006', '773']
+
+	[7dcbb314a768b72a96747a93d6c26a04]
+	(array) ['['content', '', '173']', '['content', '', '324']', '['content', '', '327']']
+
+	[session-crossdomain-sync]
+	(integer) 1
+
+	[d5deb88eafd48f0bbc6573f368caf10b]
+	(array) ['['news', 'rubric', '177']', '['news', 'item', '1074']', '['news', 'item', '979']', '['news', 'item', '961']', '['news', 'item', '959']', '['news', 'item', '958']', '['news', 'item', '851']', '['news', 'item', '685']', '['news', 'item', '686']', '['news', 'item', '683']', '['news', 'item', '667']', '['content', '', '324']', '['content', '', '327']']
+
+
+[_GET]
+	[path]
+	(string) en/newslist/2010-07-14001/
+
+
+[0.0019372]	Lock wait timeout exceeded; try restarting transaction in query: INSERT INTO `cms_stat_hits` (`page_id`, `date`, `hour`, `day_of_week`, `week`, `day`, `month`, `year`, `path_id`, `number_in_path`, `prev_page_id`) VALUES
+                 (2006, '2010-07-29 14:52:02', HOUR('2010-07-29 14:52:02'), DATE_FORMAT('2010-07-29 14:52:02', '%w'), WEEK('2010-07-29 14:52:02'), DAY('2010-07-29 14:52:02'), MONTH('2010-07-29 14:52:02'), YEAR('2010-07-29 14:52:02'), 88268, 4, 773)
+[0.0022211]	#0 /www_servers/utemp/pub/htdocs/libs/lib.php(2): mysqlConnection-&gt;query('INSERT INTO `cm...', false)
+#1 /www_servers/utemp/pub/htdocs/classes/modules/stat/classes/statistic.php(14): l_mysql_query()
+#2 /www_servers/utemp/pub/htdocs/classes/modules/stat/class.php(2): statistic-&gt;run('INSERT INTO `cm...')
+#3 /www_servers/utemp/pub/htdocs/libs/root-src/index.php(2): stat-&gt;pushStat()
+#4 /www_servers/utemp/pub/htdocs/index.php(2): require('/www_servers/ut...')
+#5 {main}

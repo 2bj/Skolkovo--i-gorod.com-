@@ -1,0 +1,50 @@
+[_COOKIE]
+	[PHPSESSID]
+	(string) b1ca9bfc55d5061af0a9a9fb35615c15
+
+	[stat_id]
+	(string) b1ca9bfc55d5061af0a9a9fb35615c15
+
+	[__utma]
+	(string) 73111947.217194272.1280415509.1280415509.1280415509.1
+
+	[__utmb]
+	(string) 73111947.1.10.1280415509
+
+	[__utmc]
+	(string) 73111947
+
+	[__utmz]
+	(string) 73111947.1280415509.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+
+
+[_SESSION]
+	[user_id]
+	(string) 2373
+
+	[is_admin]
+	(array) ['']
+
+	[old_logged_in_value]
+	(boolean) 
+
+	[stat]
+	(array) ['', 'b1ca9bfc55d5061af0a9a9fb35615c15', '2', '0', '747', '1']
+
+	[session-crossdomain-sync]
+	(integer) 1
+
+
+[_GET]
+	[path]
+	(string) 
+
+
+[0.0007510]	You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 1)' at line 2 in query: INSERT INTO `cms_stat_hits` (`page_id`, `date`, `hour`, `day_of_week`, `week`, `day`, `month`, `year`, `path_id`, `number_in_path`) VALUES
+                 (747, '2010-07-29 15:16:46', HOUR('2010-07-29 15:16:46'), DATE_FORMAT('2010-07-29 15:16:46', '%w'), WEEK('2010-07-29 15:16:46'), DAY('2010-07-29 15:16:46'), MONTH('2010-07-29 15:16:46'), YEAR('2010-07-29 15:16:46'), , 1)
+[0.0010421]	#0 /www_servers/utemp/pub/htdocs/libs/lib.php(2): mysqlConnection-&gt;query('INSERT INTO `cm...', false)
+#1 /www_servers/utemp/pub/htdocs/classes/modules/stat/classes/statistic.php(14): l_mysql_query()
+#2 /www_servers/utemp/pub/htdocs/classes/modules/stat/class.php(2): statistic-&gt;run('INSERT INTO `cm...')
+#3 /www_servers/utemp/pub/htdocs/libs/root-src/index.php(2): stat-&gt;pushStat()
+#4 /www_servers/utemp/pub/htdocs/index.php(2): require('/www_servers/ut...')
+#5 {main}

@@ -1,0 +1,2 @@
+<?php
+ interface iXmlImporter {public function __construct($vaf721e88e6c0a612be51c329cb2bc12a = false);public function loadXmlString($v2d04a630b197c6991c3e00e003f88be4);public function loadXmlFile($va30c2e8bafac20e81c697b2396c8a3b0);public function loadXmlDocument(DOMDocument $v9a09b4dfda82e3e665e31092d1c3ec8d);public function setDestinationElement($v8e2dcfd7e7e24b1ca76c1193f645902b);public function execute();}?>

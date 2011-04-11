@@ -1,0 +1,1401 @@
+﻿@import "/styles/skins/mac/design/css/contextmenu.css";
+@import "/styles/common/css/popup.css";
+@import "/styles/skins/mac/design/calendar/calendar.css";
+
+html {
+	height: 100%;
+	width: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: #fafafa;
+	color: #676767;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 11px;
+	height: 100%;
+	width: 100%;
+}
+img {
+	border: none;
+}
+a {
+	outline: none;
+	color: #0088e8;
+	text-decoration: none;
+}
+ul, ol, li {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+.clear {
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+
+/*panel*/
+#main #quickpanel {
+	height: 25px;
+	background: url(/styles/skins/mac/design/images/quickpanel_bg.gif) repeat-x;
+	font-family: Tahoma, Helvetica, sans-serif;
+	color: #676767;
+	position: absolute;
+	width: 100%;
+	*z-index: 100;
+}
+#main #quickpanel a {
+	display: block;
+	float: left;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 15px;
+	color: #676767;
+	text-decoration: none;
+	outline: none;
+	position: relative;
+}
+#main #quickpanel a span {
+	position: absolute;
+	display: block;
+	width: 1px;
+	height: 25px;
+	top: 0;
+	background: url(/styles/skins/mac/design/images/quickpanel_bg_b.gif) no-repeat;
+}
+#main #quickpanel a span.l {
+	background-position: 0 0;
+	left: 0;
+}
+#main #quickpanel a span.r {
+	background-position: -1px 0;
+	right: 0;
+}
+#main #quickpanel a:hover {
+	background: url(/styles/skins/mac/design/images/quickpanel_bg_h.gif) repeat-x;
+}
+#main #quickpanel div a {
+	color: #054f82;
+	text-indent: 0;
+	float: none;
+	height: 30px;
+	line-height: 28px;
+	padding: 0 5px;
+}
+#main #quickpanel div a:hover {
+	background: #ceeaf6;
+}
+#main #quickpanel div a img {
+	border: none;
+	float: left;
+	margin-right: 5px;
+}
+#main #quickpanel div.act div div {
+	display: block!important;
+}
+#main #quickpanel div.act div {
+	_position: absolute!important;
+	_top: 26px!important;
+	_left: 0px!important;
+}
+#main #quickpanel div.act div div {
+	_position: relative!important;
+	_top: 0px!important;
+}
+#main #quickpanel div.act div ul li {
+	_height: 25px!important;
+}
+#main #quickpanel div.act div.clear {
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+#main #quickpanel ul li {
+	padding: 5px 0;
+}
+#main #quickpanel ul li span {
+	padding: 0 20px;
+}
+#main #quickpanel #exit {
+	float: right;
+	background: url(/styles/skins/mac/design/images/quickpanel_bg.png) no-repeat -603px -33px;
+	width: 25px;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+#main #quickpanel #help {
+	float: right;
+	background: url(/styles/skins/mac/design/images/quickpanel_bg.png) no-repeat -602px 1px;
+	width: 26px;
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+#main #quickpanel #lang {
+	float: right;
+	margin: 0 10px 0 0;
+	padding: 0;
+	height: 25px;
+	line-height: 25px;
+}
+#main #quickpanel #lang a {
+	display: inline;
+	padding: 0;
+	font-weight: bold;
+	color: #8ea4be;
+	line-height: 25px;
+	height: 25px;
+	margin-left: 10px;
+}
+#main #quickpanel #lang a:hover {
+	background: none;
+	color: #676767;
+}
+#main #quickpanel #lang span {
+	margin-left: 10px;
+}
+#main #quickpanel div#butterfly {
+	background: url(/styles/skins/mac/design/images/quickpanel_bg.png) no-repeat 0 0;
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+	float: left;
+	cursor: pointer;
+	position: relative;
+}
+#main #quickpanel div#butterfly:hover {
+	background: url(/styles/skins/mac/design/images/quickpanel_bg.png) no-repeat 0 -33px;
+}
+#main #quickpanel div#butterfly.act {
+	background: url(/styles/skins/mac/design/images/quickpanel_bg.png) no-repeat 0 -65px;
+}
+#main #quickpanel div#butterfly div {
+	width: 320px;
+	cursor: default;
+	top: 1px;
+	position: relative;
+	display: none;
+	z-index: 100;
+}
+#main #quickpanel div#butterfly div ul {
+	float: left;
+	width: 50%;
+}
+#main #quickpanel div#butterfly div div.bg {
+	top: 0;
+	height: auto;
+	background: url(/styles/skins/mac/design/images/mod_bg.gif) repeat-y;
+	border-top: solid 1px #e2e2e2;
+}
+#main #quickpanel div#butterfly div div.bottom_bg {
+	height: 5px;
+	top: 0;
+	background: url(/styles/skins/mac/design/images/quickpanel_bg.png) no-repeat 0 -95px;
+	z-index: 90;
+}
+#main #quickpanel #butterfly a.drag {
+	z-index: 200;
+}
+#main #quickpanel #butterfly a.drag:hover {
+	background: none;
+}
+
+/*dock*/
+#main #dock {
+	text-align: center;
+	clear: both;
+	font-size: 1px;
+	padding-top: 25px;
+}
+#main #dock img {
+	cursor: pointer;
+}
+#main #dock div {
+	background: white;
+	border-bottom: 1px solid #d8dbde;
+	font-size: 10px;
+	padding: 3px;
+}
+#main #dock div a {
+	text-align: center;
+	margin: 0 5px 10px 5px;
+	color: #777;
+}
+#main #dock div a img {
+	display: block;
+	margin: 0 auto 5px auto;
+}
+#main #dock a {
+	display : inline-block;
+}
+#main #dock .ui-state-highlight {
+	width  : 42px;
+	height : 60px;
+	background-color: #d7e4ef;
+	border : 2px solid #77b9ef;
+}
+
+
+#page {
+	padding-bottom: 30px;
+}
+
+/*content*/
+#main {
+	position: relative;
+	min-height: 100%;
+	_height: 100%;
+	margin-bottom: -30px;
+	min-width: 990px;
+}
+#main #head {
+	margin-bottom: 20px;
+	position: relative;
+	width: 100%;
+}
+#main #head img {
+	position: absolute;
+	left: 20px;
+	top: 10px;
+}
+#main #head #breadcrumb {
+	font-family: Verdana;
+	text-transform: uppercase;
+	margin-left: 125px;
+	padding-top: 70px;
+	padding-bottom: 20px;
+}
+#main #head #breadcrumb a {
+	color: #0088e8;
+	font-size: 10px;
+	text-decoration: none;
+	margin: 0 15px;
+}
+#main #head #breadcrumb a:hover {
+	text-decoration: underline;
+}
+#main #head #breadcrumb span {
+	font-size: 16px;
+	font-weight: bold;
+}
+#main #head #breadcrumb span span {
+	margin-left: 15px;
+}
+#main #head #settings {
+	background: url(/images/cms/admin/mac/icons/settings.png) no-repeat;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	position: absolute;
+	right: 20px;
+	top: 7px;
+	text-decoration: none;
+	height: 17px;
+	line-height: 15px;
+	text-indent: 25px;
+	display: block;
+}
+#main #head .help {
+	background: url(/images/cms/admin/mac/icons/help_block.png) no-repeat;
+	position: absolute;
+	width: 40px;
+	height: 36px;
+	bottom: 0;
+	right: 20px;
+	cursor: pointer;
+}
+#main #errorList {
+	margin: 0 0 20px 20px;
+	color: red;
+}
+#main #info_block {
+	width: 23%;
+	margin-right: 20px;
+	float: right;
+}
+#main .panel {
+	border-bottom: 1px solid #b5c3c9;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	color: #4c4c4c;
+	/* position: relative; */
+	margin-bottom: 25px;
+}
+#main .panel .header {
+	background: url(/images/cms/admin/mac/common/tab.jpg) repeat-x;
+	height: 25px;
+	position: relative;
+	font-weight: bold;
+	text-indent: 10px;
+	font-size: 10px;
+	line-height: 23px;
+}
+#main #content .panel {
+	width: 100%;
+}
+#main #content .panel .header {
+	cursor: pointer;
+	display: block;
+}
+#main #content .panel .panel .header {
+	cursor: default;
+}
+#main #content .panel .tabs {
+	height: 25px;
+	border-bottom: 1px solid #b5c3c9;
+}
+#main #content .panel .tabs .header {
+	float: left;
+	font-family: Verdana;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #676767;
+}
+#main #content .panel .tabs .act {
+	height: 26px;
+	color: #0088e8;
+	_margin-bottom: -1px;
+}
+#main #content .panel .header .c {
+	background: url(/images/cms/admin/mac/sg_arrow_up.gif) no-repeat 0 5px;
+	height: 25px;
+	position: relative;
+	display: block;
+	margin-left: 5px;
+	text-indent: 23px;
+	z-index: 2;
+}
+#main #content .panel .tabs .header .c {
+	background: none;
+	text-indent: 0px;
+	padding: 0 15px;
+	margin-left: 0px;
+	line-height: 25px;
+	_display: inline;
+}
+#main .panel .header .l {
+	background: url(/images/cms/admin/mac/common/tab_first.jpg) no-repeat;
+	height: 25px;
+	width: 9px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#main .panel .header .r {
+	background: url(/images/cms/admin/mac/common/tab_last.jpg) no-repeat;
+	height: 25px;
+	width: 9px;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#main .panel .tabs .last .l,
+#main .panel .tabs .next .l,
+#main .panel .tabs .first .r,
+#main .panel .tabs .prev .r {
+	background: none;
+}
+#main .panel .tabs .act .l,
+#main .panel .tabs .prev .l {
+	background: url(/images/cms/admin/mac/common/tab_left.gif) no-repeat;
+}
+#main .panel .tabs .act .r,
+#main .panel .tabs .next .r {
+	background: url(/images/cms/admin/mac/common/tab_right.jpg) no-repeat;
+}
+#main .panel .tabs .last .r {
+	background: url(/images/cms/admin/mac/common/tab_last.jpg) no-repeat;
+}
+#main .panel .tabs .first .l {
+	background: url(/images/cms/admin/mac/common/tab_first.jpg) no-repeat;
+}
+#main .panel .content {
+	border-left: 1px solid #b5c3c9;
+	border-right: 1px solid #b5c3c9;
+	padding: 20px 15px 5px 15px;
+	/* position: relative; */
+	background: white;
+	clear: left;
+	zoom: 1;
+}
+#main #content .panel .content div.field {
+	display: block;
+	float: left;
+	min-height: 50px;
+	width: 50%;
+	_width: 49%;
+}
+#main #content .panel .content div.field label {
+	display: block;
+}
+#main #content .panel .content div.field span {
+	display: block;
+}
+#main #content .panel .content div.field span.label {
+	margin-bottom: 5px;
+}
+#main #content .panel .content div.field span.label acronym.acr {
+	border-bottom: dashed 1px;
+	cursor: help;
+}
+#main #content .panel .content div.field a img {
+	position: relative;
+	top: 1px;
+	vertical-align: top;
+}
+#main #content .panel .content div.text {
+	width: 100%;
+	_width: 90%;
+	height: auto;
+	margin-bottom: 10px;
+}
+#main #content .panel .content div.field input,
+#main #content .panel .content div.field select,
+#main #content .panel .content div.field textarea {
+	width: 90%;
+	border: 1px solid #d3d3d3;
+	color: #4c4c4c;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	margin: 0 3px 0 0;
+}
+#main #content .panel .content div.field select {
+	*width: 91%;
+}
+#main #content .panel .content div.text textarea,
+#main #content .panel .content div.text span.mceEditor {
+	width: 95%;
+	_width: 105%;
+}
+#main #content .panel .content div.text textarea {
+	height: 200px;
+}
+#main #content .panel .content div.field input.checkbox {
+	width: auto;
+	margin: -2px 10px 0 0;
+	vertical-align: middle;
+	border: none;
+}
+#main #content .panel .content div.field input.search_input {
+	background: url(/images/cms/admin/mac/tree/search.gif) no-repeat;
+	padding: 1px 0 1px 19px;
+}
+#main #content .panel .content div.field input.relation-add {
+	background : url("/images/cms/admin/mac/tree/ico_add.png") no-repeat;
+	width  : 16px;
+	height : 16px;
+	border : 0;
+}
+#main #content .panel .content div.modules {
+	width: 650px;
+	float: none;
+}
+#main #content .panel .content div.modules label {
+	float: left;
+	width: 550px;
+}
+#main #content .panel .content div.modules input {
+	width: 100%
+}
+#main #content .panel .content div.modules .buttons {
+	clear: none;
+	padding-top: 18px;
+}
+#main #content .panel .content div.modules .buttons div {
+	*width: 80px;
+}
+#main #content .panel .content div.modules .buttons .r {
+	*right: -5px;
+	_right: 5px;
+}
+#main #content .panel .content dl.field {
+	width: 50%;
+	min-height: 150px;
+	margin: 0;
+	float: right;
+	padding-bottom: 20px;
+}
+#main #content .panel .content dl.field dt {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#main #content .panel .content dl.field dd {
+	margin: 0;
+	height: 18px;
+	line-height: 17px;
+	clear: both;
+}
+#main #content .panel .content dl.field dd input {
+	float: left;
+	margin: 2px 5px 0 0;
+}
+#main #content .panel .content div.symlink {
+	height: auto;
+	min-height: 50px;
+}
+#main #content .panel .content div.symlink img {
+	cursor: pointer;
+	position: relative;
+	top: 5px;
+}
+#main #content .panel .content div.symlink ul.pageslist li {
+	height: 20px;
+}
+#main #content .panel .content div.symlink ul.pageslist li img {
+	top: 3px;
+	margin: 0 5px 0 0;
+	cursor: default;
+}
+#main #content .panel .content div.symlink ul.pageslist li span {
+	display: inline;
+	margin: 0 5px 0 0;
+}
+#main #content .panel .content div.buttons {
+	clear: both;
+	padding-top: 20px;
+	height: 30px;
+	_height: 50px;
+}
+#main #content .panel .content div.button,
+#main #content .panel .content div.buttons div {
+	float: right;
+	margin: 0 5px;
+	position: relative;
+}
+#main #content .panel .content div.button input,
+#main #content .panel .content div.buttons div input {
+	background: url(/images/cms/admin/mac/common/button_center.jpg) repeat-x;
+	border: none !important;
+	color: white !important;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	height: 17px;
+	cursor: pointer;
+}
+#main #content .panel .content div.button span,
+#main #content .panel .content div.buttons div span {
+	position: absolute;
+	display: block;
+	height: 17px;
+	width: 5px;
+	top: 0;
+}
+#main #content .panel .content div.button span.l,
+#main #content .panel .content div.buttons div span.l {
+	background: url(/images/cms/admin/mac/common/button_left.jpg) no-repeat;
+	left: 0;
+}
+#main #content .panel .content div.button span.r,
+#main #content .panel .content div.buttons div span.r {
+	background: url(/images/cms/admin/mac/common/button_right.jpg) no-repeat;
+	right: 0;
+}
+#main #content table.tableLists,
+#main #content table.tableLists table,
+#main #content .panel .content table.permissionTable {
+	border-collapse: collapse;
+	font-size: 11px;
+	width: 100%;
+}
+#main #content table.tableLists,
+#main #content .panel .content table.permissionTable {
+	background: url(/images/cms/admin/mac/tree/grid.gif) repeat;
+}
+#main #content .panel .content table.permissionTable tfoot {
+	background: white;
+}
+#main #content .panel .content table.permissionTable tr {
+	height: 22px;
+}
+#main #content .panel .content table.permissionTable th,
+#main #content .panel .content table.permissionTable td {
+	padding: 0 3px;
+	text-indent: 5px;
+}
+#main #content .panel .content table.permissionTable tfoot input {
+	width: 49%;
+	border: 1px solid #d3d3d3;
+	color: #4c4c4c;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+}
+#main #content .panel .content table.tableContent,
+#main #content .panel .content table.hide {
+	width: 100%;
+	border-collapse: collapse;
+	color: #4c4c4c;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	margin-top: 20px;
+}
+#main #content .panel .content table.tableContent th,
+#main #content .panel .content table.tableContent td {
+	border: 1px solid #d3d3d3;
+}
+#main #content .panel .content table.tableContent th {
+	background: url(/images/cms/admin/mac/common/tab.jpg);
+	border-top: none;
+}
+#main #content .panel .content table.tableContent td,
+#main #content .panel .content table.hide td {
+	padding: 5px 14px;
+}
+#main #content .panel .content table.hide td {
+	width: 50%;
+}
+#main #content .panel .content table.tableContent th.left {
+	text-align: left;
+	padding: 2px 14px;
+}
+#main #content .panel .content table.tableContent td.center {
+	width: 100px;
+	text-align: center;
+}
+#main #content .panel .content table.tableContent td.right,
+#main #content .panel .content table.hide td.eq-col {
+	text-align: right;
+}
+#main #content .panel .content table td.eq-col {
+	width: 50%;
+}
+#main #content .panel .content table.tableContent a.delete {
+	width: 16px;
+	height: 16px;
+	display: block;
+	background-image: url('/images/cms/admin/mac/ico_del.gif');
+	margin-left: 45%;
+}
+#main #content .panel .content table.tableContent a.subitems {
+	width: 24px;
+	height: 24px;
+	display: block;
+	background-image: url('/images/cms/admin/mac/ico_edit.gif');
+	margin-left: 45%;
+}
+#main #content .panel .content table.tableContent a.restore {
+	width: 14px;
+	height: 26px;
+	display: block;
+	background-image: url('/images/cms/admin/mac/trash_restore.gif');
+	margin-left: 45%;
+}
+#main #content .panel .content table.tableContent a.delete *,
+#main #content .panel .content table.tableContent a.subitems *,
+#main #content .panel .content table.tableContent a.restore * {
+	display: none;
+}
+#main #content .tableItemContainer {
+	overflow: auto;
+}
+#main #content table.tableLists {
+	border: 1px dotted #ddd;
+	background-position: 0 0px;
+	margin-bottom: 20px;
+}
+#main #content .panel .content table.tableContent td div.module_icon {
+	height: 30px;
+	line-height: 30px;
+}
+#main #content .panel .content table.tableContent td div.module_icon img {
+	float: left;
+	margin-right: 5px;
+}
+#main #content .panel .content table.tableContent ul li {
+	height: 25px;
+	line-height: 25px;
+}
+#main #content .panel .content table.tableContent ul li input.check {
+	float: left;
+	margin: 6px 10px 0 0;
+}
+#main #content table.tableLists input,
+#main #content select#blog_id,
+#main #content table.tableLists select,
+#main #content .panel .content table.tableContent td input,
+#main #content .panel .content table.tableContent td select,
+#main #content .panel .content table.hide td input {
+	width: 100%;
+	border: 1px solid #d3d3d3;
+	color: #4c4c4c;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+}
+#main #content .panel .content .center div.button {
+	float: none;
+}
+#main #content .panel .content table#statFilter td {
+	width      : 30%;
+	text-align : center;
+}
+#main #content .panel .content table#statFilter td select.date {
+	width : auto;
+}
+#main #content .panel .content #stat_links a,
+#main #content .panel .content #stat_links span {
+	margin-right: 10px;
+}
+#main #content .panel .content #stat_links a {
+	font-weight: bold;
+}
+#main #content .panel #answers_list {
+	padding-top: 1px;
+}
+#main #content .panel #answers_list table td {
+	font-family: Tahoma,Helvetica,Sans-Serif;
+	font-size: 11px;
+}
+#main #content .panel #answers_list table td input {
+	border: 1px solid #d3d3d3;
+	color: #4c4c4c;
+	font-family: Tahoma,Helvetica,Sans-Serif;
+	font-size: 11px;
+	width: 100%;
+}
+#main #content table input.check {
+	width: auto !important;
+	border: none !important;
+	color: auto !important;
+}
+#main #content #csv-buttons {
+	height: 20px;
+}
+#main #content table.tableLists th,
+#main #content table.tableLists td {
+	height: 22px;
+	padding: 0;
+	empty-cells: show;
+}
+#main #content table.tableLists tr.header-row {
+	background:transparent url(/images/cms/admin/mac/common/tab.jpg) repeat-x scroll 0 -2px;
+}
+#main #content table.tableLists .column,
+#main #content table.tableLists td.ti,
+#main #content table.tableLists tr.filter-row th {
+	border-right: 1px dotted #ddd;
+}
+#main #content table.tableLists th.void,
+#main #content table.tableLists tr.filter-row th.filter-void {
+	border-right: none;
+	empty-cells: show;
+	width: 20px;
+}
+#main #content table.tableLists tr.selected {
+	background-color: #c8efff;
+}
+#main #content table.tableLists .column div {
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100px;
+	text-overflow: ellipsis;
+}
+#main #content table.tableLists td.column div {
+	margin-left: 8px;
+	line-height: 18px;
+}
+#main #content table.tableLists th.column div {
+	cursor: pointer;
+	padding: 0;
+	margin-left: 8px;
+	position: relative;
+	_position: static;
+	color: #676767;
+}
+#main #content table.tableLists th.column div.asc {
+	background: url(/images/cms/admin/mac/tree/order-asc.gif) no-repeat 0 1px;
+}
+#main #content table.tableLists th.column div.desc {
+	background: url(/images/cms/admin/mac/tree/order-desc.gif) no-repeat 0 2px;
+}
+#main #content table.tableLists tr.filter-row th input,
+#main #content table.tableLists tr.filter-row th select {
+	margin: 0 2px;
+}
+#main #content table.tableLists thead th {
+	text-align: left;
+}
+#main #content table.tableLists thead th div {
+	zoom: 1;
+}
+#main #content table.tableLists th.column span {
+	cursor: e-resize;
+	height: 20px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	width: 8px;
+	z-index: 1;
+}
+#main #content table.tableLists th div.invoke-btn {
+	background: url(/images/cms/admin/mac/tree/show_menu.png) no-repeat;
+	cursor: pointer;
+	height: 16px;
+	margin-left: 4px;
+	margin-top: 3px;
+	padding: 1px;
+	width: 22px;
+}
+#main #content table.tableLists td.pages-bar a {
+	font-weight: bold;
+	margin-left: 7px;
+}
+#main #content table.tableLists td.pages-bar a.current {
+	color: black;
+	cursor: default;
+}
+#main #content #csv-buttons a {
+	margin-right: 20px;
+	padding: 2px 0 2px 18px;
+}
+#main #content #csv-buttons a.csvExport {
+	background: url(/images/cms/admin/mac/ico_csv_export.png) no-repeat;
+}
+#main #content #csv-buttons a.csvImport {
+	background: url(/images/cms/admin/mac/ico_csv_import.png) no-repeat;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#main #content table.tableLists {
+		/* background-position: 0 0px; */
+	}
+	#main #content table.tableLists th select {
+		height: 17px;
+	}
+}
+#main #content {
+	margin-left: 20px;
+	margin-right: 26%;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	/* position: relative; */
+}
+#main .content-expanded {
+	margin-right : 20px !important;
+}
+#main .clear {
+	_clear: right;
+}
+#main #content .filter-container {
+	float: right;
+	margin-bottom: 20px;
+}
+#main #content .filter-container .fcModeContainer,
+#main #content .filter-container .fcContainer {
+	clear: both;
+	width: 400px;
+}
+#main #content .filter-container table {
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	width: 400px;
+}
+#main #content .filter-container img {
+	cursor: pointer;
+}
+#main #content .domain_choice select,
+#main #content .filter-container input,
+#main #content .filter-container select,
+#main #content .filter-container textarea {
+	background: white;
+	border: 1px solid #aaa;
+	width: 250px;
+	color: #4c4c4c;
+	font-size: 11px;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+}
+#main #content .filter-container input.fcQuicksearchInput {
+	background: white url(/images/cms/admin/mac/tree/search.gif) no-repeat 2px 2px;
+	font-size: 12px;
+	margin: 0;
+	padding: 2px 0;
+	padding-left: 19px;
+	width: 330px;
+	width /*\**/: 309px\9;
+	*width: 309px;
+	_width: 330px;
+	_height: 20px;
+}
+#main #content .filter-container input.fcApplyButton {
+	font-weight: bold;
+	height: 20px;
+	margin-left: 15px;
+	padding-bottom: 3px;
+	padding-top: 2px;
+	width: 55px;
+	font-size: 11px;
+	background: #f0f0f0;
+}
+#main #content .filter-container input.fcLogicInput,
+#main #content .filter-container input.fcBooleanInput {
+	background: none;
+	border: none;
+	width: auto;
+}
+#main #content .filter-container .fcLogicLabel {
+	margin-bottom: 20px;
+}
+#main #content .filter-container .logic label {
+	margin-bottom: 0;
+	display: inline;
+}
+#main #content .filter-container .view_section {
+	margin-right: 212px;
+}
+#main #content .filter-container .fcApplyCell {
+	text-align: right;
+}
+#main #content .filter-container .fcLogicTitle {
+	font-weight: bold;
+}
+#main #content .imgButtonWrapper {
+	float: left;
+}
+#main #content .imgButtonWrapper a {
+	display: block;
+	float: left;
+	background: url(/images/cms/admin/mac/ico_add.png) no-repeat;
+	height: 24px;
+	line-height: 23px;
+	text-indent: 34px;
+	margin-right: 20px;
+	padding-right : 10px;
+}
+#main #content .imgButtonWrapper a.view {
+	background-image: url(/images/cms/admin/mac/ico_subitems.gif);
+}
+#main #content .imgButtonWrapper a.del {
+	background-image: url(/images/cms/admin/mac/ico_trash_empty.gif);
+}
+#main #content .domain_choice {
+	text-align: right;
+	margin-bottom: 20px;
+}
+#main #content .domain_choice select {
+	width: 400px;
+}
+#main #content .tree-container {
+	margin: 0 0 20px 0;
+	position: relative;
+}
+#main #content .ti-childs-container {
+	margin: 0 0 0 19px;
+}
+#main #content .ti {
+	margin: 2px 0 0 0;
+}
+#main #content .main-page a {
+	font-weight: bold;
+}
+#main #content .selected,
+#main #content .selected-highlight {
+	background-color: #c8efff;
+}
+#main #content .hightlight {
+	background-color: #e5e5e5;
+}
+#main #content .ti-toggle {
+	border: 0 none;
+	height: 11px;
+	margin-left: 2px;
+	width: 11px;
+}
+#main #content td.ti-toggle {
+	height: auto;
+	width: 20px;
+	text-align: center;
+}
+#main #content .ti-icon {
+	height: 16px;
+	margin: 0px 5px 4px 5px;
+	vertical-align: middle;
+	width: 16px;
+}
+#main #content ul li ul li div .ti-icon {
+	cursor: move;
+}
+#main #content table td .ti-icon {
+	margin: 0px 5px 2px 0px;
+}
+img.page-status {
+	width: 7px;
+	height: 7px;
+	z-index: 2;
+	margin-top: 8px;
+	margin-left: -20px;
+	position: absolute;
+	_position: none;
+}
+div.ti-drop {
+	height: 2px;
+	overflow: hidden;
+	background: #00008b;
+	position: absolute;
+}
+div.ti-drop-as-child {
+	height: 2px;
+	margin-left: 20px;
+	background: #00008b;
+	overflow: hidden;
+}
+div.ti-drop-as-sibling {
+	height: 2px;
+	background: #00008b;
+	overflow: hidden;
+}
+#main #content div.ti-draggable {
+	height: 21px;
+	cursor: move;
+}
+#main #content div.ti-draggable div {
+	margin-left: 20px;
+	padding-top: 5px;
+}
+#main #content .panel .content #group-fields #groupsContainer .fg_add_group {
+	margin-bottom: 10px;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container {
+	border: 1px solid #c0c0c0;
+	margin-bottom: 13px;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_header {
+	background: #e3e9ef;
+	border-bottom: 1px solid #c0c0c0;
+	height: 18px;
+	font-weight: bold;
+	line-height: 17px;
+	text-indent: 10px;
+	cursor: move;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_header span {
+	float: right;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_header span.left {
+	float: left;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_header a {
+	font-weight: normal;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container span a {
+	display: block;
+	float: left;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_header span a {
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container span a.edit {
+	background-image: url(/images/cms/admin/mac/tree/ico_edit.png);
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container span a.remove {
+	background-image: url(/images/cms/admin/mac/tree/ico_del.png);
+}
+#main #content .panel .content #group-fields #groupsContainer div.invisible {
+	border-color: #e7e7e7;
+}
+#main #content .panel .content #group-fields #groupsContainer div.ui-sortable-placeholder {
+	border: 1px dotted #c0c0c0;
+	visibility: visible!important;
+}
+#main #content .panel .content #group-fields #groupsContainer div.locked .fg_container_header {
+	cursor: default;
+}
+#main #content .panel .content #group-fields #groupsContainer div.invisible .fg_container_header {
+	background-color: #f4f7f9;
+	border-bottom-color: #e7e7e7;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body {
+	background: white;
+	padding: 5px 0;
+}
+#main #content .panel .content #group-fields #groupsContainer .fg_add_group,
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body .fg_add_field {
+	display: block;
+	height: 23px;
+	margin-left: 5px;
+}
+#main #content .panel .content #group-fields #groupsContainer .fg_add_group a,
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body .fg_add_field a {
+	background: url(/images/cms/admin/mac/ico_data_add.gif) no-repeat;
+	display: block;
+	text-indent: 25px;
+	float: left;
+	border: 1px solid #d1d1d1;
+	height: 21px;
+	line-height: 21px;
+	padding: 0 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul {
+	margin: 0 10px;
+	padding: 5px 0 0 0;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li {
+	border-top: 1px dotted #c0c0c0;
+	/* margin-bottom: 5px; */
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li.invisible .left {
+	color: #acacac;
+	/* margin-bottom: 5px; */
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li.locked {
+	/* border-color: #e7e7e7; */
+	cursor: default;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li.ui-sortable-field-placeholder {
+	border: 1px dotted #c0c0c0;
+	cursor: default;
+	/* margin-bottom: 5px; */
+	height: 25px;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li .view {
+	/* background: #e3e9ef; */
+	height: 25px;
+	line-height: 23px;
+	text-indent: 10px;
+	cursor: move;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li.locked .view {
+	/* background-color: #f4f7f9; */
+	cursor: default;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li .view span {
+	float: right;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li .view span a {
+	width: 25px;
+	height: 25px;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li .view .left,
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li .view .left span {
+	float: left;
+	height: 25px;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container .fg_container_body ul li .view .left span {
+	text-overflow: ellipsis;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container div.group_edit,
+#main #content .panel .content #group-fields #groupsContainer div.fg_container div.edit {
+	padding-top: 5px;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container div.edit {
+	border-top: 1px solid #c0c0c0;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container form {
+	margin: 0px 10px 5px 10px;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container form div {
+	margin-bottom: 10px;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container form label {
+	display: block;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container form label.boolean {
+	display: inline;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container form input,
+#main #content .panel .content #group-fields #groupsContainer div.fg_container form select {
+	border: 1px solid #d3d3d3;
+	color: #4c4c4c;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	margin: 0;
+	width: 90%;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container form input.button {
+	margin: 0 10px 0 0;
+	width: auto;
+	cursor: pointer;
+}
+#main #content .panel .content #group-fields #groupsContainer div.fg_container form input.boolean {
+	border: none;
+	width: auto;
+}
+#main #content #webo_in .buttons {
+	padding-top: 5px;
+	height: 20px;
+}
+#main #content #webo_in .webo_err {
+	margin-bottom: 10px;
+}
+#main #content #webo_in .webo_err strong {
+	margin-right: 5px;
+}
+#main #content #webo_in dl dt {
+	width: 140px;
+	float: left;
+}
+#main #content #webo_in dl dt img {
+	border: 1px solid silver;
+	padding: 3px;
+	margin-top: 5px;
+}
+#main #content #webo_in dl dd {
+	margin-left: 160px;
+}
+#main #content #webo_in dl dd .site_name {
+	font-size: 20px;
+}
+#main #content #webo_in dl dd .ratings {
+	width: 30%;
+	float: left;
+}
+#main #content #webo_in dl dd .ratings div {
+	margin: 10px 0;
+}
+#main #content #webo_in dl dd .ratings div div {
+	font-size: 20px;
+	margin: 0;
+}
+#main #content #webo_in dl dd .ratings div div span {
+	font-size: 22px;
+	color: orange;
+}
+#main #content #webo_in dl dd .info {
+	margin-left: 31%;
+	padding: 10px 0;
+}
+#main #content #webo_in dl dd .info div {
+	line-height: 20px;
+}
+#main #content #webo_in dl dd .info div strong {
+	margin-left: 5px;
+}
+#main #content #webo_in #webo_main h2 {
+	margin: 0 0 10px 0;
+	color: #676767;
+	font-size: 18px;
+}
+#main #content #webo_in #webo_main #webo_analyze ol {
+	margin: 0 0 20px 0;
+	padding: 0 0 0 20px;
+}
+#main #content #webo_in #webo_main #webo_analyze ol li {
+	margin: 0 0 5px 0;
+}
+#main #content #webo_in #webo_main #webo_analyze ol li strong.name {
+	display: block;
+}
+#main #content #webo_in #webo_main #webo_files table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 11px;
+}
+#main #content #webo_in #webo_main #webo_files table#webo_google td div {
+	line-height: 20px;
+}
+#main #content #webo_in #webo_main #webo_files table#webo_google td div span {
+	color: orange;
+	font-size: 17px;
+	margin-right: 3px;
+}
+#main #content #webo_in #webo_main #webo_files table#webo_files_table {
+	border: 2px solid #c8d5e6;
+	margin-bottom: 10px;
+}
+#main #content #webo_in #webo_main #webo_files table#webo_files_table th,
+#main #content #webo_in #webo_main #webo_files table#webo_files_table td {
+	border: 1px solid #c8d5e6;
+	padding: 5px;
+}
+#main #content #webo_in #webo_main #webo_files table#webo_files_table th {
+	background: #ebf0f6;
+}
+#main #content #webo_in .webo_copy {
+	text-align: right;
+	margin-bottom: 20px;
+}
+#foot {
+	height: 30px;
+	clear: both;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+}
+#foot a {
+	color: #787b81;
+	font-size: 10px;
+}
+#foot a#support {
+	float: right;
+	margin-right: 20px;
+}
+#foot a#support span {
+	text-transform: uppercase;
+}
+#foot a#copy {
+	margin-left: 50px;
+}
+.symlinkAutosuggest , .relationAutosuggest{
+	border: 1px solid #d3d3d3;
+	background: white;
+}
+.symlinkAutosuggest ul li, .relationAutosuggest ul li {
+	padding: 5px 10px;
+}
+.symlinkAutosuggest ul li.active, .relationAutosuggest ul li.active {
+	background: #ceeaf6;
+}
+.symlinkAutosuggest ul li img {
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+.type_select {
+	border : 1px solid white;
+}
+.type_select_gray {
+	border : 1px solid #fafafa;
+}
+.type_select_active {
+	border : 1px solid #d3d3d3;
+	background : white;
+	border-bottom : none;	
+}
+ul.type_select {
+	border : 1px solid #d3d3d3;
+	border-top : none;
+	background : white;
+	margin-top : 1px;
+	/*overflow: hidden; */
+}
+ul.type_select li {
+	padding : 5px;
+}
+ul.type_select li:hover {
+	background : #ceeaf6;	
+}
+ul.type_select li a {
+	white-space: nowrap;
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	-o-text-overflow: ellipsis;	
+	-moz-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;	
+	display: inline-block;
+}
+div.tree_toolbar {
+	position: absolute;
+	z-index: 100;
+	height: 22px;
+	overflow: hidden;
+	padding: 2px 0 0 0;
+	width: 230px;
+	right: 0;
+}
+div.tree_toolbar a.tree_toolbtn {
+	display: block;
+	float: right;
+	height: 16px;
+	margin-left: 10px;
+	margin-top: 2px;
+	width: 22px;
+}
+
+#snapshots-errors {
+	clear: both;
+}

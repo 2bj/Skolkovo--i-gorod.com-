@@ -1,0 +1,126 @@
+<html>    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Файловый менеджер</title>
+
+	<script src="/js/jquery/jquery-1.4.1.min.js"></script>
+	<!--script	type="text/javascript" src="/ulang/ru/common/content/date?js" charset="utf-8" /-->
+	<script src="/styles/common/other/filebrowser/AC_OETags.js" language="javascript"></script>
+	<style>
+		* {
+			padding : 0;
+			margin  : 0;
+		}
+	</style>
+	
+    </head>
+
+    <body>
+
+		<script language="JavaScript" type="text/javascript">
+		<!--
+			function getArgs() {
+				var args = new Object();
+				var query = location.search.substring(1);
+				var pairs = query.split("&");
+				for(var i = 0; i < pairs.length; i++) {
+					var pos = pairs[i].indexOf('=');
+					if (pos == -1) continue;
+					var argname   = pairs[i].substring(0,pos);
+					var value     = pairs[i].substring(pos+1);
+					args[argname] = unescape(value);
+				}
+				return args;
+			}			
+			function chooseFiles(flist) {
+				var args   = getArgs();
+				var select = null;				
+				var frame  = window.parent.document.getElementsByTagName('iframe');				
+				if (frame.length > 1) {
+					select = frame[frame.length - 2].contentDocument ? 
+						     frame[frame.length - 2].contentDocument.getElementById(args.id) :
+							 frame[frame.length - 2].document.getElementById(args.id);
+				}				
+				if(!select) { 
+					select = window.parent.document.getElementById(args.id);
+				}
+				if(!select && frame.length > 1) {
+					select = frame[frame.length - 2].contentWindow[args.id];
+				}
+				if(select) {
+					if(flist && flist.length) {						
+						if(select.control) {
+							var file   = flist[0].substr(flist[0].lastIndexOf('/')+1);
+							var folder = flist[0].substr(0, flist[0].lastIndexOf('/'));
+							select.control.setFolder(folder);
+							select.control.add(file, true);
+						} else {
+							select.value = flist[0];
+						}
+					} else {
+						if(select.control) {
+							select.control.clearItems();
+							select.control.add(null, true);
+						}
+					}
+				}
+				window.parent.jQuery.closePopupLayer('Filemanager', flist);
+				return false;
+			}
+			function cancelChooisng() {
+				window.parent.jQuery.closePopupLayer('Filemanager');
+			}
+
+			var requiredMajorVersion = 9;			
+			var requiredMinorVersion = 0;			
+			var requiredRevision     = 28;
+
+			var hasProductInstall   = DetectFlashVer(6, 0, 65);                        
+			var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+			if (hasProductInstall && !hasRequestedVersion) {
+	
+				var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+				var MMredirectURL = window.location;
+				document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    			var MMdoctitle = document.title;
+
+				AC_FL_RunContent(
+					"src", "playerProductInstall",
+					"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+					"width", "660",
+					"height", "460",
+					"align", "middle",
+					"id", "UmiFileBrowser",
+					"quality", "high",
+					"bgcolor", "#869ca7",
+					"name", "UmiFileBrowser",
+					"allowScriptAccess","sameDomain",
+					"type", "application/x-shockwave-flash",
+					"pluginspage", "http://www.adobe.com/go/getflashplayer"
+				);
+			} else if (hasRequestedVersion) {	
+				AC_FL_RunContent(
+						"src", "UmiFileBrowser",
+						"width", "660",
+						"height", "460",
+						"align", "middle",
+						"id", "UmiFileBrowser",
+						"quality", "high",
+						"bgcolor", "#869ca7",
+						"name", "UmiFileBrowser",
+						"allowScriptAccess","sameDomain",
+						"type", "application/x-shockwave-flash",
+						"flashVars", document.cookie.replace(/;\s/g, "&") + '&' + location.search.substring(1, location.search.length),
+						"pluginspage", "http://www.adobe.com/go/getflashplayer"
+				);
+			} else {  
+				var alternateContent = 'Alternate HTML content should be placed here. '
+				+ 'This content requires the Adobe Flash Player. '
+				+ '<a href=http://www.adobe.com/go/getflash/>Get Flash</a>';
+				document.write(alternateContent);  // insert non-flash content
+			}
+// -->
+		</script>
+    </body>
+</html>

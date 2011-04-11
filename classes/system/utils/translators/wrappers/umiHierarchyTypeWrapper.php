@@ -1,0 +1,2 @@
+<?php
+ class umiHierarchyTypeWrapper extends translatorWrapper {public function translate($v8d777f385d3dfec8815d20f7496026dc) {return $this->translateData($v8d777f385d3dfec8815d20f7496026dc);}protected function translateData(iUmiHierarchyType $v599dcce2998a6b40b1e38e8c6006cb0a) {return array(    'attribute:id'  => $v599dcce2998a6b40b1e38e8c6006cb0a->getId(),    'attribute:module' => $v599dcce2998a6b40b1e38e8c6006cb0a->getName(),    'attribute:method' => $v599dcce2998a6b40b1e38e8c6006cb0a->getExt(),    'node:title'  => $v599dcce2998a6b40b1e38e8c6006cb0a->getTitle()   );}}?>

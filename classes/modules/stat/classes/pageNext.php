@@ -1,0 +1,7 @@
+<?php
+class pageNext extends simpleStat{protected $params = array('page_id' => '', 'page_uri' => '');public function get()    {if(!$this->params['page_uri']) {$v1a63c8004d716c8b91f5b7af780555b9 = $this->params['page_id'];}else {$vac5c74b64b4b8352ef2f181affb5ac2a = "SELECT id FROM cms_stat_pages WHERE uri = '" . mysql_real_escape_string($this->params['page_uri']) . "' " . $this->getHostSQL("") . " LIMIT 1";list($v1a63c8004d716c8b91f5b7af780555b9) = mysql_fetch_row(l_mysql_query($vac5c74b64b4b8352ef2f181affb5ac2a));}return $this->simpleQuery("SELECT COUNT(*) AS `abs`, `p`.`uri`, `p`.`id` FROM `cms_stat_hits` `h`
+                                                     INNER JOIN `cms_stat_hits` `h2` ON `h2`.`prev_page_id` = `h`.`page_id` AND `h2`.`number_in_path` = `h`.`number_in_path` + 1 AND `h2`.`path_id` = `h`.`path_id`
+                                                      INNER JOIN `cms_stat_pages` `p` ON `p`.`id` = `h2`.`page_id`
+                                                       WHERE `h`.`date` BETWEEN " . $this->getQueryInterval() . " AND `h`.`page_id` = " . (int) $v1a63c8004d716c8b91f5b7af780555b9 . " " . $this->getHostSQL("p") . "
+                                                        GROUP BY `h2`.`page_id`
+                                                         ORDER BY `abs` DESC");}}?>

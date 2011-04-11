@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<enviroment>
+		<temporary-directory path="./manifest/temp/" />
+		<backup-directory path="./manifest/backup/" />
+		<logger-directory path="./manifest/logs/" />
+	</enviroment>
+	
+	<route>
+		<transaction name="branch_content_table">
+			<title>Branch content table</title>
+			
+		<!--
+			<action name="CheckPermissions">
+				<title>Check some fs permissions</title>
+				<param name="target" value="./cache" />
+			</action>
+		-->
+			
+			<action name="CreateBranchTable">
+				<title>Create cms3_object_content table clone</title>
+				<param name="hierarchy-type-id" value="{hierarchy-type-id}" />
+			</action>
+			
+			<action name="MoveContentTableData">
+				<title>Move data to branched table</title>
+				<param name="hierarchy-type-id" value="{hierarchy-type-id}" />
+			</action>
+			
+			<action name="SaveBranchTableRelations">
+				<title>Save relation data</title>
+			</action>
+			
+			<action name="DeleteContentTableData">
+				<title>Delete moved data from primary table</title>
+				<param name="hierarchy-type-id" value="{hierarchy-type-id}" />
+			</action>
+		</transaction>
+	</route>
+</manifest>

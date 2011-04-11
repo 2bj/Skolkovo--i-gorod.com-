@@ -1,0 +1,176 @@
+[_COOKIE]
+	[stat_id]
+	(string) 4cb21dbbf6087f6f2661ca6fa5ea060d
+
+	[ilang]
+	(string) ru
+
+	[__utma]
+	(string) 73111947.662977136.1272459767.1272622165.1272625643.9
+
+	[__utmz]
+	(string) 73111947.1272459767.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+
+	[PHPSESSID]
+	(string) 4cb21dbbf6087f6f2661ca6fa5ea060d
+
+	[__utmc]
+	(string) 73111947
+
+	[stat_domain]
+	(string) all
+
+	[stat_user]
+	(string) 0
+
+	[from_time]
+	(string) 1272571200
+
+	[to_time]
+	(string) 1272657600
+
+	[expandExtendedFields]
+	(string) 1
+
+	[__utmb]
+	(string) 73111947.1.10.1272625643
+
+	[help__admin_content_config_]
+	(string) 1
+
+
+[_SESSION]
+	[user_id]
+	(integer) 14
+
+	[is_admin]
+	(array) ['']
+
+	[old_logged_in_value]
+	(boolean) 1
+
+	[session-crossdomain-sync]
+	(integer) 1
+
+	[cms_login]
+	(string) ilarion
+
+	[cms_pass]
+	(string) 0769f23194de661c0223693223895afd
+
+	[3a127f45627942a6767b27eda2f4a27f]
+	(array) ['['content', '', '7']', '['content', '', '16']', '['content', '', '23']']
+
+	[stat]
+	(array) ['4cb21dbbf6087f6f2661ca6fa5ea060d', '1', '3618', '4123', '3', '5', '5', '']
+
+	[220240de1a3d20e0d3e1aabf16a6ce99]
+	(array) ['['content', '', '150']', '['content', '', '16']', '['content', '', '23']']
+
+	[4f0ac1919a1a999723f5307a32ca8147]
+	(array) ['['content', '', '1']', '['content', '', '16']', '['content', '', '23']']
+
+	[90c4612b47319ae2fedb40a229d278cd]
+	(array) ['['content', '', '5']', '['content', '', '16']', '['content', '', '23']']
+
+	[referer]
+	(string) http://www.i-gorod.com/admin/content/sitetree/
+
+
+[_POST]
+	[referer]
+	(string) http://www.i-gorod.com/admin/content/sitetree/
+
+	[domain]
+	(string) 82.138.1.131
+
+	[name]
+	(string) Будущее
+
+	[alt-name]
+	(string) future
+
+	[active]
+	(string) 1
+
+	[data]
+	(array) ['['i-GOROD.com — Сайт Рабочей группы по созданию Иннограда в Сколково  |  Будущее', 'Будущее', '', '', '', '<p>Под руководством Виктора Вексельберга при тесном взаимодействии с Администрацией Президента России, Правительством, профильными министерствами в течение месяца была разработана концепция Центра инноваций. Главное &mdash; сформулирована цель проекта: создание благоприятной среды для концентрации интеллектуального капитала, способного генерировать инновации.</p>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Мировой опыт</strong></span></p>
+<div id="__ss_3869742" style="width: 650px; margin-bottom: 30px;">
+<object width="650" height="545" data="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=innocity-100427064918-phpapp02&amp;stripped_title=innocity" type="application/x-shockwave-flash">
+<param name="allowFullScreen" value="true" />
+<param name="allowScriptAccess" value="always" />
+<param name="src" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=innocity-100427064918-phpapp02&amp;stripped_title=innocity" />
+<param name="allowfullscreen" value="true" />
+</object>
+</div>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Правовой статус и структура управления</strong></span></p>
+<p>Для управления проектом в Сколково создается Фонд. Его соучредителями станет ряд государственных и частных организаций, список которых на данный момент фактически определён. Это Российская Академия наук, &laquo;Роснано&raquo;, Внешэкономбанк, Российская венчурная компания, Фонд содействия развитию малых форм предприятий в научно-технической сфере, собственник земли (т.е. государство через Фонд содействия развитию жилищного строительства) и некоммерческая организация, в которую войдёт ряд вузов. Предполагается, что штат Фонда будет насчитывать 50-70 человек.</p>
+<p>В 2010 году будет подготовлено техническое задание на строительство и первые проекты архитектурной концепции города. Строительство возглавит компания, специально учреждённая Фондом. Впоследствии эта компания возьмёт на себя эксплуатацию построенного комплекса. В рамках проекта функции органов местного самоуправления будут переданы в Фонд.</p>
+<p>Виктор Вексельберг, вместе с международным партнёром, станет сопредседателем Совета Фонда. Одновременно он займёт должность Президента Фонда. В рамках Фонда будет создан Консультативный научный совет, который с российской стороны возглавит лауреат Нобелевской премии по физике академик Жорес Алфёров. Кандидатура международного сопредседателя обсуждается, но наиболее вероятным кандидатом является нобелевский лауреат Роджер Корнберг &mdash; американский биохимик, профессор медицинской школы Стэнфордского университета.</p>
+<p>По предварительным подсчётам, в новом городе будут проживать 25-30 тысяч человек. Перед началом строительства будет объявлен тендер &mdash; в нём примут участие как российские, так и иностранные участники. Строительство технополиса должно быть основано на использовании новейших подходов к градостроительству по всему спектру: в вопросах экологии, энергоэффективности, внутригородской логистики, обеспечения водой, теплом, утилизации мусора и пр. Весь комплекс проблем, с которым сталкивается современный город, должен быть переосмыслен. Предполагается в каком-то роде создание &laquo;старт-апа&raquo; в градостроительстве: опробованные новые технологии в дальнейшем могут быть распространены.</p>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Инфраструктура</strong></span></p>
+<p>В городе будут определённые элементы инфраструктуры, которые обеспечат появление нового качества жизни. Замысел архитектурно-строительной части проекта состоит в создании среды, способной обеспечить необходимые условия для возникновения идей, высокотехнологичных решений, их превращения в инновационные проекты. Там будет академическая наука. Безусловно, будут институты и другие организации, которые займутся фундаментальными исследованиями. Будут учреждения образования. Вероятно, речь не идёт о полномасштабном университете, но магистерские программы, аспирантура, докторантура там будут.</p>
+<p>Жителями нового города станут люди, которые имеют базовое высшее образование, но стремятся его продолжить в области научно-технических исследований. Будут построены офисные здания и сотни малых предприятий, занимающихся инновациями.</p>
+<p>И, наконец, там создадут передовую лабораторную базу для тех отраслей, которым требуется проведение определённых исследований, испытаний, тестов.</p>
+<p>Дорогостоящее оборудование будет предоставлено в совместное пользование инновационных компаний в рамках создаваемых центров коллективного пользования.</p>
+<p>Естественно, в городе будут и школы, и детские сады, и больницы, а также рестораны, спортивные центры и прочие учреждения, призванные обеспечить человеку комфортную жизнь и посвятить свою деятельность творческому процессу.</p>
+<p>С Москвой будущий город соединят Минское, Сколковское и Боровское шоссе, а также железнодорожное сообщение Смоленского и Киевского направлений. Недалеко находится аэропорт Внуково.</p>
+<div style="width: 650px; margin-bottom: 30px;">
+<object width="650" height="545" data="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=random-100427082447-phpapp02&amp;stripped_title=ss-3870555" type="application/x-shockwave-flash">
+<param name="allowFullScreen" value="true" />
+<param name="allowScriptAccess" value="always" />
+<param name="src" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=random-100427082447-phpapp02&amp;stripped_title=ss-3870555" />
+<param name="allowfullscreen" value="true" />
+</object>
+</div>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Особый правовой статус</strong></span></p>
+<p>Инновационной компании, учреждённой на территории реализации проекта в Сколково, присваивается статус участника, если предложенный ею к реализации инновационный проект пройдёт процедуры отбора. Участник приобретает широкий набор преференций, к числу которых относятся беспрецедентные налоговые льготы, освобождение от многих бюрократических процедур, связанных с созданием юридического лица, льготная аренда офисных площадей и пользование инфраструктурой, доступ к исследовательскому оборудованию, жильё для своих работников, а также специализированные сервисы, призванные способствовать успешному завершению разработок и коммерциализации инновационных продуктов. Большое внимание будет уделено оформлению и защите авторских прав, работе с патентами.</p>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Помощь инновационным компаниям</strong></span></p>
+<p>В рамках Проекта будет создан &laquo;бизнес-инкубатор&raquo; для компаний на начальном этапе своего развития, оказывающий им дополнительные услуги. В проекте будут представлены различные источники финансирования: гранты, фонды посевного финансирования, венчурные фонды. Для участия в проекте будут приглашаться и крупные международные компании, которые смогут включить в Проект свои R&amp;D-центры.</p>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Финансирование</strong></span></p>
+<p>На первых этапах финансирование проекта будет осуществляться за счёт бюджета. Конкретные суммы станут известны после подготовки финансовых документов.</p>
+<p>С момента объявления о строительстве инновационного центра проект стал &laquo;обрастать&raquo; энтузиастами &mdash; рабочей группе каждый день поступают предложения с проектами и резюме со всей России. Все письма внимательно рассматриваются, здравые идеи будут конвертироваться в конкретные действия &mdash; ведь именно личная активность дает жизнь таким проектам.</p>
+<p>По прогнозам, уже через несколько лет первые жители Иннограда смогут заселиться в построенные дома&hellip;</p>', './images/cms/menu/', './images/cms/menu/', './images/cms/headers/', '0', '0', '0', '0']']
+
+	[template-id]
+	(string) 5
+
+	[is-visible]
+	(string) 1
+
+	[is-default]
+	(string) 0
+
+	[save-mode]
+	(string) Сохранить
+
+	[perms_read]
+	(array) ['1']
+
+
+[_GET]
+	[path]
+	(string) admin/content/edit/5/do/
+
+
+[0.0025668]	Cannot add or update a child row: a foreign key constraint fails in query: UPDATE cms3_hierarchy SET rel = '0', type_id = '2', lang_id = '1', domain_id = '1', tpl_id = '5', obj_id = '27492', ord = '5', alt_name = 'future', is_active = '1', is_visible = '1', is_deleted = '0', updatetime = '1272626408', is_default = '0' WHERE id = '5'
+[0.0028608]	#0 /www_servers/utemp/pub/htdocs/libs/lib.php(2): mysqlConnection-&gt;query('UPDATE cms3_hie...', false)
+#1 /www_servers/utemp/pub/htdocs/classes/system/subsystems/models/hierarchy/umiHierarchyElement.php(2): l_mysql_query()
+#2 /www_servers/utemp/pub/htdocs/classes/system/patterns/umiEntinty.php(2): umiHierarchyElement-&gt;save('UPDATE cms3_hie...')
+#3 /www_servers/utemp/pub/htdocs/classes/system/subsystems/models/hierarchy/umiHierarchyElement.php(2): umiEntinty-&gt;commit()
+#4 /www_servers/utemp/pub/htdocs/classes/modules/baseModuleAdmin.php(2): umiHierarchyElement-&gt;commit()
+#5 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2) : eval()'d code(1): baseModuleAdmin-&gt;saveEditedElementData()
+#6 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2): eval()
+#7 /www_servers/utemp/pub/htdocs/classes/modules/content/class.php(2): def_module-&gt;__call(Array)
+#8 [internal function]: content-&gt;__call('saveEditedEleme...', Array)
+#9 /www_servers/utemp/pub/htdocs/classes/modules/content/__admin.php(2): content-&gt;saveEditedElementData('saveEditedEleme...', Array)
+#10 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2) : eval()'d code(1): __content-&gt;edit(Array)
+#11 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2): eval()
+#12 /www_servers/utemp/pub/htdocs/classes/modules/content/class.php(2): def_module-&gt;__call()
+#13 [internal function]: content-&gt;__call('edit', Array)
+#14 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2): content-&gt;edit('edit', Array)
+#15 /www_servers/utemp/pub/htdocs/libs/def_macroses.php(2): def_module-&gt;cms_callMethod()
+#16 /www_servers/utemp/pub/htdocs/libs/root-src/index.php(2): macros_content()
+#17 /www_servers/utemp/pub/htdocs/index.php(2): require('/www_servers/ut...')
+#18 {main}

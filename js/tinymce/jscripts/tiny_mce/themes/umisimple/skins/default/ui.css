@@ -1,0 +1,52 @@
+/* Reset */
+.defaultUmiSimpleSkin table, .defaultUmiSimpleSkin tbody, .defaultUmiSimpleSkin a, .defaultUmiSimpleSkin img, .defaultUmiSimpleSkin tr, .defaultUmiSimpleSkin div, .defaultUmiSimpleSkin td, .defaultUmiSimpleSkin iframe, .defaultUmiSimpleSkin span, .defaultUmiSimpleSkin * {border:0; margin:0; padding:0; background:transparent; white-space:nowrap; text-decoration:none; font-weight:normal; cursor:default; color:#000}
+
+/* Containers */
+.defaultUmiSimpleSkin {position:relative}
+.defaultUmiSimpleSkin table.mceLayout {background:#F0F0EE; border:1px solid #CCC;}
+.defaultUmiSimpleSkin iframe {display:block; background:#FFF; border-top:1px solid #CCC;}
+.defaultUmiSimpleSkin .mceToolbar {height:24px;}
+
+/* Layout */
+.defaultUmiSimpleSkin span.mceIcon, .defaultUmiSimpleSkin img.mceIcon {display:block; width:20px; height:20px}
+.defaultUmiSimpleSkin .mceIcon {background:url(/images/cms/eip/wysiwyg.gif) no-repeat 20px 20px}
+
+/* Button */
+.defaultUmiSimpleSkin .mceButton {display:block; border:1px solid #F0F0EE; width:20px; height:20px}
+.defaultUmiSimpleSkin a.mceButtonEnabled:hover {border:1px solid #0A246A; background-color:#B2BBD0}
+.defaultUmiSimpleSkin a.mceButtonActive {border:1px solid #0A246A; background-color:#C2CBE0}
+.defaultUmiSimpleSkin .mceButtonDisabled span {opacity:0.3; -ms-filter:'alpha(opacity=30)'; filter:alpha(opacity=30)}
+
+/* Separator */
+.defaultUmiSimpleSkin .mceSeparator {display:block; background:url(../../img/icons.gif) -180px 0; width:2px; height:20px; margin:0 2px 0 4px}
+
+/* Theme */
+.defaultUmiSimpleSkin span.mce_bold {background-position:0 0}
+.defaultUmiSimpleSkin span.mce_italic {background-position:-24px 0}
+.defaultUmiSimpleSkin span.mce_underline {background-position:-46px 0}
+.defaultUmiSimpleSkin span.mce_strikethrough {background-position:-120px 0}
+.defaultUmiSimpleSkin span.mce_justifyleft {background-position:-74px 0}
+.defaultUmiSimpleSkin span.mce_justifycenter {background-position:-98px 0}
+.defaultUmiSimpleSkin span.mce_justifyright {background-position:-122px 0}
+.defaultUmiSimpleSkin span.mce_undo {background-position:-160px 0}
+.defaultUmiSimpleSkin span.mce_redo {background-position:-100px 0}
+.defaultUmiSimpleSkin span.mce_cleanup {background-position:-170px 0}
+.defaultUmiSimpleSkin span.mce_insertunorderedlist {background-position:-270px 0}
+.defaultUmiSimpleSkin span.mce_insertorderedlist {background-position:-295px 0}
+.defaultUmiSimpleSkin span.mce_link {background-position:-196px 0}
+.defaultUmiSimpleSkin span.mce_unlink {background-position:-221px 0}
+.defaultUmiSimpleSkin span.mce_image {background-position:-246px 0}
+.defaultUmiSimpleSkin span.mce_clipboardpaste {background-position:-318px 0}
+
+.wysiwyg_tip {
+	border: none;
+	background-color: #308fba;
+	color : #fff;
+	font-weight : bold;
+	text-align : center;
+	padding: 5px;
+	position: absolute;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}

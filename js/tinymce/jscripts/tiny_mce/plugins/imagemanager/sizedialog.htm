@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#imagemanager.resize_title}</title>
+	<script language="javascript" type="text/javascript" src="../../tiny_mce_popup.js"></script>	
+	<script language="javascript" type="text/javascript" src="../../utils/form_utils.js"></script>
+	<script language="javascript" type="text/javascript" src="../../utils/validate.js"></script>
+	<script language="javascript" type="text/javascript" src="jscripts/functions.js"></script>
+	<script language="javascript" type="text/javascript" src="/js/jquery/jquery-1.4.1.min.js"></script>
+	<link href="css/imanager.css" rel="stylesheet" type="text/css" />
+	
+	<base target="_self" />
+</head>
+<body id="advimage" style="display: none">
+    <form onsubmit="insertAction();return false;" action="#">		
+		<fieldset>
+				<legend>{#imagemanager.resize_general}</legend>
+
+				<table class="properties">
+					<tr>
+						<td>
+							<input type="radio" name="resize_type" id="orig_size" checked="checked">
+						</td>
+						<td width="100%">
+							<label id="orig_size_lbl" for="orig_size">{#imagemanager.orig_size}</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="radio" name="resize_type" id="panel_size">
+						</td>
+						<td width="100%">
+							<label id="panel_size_lbl" for="panel_size">{#imagemanager.panel_size}</label>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top">
+							<input type="radio" name="resize_type" id="user_size">
+						</td>
+						<td width="100%">
+							<label id="user_size_lbl" for="user_size">{#imagemanager.user_size}</label>
+							<table>
+								<tr>
+									<td><label id="user_size_width_lbl" for="user_size_width">{#imagemanager.size_width}</label></td>
+									<td width="100%"><input type="text" onkeyup="calculateProportions(event)" onfocus="setUserSizesActive(event)" onkeypress="validateIntVals(event)" id="user_size_width" name="user_width" maxlength="4" class="user_sizes">px</td>
+								</tr>
+								<tr>
+									<td><label id="user_size_height_lbl" for="user_size_width">{#imagemanager.size_height}</label></td>
+									<td><input type="text" onkeyup="calculateProportions(event)" onfocus="setUserSizesActive(event)" onkeypress="validateIntVals(event)" id="user_size_height" name="user_height" maxlength="4" class="user_sizes">px</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<table><tr>
+											<td>
+												<input type="checkbox" checked="checked" id="save_proportions" onclick="if (this.checked) calculateProportions(event)">
+											</td>
+											<td width="100%">
+												<label id="save_proportions_lbl" for="save_proportions" >{#imagemanager.save_proportions}</label>
+											</td>
+										</tr></table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+		</fieldset>
+
+		<div class="mceActionPanel">
+			<div style="float: left">
+				<input type="button" id="insert" name="insert" value="{#insert}" onclick="insertAction();" />
+			</div>
+
+			<div style="float: right">
+				<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="cancelAction();" />
+			</div>
+		</div>
+
+    </form>
+</body> 
+</html> 

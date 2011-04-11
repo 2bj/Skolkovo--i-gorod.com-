@@ -1,0 +1,135 @@
+div.popup {
+	background : #fee;
+	border : 1px solid red;
+	width  : 250px;	
+}
+
+div.popup > div {
+	padding : 3px;
+}
+
+div.popup .header {
+	font-weight: bold;
+	background : red;
+	color      : white;
+	padding    : 0 3px 1px;
+}
+
+div.fg_container {
+	margin-top    : 10px;
+	margin-bottom : 10px;
+	width: 70%;
+}
+
+div.fg_container form {
+	margin : 0px;
+}
+
+div.fg_container_header {
+	background:#4D7285;
+	padding: 2px;
+	color  : #fff;
+	text-align: right;
+}
+
+div.locked div.fg_container_header {
+	background: #858585 !important;
+}
+
+div.fg_container_header a {
+	color : #fff;
+}
+
+div.fg_container_body {
+	background  : #eee;
+	padding-top : 10px;
+}
+
+div.group_edit {
+	background : #ffffd4 !important;
+	padding : 5px;	
+}
+
+
+div.fg_container_body span.fg_add_field {
+	margin-left : 10px;
+}
+
+div.group_edit label {
+	margin-top : 0px;
+}
+
+div.group_edit input, div.group_edit select {
+	font-size: 0.9em;
+}
+
+div.group_edit input[type="text"], div.group_edit select {
+	width : 95%;
+	margin-bottom : 5px;
+}
+
+div.group_edit input.ok {
+	font-weight: bold;
+}
+
+
+ul.fg_container {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;		
+		padding-top: 5px;
+		padding-bottom: 5px;		
+		width: 100%;
+}
+ul.fg_container li {
+		border : 1px solid #999;
+		background: #fff;
+		margin: 5px;
+		margin-left : 10px;
+		padding: 5px;
+		font-size: 0.9em;
+		width: 95%;
+}
+
+ul.fg_container li.locked {
+	background: #eee;
+	border : 1px solid #bbb;
+}
+
+.ui-sortable-placeholder { border: 1px dashed #999 !important; background : none !important; visibility: visible !important; width : 70%; height: 95px !important; }
+.ui-sortable-placeholder * { visibility: hidden; }
+ .ui-sortable-field-placeholder { border: 1px dashed #999 !important; background : none !important; visibility: visible !important; width : 70%; height: 15px !important; }
+
+div.view {
+	text-align : right;
+}
+
+span.left {
+	float        : left;
+	margin-right : 5px;
+}
+
+div.edit {
+	background : #ffffd4 !important;
+	border-top : 1px solid #ddd;
+	margin  : 5px -5px -5px;
+	padding : 5px;
+}
+
+div.edit label {
+	margin-top : 0px;
+}
+
+div.edit input, div.edit select {
+	font-size: 1.0em;
+}
+
+div.edit input[type="text"], div.edit select {
+	width : 95%;
+	margin-bottom : 5px;
+}
+
+div.edit input.ok {
+	font-weight: bold;
+}
+

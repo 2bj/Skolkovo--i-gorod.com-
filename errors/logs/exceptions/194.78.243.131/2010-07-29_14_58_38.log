@@ -1,0 +1,122 @@
+[_COOKIE]
+	[__utma]
+	(string) 73111947.2088201285.1272991745.1279557700.1280412227.4
+
+	[__utmz]
+	(string) 73111947.1279557700.3.2.utmcsr=kreml.org|utmccn=(referral)|utmcmd=referral|utmcct=/
+
+	[stat_id]
+	(string) 90dbf6b2b06d0edc64ad0ee1cb729193
+
+	[PHPSESSID]
+	(string) b8b4140a990d11e58f3f3869f95525c1
+
+	[__utmb]
+	(string) 73111947.30.10.1280412227
+
+	[__utmc]
+	(string) 73111947
+
+
+[_SESSION]
+	[user_id]
+	(string) 2373
+
+	[is_admin]
+	(array) ['']
+
+	[old_logged_in_value]
+	(boolean) 
+
+	[stat]
+	(array) ['', '90dbf6b2b06d0edc64ad0ee1cb729193', '55405', '2', '88299', '30', '2040', '1888', '['65', '66', '71']']
+
+	[4f0ac1919a1a999723f5307a32ca8147]
+	(array) ['['content', '', '1']', '['content', '', '16']', '['content', '', '23']']
+
+	[session-crossdomain-sync]
+	(integer) 1
+
+	[cc33fc57e4435bb0f00335b8ca03c9b0]
+	(array) ['['content', '', '4']', '['content', '', '16']', '['content', '', '329']', '['content', '', '23']']
+
+	[ef0ad63858dd9f1238ab762ee60b9a27]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '1218']', '['news', 'item', '1190']', '['news', 'item', '1202']', '['news', 'item', '1128']', '['news', 'item', '1073']', '['news', 'item', '956']', '['news', 'item', '942']', '['news', 'item', '923']', '['news', 'item', '842']', '['news', 'item', '839']', '['content', '', '16']', '['content', '', '23']']
+
+	[0fbad71ff365339aebf6e715544bc957]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '840']', '['news', 'item', '780']', '['news', 'item', '767']', '['news', 'item', '762']', '['news', 'item', '750']', '['news', 'item', '752']', '['news', 'item', '753']', '['news', 'item', '754']', '['news', 'item', '749']', '['news', 'item', '724']', '['content', '', '16']', '['content', '', '23']']
+
+	[9ef9b6d0724ebdf95376f563b74336ac]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '675']', '['news', 'item', '666']', '['news', 'item', '662']', '['news', 'item', '652']', '['news', 'item', '651']', '['news', 'item', '649']', '['news', 'item', '650']', '['news', 'item', '647']', '['news', 'item', '648']', '['news', 'item', '645']', '['content', '', '16']', '['content', '', '23']']
+
+	[f73aaf7ac00aa3834118a975f05b30c3]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '644']', '['news', 'item', '640']', '['news', 'item', '641']', '['news', 'item', '635']', '['news', 'item', '636']', '['news', 'item', '633']', '['news', 'item', '632']', '['news', 'item', '625']', '['news', 'item', '620']', '['news', 'item', '614']', '['content', '', '16']', '['content', '', '23']']
+
+	[307ececdf5557587c4fe41167e0d8db1]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '615']', '['news', 'item', '613']', '['news', 'item', '582']', '['news', 'item', '405']', '['news', 'item', '401']', '['news', 'item', '406']', '['news', 'item', '396']', '['news', 'item', '397']', '['news', 'item', '381']', '['news', 'item', '382']', '['content', '', '16']', '['content', '', '23']']
+
+	[972712f6bb9807add29d40cf41a32435]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '20']', '['content', '', '16']', '['content', '', '23']']
+
+	[5abd2622a1185385b2161b82952b0c4b]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '354']', '['news', 'item', '352']', '['news', 'item', '353']', '['news', 'item', '337']', '['news', 'item', '334']', '['news', 'item', '152']', '['news', 'item', '153']', '['news', 'item', '149']', '['news', 'item', '151']', '['news', 'item', '143']', '['content', '', '16']', '['content', '', '23']']
+
+	[27c00ddb8cf8e4c9767e3b99a8408ecf]
+	(array) ['['news', 'item', '406']', '['content', '', '16']', '['content', '', '23']']
+
+	[d9c2317c38acb13f2edf24413ab53524]
+	(array) ['['news', 'item', '401']', '['content', '', '16']', '['content', '', '23']']
+
+	[a1f08e9dce503bac98f27d69be7ba9fa]
+	(array) ['['news', 'item', '620']', '['content', '', '16']', '['content', '', '23']']
+
+	[0cf35993ddcc9108206865a6f6382539]
+	(array) ['['news', 'item', '625']', '['content', '', '16']', '['content', '', '23']']
+
+	[ba6e38376dd17c7ab2403b91ef651b92]
+	(array) ['['news', 'item', '633']', '['content', '', '16']', '['content', '', '23']']
+
+	[ce265778db14a3ae632f08ffcbc00e56]
+	(array) ['['news', 'item', '635']', '['content', '', '16']', '['content', '', '23']']
+
+	[d49a984edbb736e6c1f1cc4085ca7818]
+	(array) ['['news', 'item', '651']', '['content', '', '16']', '['content', '', '23']']
+
+	[99ee9ac9801530d4e0a12899cb38029d]
+	(array) ['['news', 'item', '652']', '['content', '', '16']', '['content', '', '23']']
+
+	[165938c629fdd152ec40d75b7dce469a]
+	(array) ['['news', 'item', '675']', '['content', '', '16']', '['content', '', '23']']
+
+	[a94895fa764a5cd002268535afe87cf7]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '734']', '['news', 'item', '740']', '['news', 'item', '718']', '['news', 'item', '719']', '['news', 'item', '692']', '['news', 'item', '694']', '['news', 'item', '682']', '['news', 'item', '681']', '['news', 'item', '684']', '['news', 'item', '670']', '['content', '', '16']', '['content', '', '23']']
+
+	[13d16d94206d552fea7f375786851a1a]
+	(array) ['['news', 'item', '681']', '['content', '', '16']', '['content', '', '23']']
+
+	[37eb49db3a49fcc093cdd4cf7d948f16]
+	(array) ['['news', 'item', '682']', '['content', '', '16']', '['content', '', '23']']
+
+	[8567b91118b7fa7d8f62482797e98b51]
+	(array) ['['news', 'item', '719']', '['content', '', '16']', '['content', '', '23']']
+
+	[8e1e2c4ed14f1d43b267d98b44c24a9a]
+	(array) ['['news', 'item', '750']', '['content', '', '16']', '['content', '', '23']']
+
+	[d4a4d0e47fb6299da8ba1a3b8c2c2cf7]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '1218']', '['news', 'item', '1190']', '['news', 'item', '1202']', '['news', 'item', '1128']', '['news', 'item', '1073']', '['news', 'item', '956']', '['news', 'item', '942']', '['news', 'item', '923']', '['news', 'item', '842']', '['news', 'item', '839']', '['content', '', '16']', '['content', '', '23']']
+
+
+[_GET]
+	[path]
+	(string) newslist/20100723001/
+
+
+[0.0105760]	Lock wait timeout exceeded; try restarting transaction in query: INSERT INTO `cms_stat_hits` (`page_id`, `date`, `hour`, `day_of_week`, `week`, `day`, `month`, `year`, `path_id`, `number_in_path`, `prev_page_id`) VALUES
+                 (2040, '2010-07-29 14:57:47', HOUR('2010-07-29 14:57:47'), DATE_FORMAT('2010-07-29 14:57:47', '%w'), WEEK('2010-07-29 14:57:47'), DAY('2010-07-29 14:57:47'), MONTH('2010-07-29 14:57:47'), YEAR('2010-07-29 14:57:47'), 88299, 30, 1888)
+[0.0108559]	#0 /www_servers/utemp/pub/htdocs/libs/lib.php(2): mysqlConnection-&gt;query('INSERT INTO `cm...', false)
+#1 /www_servers/utemp/pub/htdocs/classes/modules/stat/classes/statistic.php(14): l_mysql_query()
+#2 /www_servers/utemp/pub/htdocs/classes/modules/stat/class.php(2): statistic-&gt;run('INSERT INTO `cm...')
+#3 /www_servers/utemp/pub/htdocs/libs/root-src/index.php(2): stat-&gt;pushStat()
+#4 /www_servers/utemp/pub/htdocs/index.php(2): require('/www_servers/ut...')
+#5 {main}

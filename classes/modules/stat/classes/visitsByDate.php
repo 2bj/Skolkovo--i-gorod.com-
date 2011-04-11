@@ -1,0 +1,4 @@
+<?php
+class visitsByDate extends simpleStat{public function get()    {$va181a603769c1f98ad927e7367c7aa51 = $this->simpleQuery("SELECT SQL_CALC_FOUND_ROWS DISTINCT(`user_id`) FROM `cms_stat_paths`
+                                     WHERE `date` BETWEEN '" . $this->formatDate(strtotime('-1 day', $this->finish)) . "' AND '" . $this->formatDate($this->finish) . $this->getUserFilterWhere('p') . "'
+                                       ORDER BY `date` DESC LIMIT " . $this->offset . ", " . $this->limit);$v9b207167e5381c47682c6b4f58a623fb = $this->simpleQuery('SELECT FOUND_ROWS() as `total`');$v8016fd3f91b68b651801a7c279f41ea4 = (int) $v9b207167e5381c47682c6b4f58a623fb[0]['total'];return array("all"=>$va181a603769c1f98ad927e7367c7aa51, "total"=>$v8016fd3f91b68b651801a7c279f41ea4);}}?>

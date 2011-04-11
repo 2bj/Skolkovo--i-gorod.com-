@@ -1,0 +1,2 @@
+<?php
+ interface iPagenum {public static function generateNumPage($vfbb44b4487415b134bce9c790a27fe5e, $v9d85c254b5062e518a134a61950999c3, $v66f6181bcb4cff4cd38fbc804a036db6 = "default", $v51746fc9cfaaf892e94c2d56d7508b37 = "p");public static function generateOrderBy($v972bf3f05d14ffbdb817bef60638ff00, $v94757cae63fd3e398c0811a976dd6bbe, $v66f6181bcb4cff4cd38fbc804a036db6 = "default");}?>

@@ -1,0 +1,68 @@
+[_COOKIE]
+	[stat_id]
+	(string) 890f7851ed5b2f71ae50a05435143a8d
+
+	[PHPSESSID]
+	(string) f14f66c3dbb61c45f39e0133f5da80bc
+
+	[umi_captcha]
+	(string) e49feddf8e1b38d230892d2ef34ea9d4
+
+	[__utma]
+	(string) 73111947.1697987174.1273164224.1275559009.1276043999.9
+
+	[__utmz]
+	(string) 73111947.1273164343.1.2.utmcsr=yandex|utmccn=(organic)|utmcmd=organic|utmctr=Сколково конкурс
+
+	[__utmb]
+	(string) 73111947.2.10.1276043999
+
+	[__utmc]
+	(string) 73111947
+
+
+[_SESSION]
+	[user_id]
+	(string) 2373
+
+	[is_admin]
+	(array) ['']
+
+	[old_logged_in_value]
+	(boolean) 
+
+	[stat]
+	(array) ['', '890f7851ed5b2f71ae50a05435143a8d', '5416', '2', '23154', '2', '750', '750']
+
+	[4f0ac1919a1a999723f5307a32ca8147]
+	(array) ['['content', '', '1']', '['content', '', '16']', '['content', '', '23']']
+
+	[session-crossdomain-sync]
+	(integer) 1
+
+	[2f2292bb47632265931540b61f7bafd8]
+	(array) ['['content', '', '50']', '['content', '', '370']', '['content', '', '16']', '['content', '', '23']']
+
+	[umi_captcha]
+	(string) e49feddf8e1b38d230892d2ef34ea9d4
+
+	[umi_captcha_plain]
+	(string) zvhhtw
+
+	[errors_1276045721]
+	(array) ['['Вы ввели неверный код с картинки', '', '']']
+
+
+[_GET]
+	[path]
+	(string) webforms/send/
+
+
+[0.0013590]	Can't find error redirect string
+[0.0016382]	#0 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2): def_module-&gt;errorPanic()
+#1 /www_servers/utemp/pub/htdocs/classes/modules/webforms/class.php(2): def_module-&gt;errorNewMessage('%errors_wrong_c...')
+#2 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2): webforms-&gt;send()
+#3 /www_servers/utemp/pub/htdocs/libs/def_macroses.php(2): def_module-&gt;cms_callMethod('send', NULL)
+#4 /www_servers/utemp/pub/htdocs/libs/root-src/index.php(2): macros_content()
+#5 /www_servers/utemp/pub/htdocs/index.php(2): require('/www_servers/ut...')
+#6 {main}

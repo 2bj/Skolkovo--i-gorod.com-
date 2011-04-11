@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+	<ShortName>Search on UMI.CMS</ShortName>
+	<Description>Search on UMI.CMS</Description>
+	<Image height="16" width="16" type="image/x-icon">/favicon.ico</Image>
+	<Url type="text/html" method="get"
+		template="http://baleba.phoenix.umisoft.ru/search/search_do/?search_string={searchTerms}"
+	/>
+
+	<Url type="application/x-suggestions+json" method="get"
+		template="http://baleba.phoenix.umisoft.ru/OnlineSearch?q={searchTerms}"
+	/>
+</OpenSearchDescription>

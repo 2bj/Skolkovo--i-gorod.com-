@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry id="error_occured">Произошла ошибка</entry>
+	<entry id="information">Информация</entry>
+	<entry id="cant_recieve">Невозможно получить данные</entry>
+	<entry id="no_source">Источник данных не определен</entry>
+	<entry id="no_info">Информация по отчету за данный период отсутствует</entry>
+	
+	<entry id="copy_to_clipboard">Скопировать в буфер обмена</entry>
+	
+	<entry id="average_per_period">Среднее по периоду</entry>
+	
+	<entry id="help_link">Этим значком обозначается строка-ссылка. Двойной щелчок по ней позволяет просмотреть детализованую информацию</entry>
+	
+	<entry id="january">Январь</entry>
+	<entry id="february">Ферваль</entry>
+	<entry id="march">Март</entry>
+	<entry id="april">Апрель</entry>
+	<entry id="may">Май</entry>
+	<entry id="june">Июнь</entry>
+	<entry id="july">Июль</entry>
+	<entry id="august">Август</entry>
+	<entry id="september">Сентябрь</entry>
+	<entry id="october">Октябрь</entry>
+	<entry id="november">Ноябрь</entry>
+	<entry id="december">Декабрь</entry>
+	
+</language>

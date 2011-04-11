@@ -1,0 +1,40 @@
+[_COOKIE]
+	[stat_id]
+	(string) d8e9f77248b7fbd1697b23602bed10de
+
+	[__utmz]
+	(string) 73111947.1280278363.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=idea@i-gorod.com
+
+	[__utma]
+	(string) 73111947.23611189.1280278363.1280403726.1280405243.12
+
+
+[_SESSION]
+	[user_id]
+	(string) 2373
+
+	[is_admin]
+	(array) ['']
+
+	[old_logged_in_value]
+	(boolean) 
+
+	[stat]
+	(array) ['2', '['66', '131']', '', 'd8e9f77248b7fbd1697b23602bed10de', '60158']
+
+
+[_GET]
+	[path]
+	(string) blog/20100625-zakon/
+
+	[p]
+	(string) 4
+
+
+[0.0007241]	Lock wait timeout exceeded; try restarting transaction in query: INSERT INTO `cms_stat_paths` (`user_id`, `date`, `host_id`, `source_id`) VALUES (60158, '2010-07-29 14:48:06', 2, 0)
+[0.0014980]	#0 /www_servers/utemp/pub/htdocs/libs/lib.php(2): mysqlConnection-&gt;query('INSERT INTO `cm...', false)
+#1 /www_servers/utemp/pub/htdocs/classes/modules/stat/classes/statistic.php(12): l_mysql_query()
+#2 /www_servers/utemp/pub/htdocs/classes/modules/stat/class.php(2): statistic-&gt;run('INSERT INTO `cm...')
+#3 /www_servers/utemp/pub/htdocs/libs/root-src/index.php(2): stat-&gt;pushStat()
+#4 /www_servers/utemp/pub/htdocs/index.php(2): require('/www_servers/ut...')
+#5 {main}

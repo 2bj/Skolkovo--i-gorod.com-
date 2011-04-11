@@ -1,0 +1,8 @@
+<?php
+class auditoryVolumeGrowth extends simpleStat{private $groupby;protected $interval = '-1 year';public function get() {$this->groupby = $this->calcGroupby($this->start, $this->finish);$v36f75e2036c54462c47b965f4a581cff = "SELECT COUNT(*) AS `cnt`, UNIX_TIMESTAMP(`h`.`date`) AS `ts`, `h`.`" . $this->groupby . "` AS `period` FROM `cms_stat_paths` `p`
+                 INNER JOIN `cms_stat_hits` `h` ON `h`.`path_id` = `p`.`id` AND `h`.`number_in_path` = 1
+                  INNER JOIN `cms_stat_users` `u` ON `u`.`id` = `p`.`user_id` AND `u`.`first_visit` = `h`.`date`
+                   INNER JOIN `cms_stat_pages` `pg` ON `h`.`page_id` = `pg`.`id`
+                    WHERE `h`.`date` BETWEEN " . $this->getQueryInterval() . " " . $this->getHostSQL("pg") .$this->getUserFilterWhere('p') . "
+                     GROUP BY `h`.`" . $this->groupby . "`
+                      ORDER BY `h`.`date` ASC";$result = $this->simpleQuery($v36f75e2036c54462c47b965f4a581cff);return array('detail' => $result, 'groupby' => $this->groupby);}private function calcGroupby($vea2b2676c28c0db26d39331a336c6b92, $v3248bc7547ce97b2a197b2a06cf7283d) {$v480b0ab43f368eb46e331029cacb5d1e = ceil(($v3248bc7547ce97b2a197b2a06cf7283d - $vea2b2676c28c0db26d39331a336c6b92) / (3600 * 24));if ($v480b0ab43f368eb46e331029cacb5d1e > 30) {return 'week';}elseif ($v480b0ab43f368eb46e331029cacb5d1e > 7) {return 'day';}return 'hour';}}?>

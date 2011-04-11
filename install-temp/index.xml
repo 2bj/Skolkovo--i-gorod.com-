@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component xmlns:php="http://php.net/xsl" name="demoblank" type="site" update-status="done">
+  <meta>
+		<author>
+			<company>umisoft</company>
+			<e-mail>incoming@umisoft.ru</e-mail>
+			<site>www.umi-cms.ru</site>
+		</author>
+		
+		<description>
+			<short>Демо сайт demoblank</short>
+			
+			<full>
+				Тестовый демо-сайт demoblank для систем lite
+			</full>
+		</description>
+		
+		<tags>
+			<tag>core</tag>
+			<tag>cms</tag>
+			<tag>data</tag>
+			<tag>driver</tag>
+		</tags>
+	</meta>
+  <database-image>
+    <regedit/>
+    <hierarchy-types>
+      <hierarchy-type title="Страницы контента" module="content" method="" status="no-changes" update-status="done"/>
+    </hierarchy-types>
+    <object-types/>
+    <objects/>
+    <pages>
+    <page name="Пустая страница" type-index="44" active="active" default="default" status="new">
+      <link>/pustaya_stranica/</link>
+      <template title="Внутренние страницы" default="default">inner.tpl</template>
+      <basetype module="content"/>
+      <property name="h1" temp="string">
+        <value>Пустая страница</value>
+      </property>
+      <property name="content" temp="wysiwyg">
+        <value>Пустая страница</value>
+      </property>
+      <property name="publish_status" temp="relation">
+        <object>Опубликован</object>
+      </property>
+    </page>
+  </pages>
+  </database-image>
+  <files>
+  <folder update-status="done">tpls</folder>
+  <file update-status="done">tpls/inner.tpl</file>
+</files>
+</component>

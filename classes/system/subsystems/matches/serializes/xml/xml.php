@@ -1,0 +1,2 @@
+<?php
+ class xmlSerialize extends baseSerialize {public function execute($v58309fbfe87fa90ec9f4b9d78ead9d77, $v21ffce5b8a6cc8cc6a41448dd69623c9) {$v7f2db423a49b305459147332fb01cf87 = outputBuffer::current();$v7f2db423a49b305459147332fb01cf87->clear();$v7f2db423a49b305459147332fb01cf87->charset('utf-8');$v7f2db423a49b305459147332fb01cf87->contentType('text/xml');$this->sendHTTPHeaders($v21ffce5b8a6cc8cc6a41448dd69623c9);$v7f2db423a49b305459147332fb01cf87->push($v58309fbfe87fa90ec9f4b9d78ead9d77);$v7f2db423a49b305459147332fb01cf87->end();}}?>

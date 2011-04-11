@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Создание ссылки</title>
+		<link type="text/css" rel="stylesheet" href="/styles/skins/_eip/css/popup_page.css" />
+		<script src="/js/jquery/jquery-1.4.1.min.js"></script>
+		<script type="text/javascript" src="/js/jquery/jquery.umipopups.js" charset="utf-8"></script>
+
+		<script language="JavaScript" type="text/javascript">
+		<!--
+			function getArgs() {
+				var args = new Object();
+				var query = location.search.substring(1);
+				var pairs = query.split("&");
+				for(var i = 0; i < pairs.length; i++) {
+					var pos = pairs[i].indexOf('=');
+					if (pos == -1) continue;
+					var argname   = pairs[i].substring(0,pos);
+					var value     = pairs[i].substring(pos+1);
+					args[argname] = unescape(value);
+				}
+				return args;
+			}
+
+			function cancelChooisng() {
+				window.parent.$.closePopupLayer('CreateLink');
+			}
+
+			function applyChoosing() {
+				var url = jQuery('#url').attr('value');
+				window.parent.$.closePopupLayer('CreateLink', url);
+			}
+
+			function showTree() {
+				var _self = document;
+				window.parent.setEIPLinkValue = function(id, name, link) {
+													_self.getElementById("url").value = link;
+													window.parent.$.closePopupLayer("Sitetree");
+												};
+				window.parent.$.openPopupLayer({
+					name   : "Sitetree",
+					title  : "Выбор страницы",
+					width  : 620,
+					height : 340,
+					url    : "/styles/common/js/tree.html?callback=setEIPLinkValue"
+				});
+			}
+
+			jQuery(document).ready(function () {
+				var args = getArgs();
+				if(typeof args['url'] != 'undefined') {
+					jQuery('#url').attr('value', args['url']);
+				}
+
+				jQuery('#cancel').click(function () {
+					cancelChooisng();
+				});
+
+				jQuery('#apply').click(function () {
+					applyChoosing();
+				});
+
+				jQuery('#tree').click(function() {
+					showTree();
+				});
+			});
+// -->
+		</script>
+	</head>
+	<body class="eip_win">
+		<div class="popupText">
+			<label for="url">Введите адрес:</label>
+			<input type="text" name="url" id="url" size="45" />
+			<!--input type="button" name="tree" id="tree" value="╘" /-->
+			<img src="/images/cms/admin/mac/tree.png" name="tree" id="tree" alt="Выбрать страницу из структуры" title="Выбрать страницу из структуры" class="treeButton" />
+		</div>
+
+		<div class="eip_buttons">
+			<input type="button" value="Отменить" id="cancel" class="back" />
+			<input type="button" value="Сохранить" id="apply" class="primary ok" />
+		</div>
+	</body>
+</html>

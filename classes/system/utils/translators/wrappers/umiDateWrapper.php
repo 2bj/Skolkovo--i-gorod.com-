@@ -1,0 +1,2 @@
+<?php
+ class umiDateWrapper extends translatorWrapper {public function translate($v8d777f385d3dfec8815d20f7496026dc) {return $this->translateData($v8d777f385d3dfec8815d20f7496026dc);}protected function translateData(iUmiDate $v5fc732311905cb27e82d67f4f6511f7f) {return array(    'attribute:unix-timestamp' => $v5fc732311905cb27e82d67f4f6511f7f->getFormattedDate('U'),    'attribute:rfc'    => $v5fc732311905cb27e82d67f4f6511f7f->getFormattedDate('r'),    'node:std'     => $v5fc732311905cb27e82d67f4f6511f7f->getFormattedDate()   );}};?>

@@ -1,0 +1,2 @@
+<?php
+ interface iUmiImportSplitter {public function __construct($v599dcce2998a6b40b1e38e8c6006cb0a);static public function get($v6f66e878c62db60568a3487869695820);public function load($v97fd815a3803a0588876bdd862014fed, $v471827d86551eb9b51f054d563c85636 = 100, $v7a86c157ee9713c34fbd7a1ee40f0c5a = 0);public function translate(DomDocument $v9a09b4dfda82e3e665e31092d1c3ec8d);public function getXML();public function getDocument();public function getOffset();}?>

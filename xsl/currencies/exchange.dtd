@@ -1,0 +1,5 @@
+<!ELEMENT Exchange       (Exchange_Rates)*>
+<!ELEMENT Exchange_Rates (Home_Country, New_Country,Rate)>
+<!ELEMENT Home_Country   (#PCDATA)>
+<!ELEMENT New_Country    (#PCDATA)>
+<!ELEMENT Rate           (#PCDATA)>

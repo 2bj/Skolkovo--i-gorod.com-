@@ -1,0 +1,284 @@
+/* Main CSS */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td		{
+	padding:0px 0px 0px 0px; 
+	margin:0px 0px 0px 0px;
+}
+
+html	{
+	height:100%
+}
+
+body 	{
+	text-align:center
+}
+
+table 	{
+	border-collapse:collapse; 
+	border:0px; 
+	width:100%;
+	padding:0;
+}
+
+a, object {
+	outline:none;
+}
+
+td 		{
+	vertical-align:top;
+	text-align:left;
+}
+
+th 		{
+	text-align:left; 
+	vertical-align:top
+}
+
+img		{
+	border:none
+}
+
+h1 		{
+	font-size:130%
+}
+h2 		{
+	font-size:120%
+}
+h3 		{
+	font-size:110%
+}
+h4		{
+	font-size:110%
+}
+
+p		{
+	padding:0px 0px 10px 0px;
+}
+
+textarea .inputbox {
+	width:300px; 
+	height:100px; 
+	margin:0px 0px 5px 0px;
+}
+
+select	{
+	height:auto; 
+	margin:0px 0px 2px 0px; 
+	vertical-align:middle
+}
+
+ul {
+	list-style:disc;
+	margin:0px 0px 0px 15px;
+}
+ol {
+	margin:0px 0px 0px 15px;
+}
+
+.width	{
+	width:100%
+}
+.main	{
+	margin:auto; 
+	text-align:left
+}
+.clearfix:after {content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+/* End Main CSS */
+
+/* BODY */
+
+body, td, th, div, p, label, input {
+	color:#6a6a6a;
+	font:normal 12px/17px Arial, Helvetica, sans-serif;
+}
+input, select, #contact_text {
+	color:#737373;
+	font-family:Arial, Helvetica, sans-serif;	
+	
+}
+a{color:#000;   }
+a:hover {
+	color:#000;
+	text-decoration:none;
+	
+}
+a:hover {text-decoration:none}
+a, button, .button{ cursor:pointer;}
+
+/* END BODY */
+
+/* STRUCTURE */
+
+#body { background:#fff !important}
+.main 	{
+	position:relative;
+	margin:0 auto;
+	padding:0 0 0 0;
+}
+.header {
+	position:relative;
+	height:156px;
+	width:940px;
+	margin:0 auto
+}
+.wrapper {
+	width:940px;
+	margin:0 auto;
+	position:relative
+}
+.main_title {
+	font-size:21px;
+	color:#2b2b2b;
+	text-transform:uppercase;
+	margin-left:-5px !important;
+}
+.componentheading {
+	font-size:29px;
+	color:#2b2b2b;
+	text-transform:uppercase;
+}
+.boxTitle h3 {
+	font-size:21px;
+	color:#2b2b2b;
+	text-transform:uppercase;
+	margin-bottom:16px;
+}
+
+/* END STRUCTURE */
+
+/* HEADER */
+
+.clear{ width:100%; overflow:hidden;}
+.clear1{ clear:both;}
+.br{ display:block;}
+.fright{ float:right !important;}
+.fleft{ float:left;}
+
+.row-header{ height:394px;}
+.row-header .fleft{ width:457px;}
+.row-header .fright{ width:358px;}
+
+.row-flash{ margin:0 0 5px 0;
+ width:100%;
+ text-align:center;
+ height:382px;
+ background:#eff1f4 !important
+ }
+.row-flash div { 
+	width:940px;
+	margin:0 auto;
+	overflow:hidden
+ }
+
+#logo{ display:block; margin:38px 0 0 0; position:absolute; }
+#logo a{ display:block; position:relative; cursor:pointer;}
+
+.boxIndent .menu {
+	margin-left:25px !important	
+}
+
+/* END HEADER */
+
+/* MAIN MENU */
+
+.top_menu {
+	background:url(/images/menu_bg.gif) 0 0 repeat-x;	
+	height:39px;
+	position:absolute;
+	width:100%;
+	margin:111px 0 0 0;
+	overflow:hidden
+}
+.top_menu ul {
+	list-style:none;
+	padding-top:7px;
+	margin:0 !important;
+	
+	
+}
+.top_menu ul li {
+	float:left;
+	margin-right:22px;
+	padding:4px 0 4px 22px;
+	background:url(/images/dot_menu.gif)  repeat-y 0% 0%;
+	margin-left:-1px !important;
+}
+.top_menu ul li a{
+	font-size:13px;
+	text-transform:uppercase;
+	color:#fff;
+	font-weight:bold;
+	text-decoration:none;
+}
+.top_menu ul li a:hover, #active_menu-nav{
+	color:#fc6900;
+}
+
+/* END MAIN MENU */
+
+/* SEARCH */
+
+.search{ 
+	margin:0 0 0 0;
+	position:absolute;
+	right:0;
+	top:51px;
+	/*background:url(/images/search_bg_.gif) no-repeat 100% 0%;*/
+	width:316px;
+	height:32px;
+}
+.search .search-input{ width:234px; float:left;}
+.search .search-button{   padding:0 0 0 0; float:left; width:75px; }
+.search .inputbox	{
+	background:none;
+	border:none;
+	color:#000000;
+	line-height:15px;
+	padding:3px 0 3px 5px !important;
+	width:217px;
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:capitalize;
+	margin-top:4px;
+}
+.search .button	{ width:82px; height:28px;  padding:0; background:none; border:0; text-indent:-1000px}
+.search .button:hover{ text-decoration:underline;}
+span.count{  color:#105183; font-size:15px; font-weight:bold;}
+
+/* END SEARCH */
+
+/* BLOCK1 */
+.block1 {
+	float:left;
+	width:257px;
+	padding:25px 26px 20px 30px;
+	color:#fff;
+}
+.block1 p{
+	color:#fff
+}
+.block1 h3 {
+	font-size:30px;
+	color:#fff;
+	text-transform:uppercase;
+	margin-bottom:5px;
+}
+.s1 {
+	background:#a8ce1f url(../images/s1_bg.gif) repeat-x 0% 100%;
+}
+.s2 {
+	background:#ffce1a url(../images/s2_bg.gif) repeat-x 0% 100%;
+}
+.s3 {
+	background:#fd9900 url(../images/s3_bg.gif) repeat-x 0% 100%;
+}
+/* END BLOCK1 */

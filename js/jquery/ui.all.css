@@ -1,0 +1,8 @@
+@import "ui.base.css";
+@import "ui.theme.css";
+@import "ui.datepicker.css";
+@import "jquery.jgrowl.css";
+
+.ui-datepicker {
+	font-size: 62.5%;
+}

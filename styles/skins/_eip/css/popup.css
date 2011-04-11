@@ -1,0 +1,28 @@
+.popupHeader {
+	height           : 20px;
+	background-color : #000;
+	padding-left     : 10px;
+	padding-right    : 10px;
+}
+
+.popupTitle {
+	vertical-align : middle;
+	font-weight    : bold;
+	color          : #fff;
+}
+
+.popupClose {
+	float : right;
+}
+
+.popupClose a {
+	text-decoration : none;
+	color           : #8acced;
+	
+}
+
+.popupBody {
+	background-color : #fff;
+	padding : 0;
+}
+

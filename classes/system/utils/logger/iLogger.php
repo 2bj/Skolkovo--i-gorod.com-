@@ -1,0 +1,2 @@
+<?php
+ interface iUmiLogger {public function __construct($vd3326835044515b68dab0a9dc8eec976 = "./logs/");public function pushGlobalEnviroment();public function push($vf664237e19ad7e814700e688b6016d6c, $v7474e980a35c8d389fd3a8f1991c0352 = true);public function log();public function save();public function get();};?>

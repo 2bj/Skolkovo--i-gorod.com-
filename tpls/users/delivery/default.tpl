@@ -1,0 +1,5 @@
+<?php
+
+$FORMS = Array();
+
+?>

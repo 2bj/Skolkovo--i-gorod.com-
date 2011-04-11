@@ -1,0 +1,32 @@
+/*-------------------------------------mainmenu---*/
+.top_menu {
+	background:url(/images/menu_bg.gif) 0 0 repeat-x;
+	height:39px;
+	position:absolute;
+	width:100%;
+	margin:111px 0 0 0;
+	overflow:hidden
+}
+.top_menu ul {
+	list-style:none;
+	padding-top:7px;
+	margin:0 !important;
+}
+.top_menu ul li {
+	float:left;
+	margin-right:20px;
+	padding:4px 0 4px 19px;
+	background:url(/images/dot_menu.gif)  repeat-y 0% 0%;
+	margin-left:-1px !important;
+}
+.top_menu ul li a{
+	font-size:13px;
+	text-transform:uppercase;
+	color:#fff;
+	font-weight:bold;
+	text-decoration:none;
+}
+.top_menu ul li a:hover, #active_menu-nav{
+	color:#fc6900;
+}
+

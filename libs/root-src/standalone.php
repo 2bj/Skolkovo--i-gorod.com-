@@ -1,0 +1,2 @@
+<?php
+ require CURRENT_WORKING_DIR . '/libs/config.php';if(defined("CLUSTER_CACHE_CORRECTION") && CLUSTER_CACHE_CORRECTION) {cacheFrontend::getInstance();clusterCacheSync::getInstance();}function run_standalone($v854203cccade0bbe21be239a208aea49) {return cmsController::getInstance()->getModule($v854203cccade0bbe21be239a208aea49);}?>

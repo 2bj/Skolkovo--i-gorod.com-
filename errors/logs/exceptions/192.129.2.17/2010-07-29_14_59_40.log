@@ -1,0 +1,37 @@
+[_COOKIE]
+	[__utma]
+	(string) 73111947.1427388294.1273510541.1273510541.1277482393.2
+
+	[__utmz]
+	(string) 73111947.1277482393.2.2.utmcsr=yandex|utmccn=(organic)|utmcmd=organic|utmctr=сколково вакансии
+
+	[stat_id]
+	(string) ad0fcccee8456475038e17c82a4bfe8c
+
+
+[_SESSION]
+	[user_id]
+	(string) 2373
+
+	[is_admin]
+	(array) ['']
+
+	[old_logged_in_value]
+	(boolean) 
+
+	[stat]
+	(array) ['', 'ad0fcccee8456475038e17c82a4bfe8c', '28271', '2']
+
+
+[_GET]
+	[path]
+	(string) 
+
+
+[0.0006661]	Lock wait timeout exceeded; try restarting transaction in query: INSERT INTO `cms_stat_paths` (`user_id`, `date`, `host_id`, `source_id`) VALUES (28271, '2010-07-29 14:58:49', 2, 191)
+[0.0008790]	#0 /www_servers/utemp/pub/htdocs/libs/lib.php(2): mysqlConnection-&gt;query('INSERT INTO `cm...', false)
+#1 /www_servers/utemp/pub/htdocs/classes/modules/stat/classes/statistic.php(12): l_mysql_query()
+#2 /www_servers/utemp/pub/htdocs/classes/modules/stat/class.php(2): statistic-&gt;run('INSERT INTO `cm...')
+#3 /www_servers/utemp/pub/htdocs/libs/root-src/index.php(2): stat-&gt;pushStat()
+#4 /www_servers/utemp/pub/htdocs/index.php(2): require('/www_servers/ut...')
+#5 {main}

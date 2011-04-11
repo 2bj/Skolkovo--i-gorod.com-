@@ -1,0 +1,62 @@
+[_COOKIE]
+	[stat_id]
+	(string) e9b7dfc47871bb5bb883cb3b3e69b275
+
+	[__utma]
+	(string) 73111947.976500062.1276362155.1280398612.1280412723.28
+
+	[__utmz]
+	(string) 73111947.1280323252.26.3.utmcsr=gosbook.ru|utmccn=(referral)|utmcmd=referral|utmcct=/node/5352
+
+	[PHPSESSID]
+	(string) 3e1eec087e3e5ae9173e9b6512b70695
+
+	[__utmc]
+	(string) 73111947
+
+
+[_SESSION]
+	[user_id]
+	(string) 2373
+
+	[is_admin]
+	(array) ['']
+
+	[old_logged_in_value]
+	(boolean) 
+
+	[stat]
+	(array) ['', 'e9b7dfc47871bb5bb883cb3b3e69b275', '16662', '2', '88307', '5', '2016', '2042', '['66', '131']']
+
+	[4f0ac1919a1a999723f5307a32ca8147]
+	(array) ['['content', '', '1']', '['content', '', '16']', '['content', '', '23']']
+
+	[session-crossdomain-sync]
+	(integer) 1
+
+	[f2b94f1b70e566c4e50f07bfce1fc41f]
+	(array) ['['content', '', '16']', '['content', '', '23']']
+
+	[83733268e0d6523dba7a972bfd8bfcc1]
+	(array) ['['content', '', '16']', '['content', '', '23']']
+
+	[99e50a383bca7d53b8073a3ba44a4342]
+	(array) ['['content', '', '16']', '['content', '', '23']']
+
+
+[_GET]
+	[path]
+	(string) blog/20100625-zakon/
+
+	[p]
+	(string) 3
+
+
+[0.0014799]	Lock wait timeout exceeded; try restarting transaction in query: INSERT INTO `cms_stat_hits` (`page_id`, `date`, `hour`, `day_of_week`, `week`, `day`, `month`, `year`, `path_id`, `number_in_path`, `prev_page_id`) VALUES
+                 (2016, '2010-07-29 14:54:35', HOUR('2010-07-29 14:54:35'), DATE_FORMAT('2010-07-29 14:54:35', '%w'), WEEK('2010-07-29 14:54:35'), DAY('2010-07-29 14:54:35'), MONTH('2010-07-29 14:54:35'), YEAR('2010-07-29 14:54:35'), 88307, 5, 2042)
+[0.0017049]	#0 /www_servers/utemp/pub/htdocs/libs/lib.php(2): mysqlConnection-&gt;query('INSERT INTO `cm...', false)
+#1 /www_servers/utemp/pub/htdocs/classes/modules/stat/classes/statistic.php(14): l_mysql_query()
+#2 /www_servers/utemp/pub/htdocs/classes/modules/stat/class.php(2): statistic-&gt;run('INSERT INTO `cm...')
+#3 /www_servers/utemp/pub/htdocs/libs/root-src/index.php(2): stat-&gt;pushStat()
+#4 /www_servers/utemp/pub/htdocs/index.php(2): require('/www_servers/ut...')
+#5 {main}

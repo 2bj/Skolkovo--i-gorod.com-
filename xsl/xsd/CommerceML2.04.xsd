@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml:schema xmlns:cml="http://www.w3.org/2001/XMLSchema" version="2.04">
+	<!--Предусматривается использование данной схемы, в частности, для обмена:
+·	каталогами товаров; 
+·	коммерческими предложениями (прайс – листами); 
+·	документами, сопровождающими наиболее распространенные торговые (хозяйственные) операции :
+Заказ товара;
+Cчет на оплату;
+Отпуск товара;
+Счет-фактура;
+Возврат товара;
+Передача товара на комиссию;
+Возврат комиссионного товара;
+Отчет о продажах комиссионного товара;
+Выплата наличных денег;
+Возврат наличных денег;
+Выплата безналичных денег;
+Возврат безналичных денег.
+-->
+	<!--Описание составных типов-->
+	<cml:complexType name="Адрес">
+		<cml:annotation>
+			<cml:documentation>Служит для  представления адреса контрагента или любого другого участника бизнес-процесса</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Представление" type="НаименованиеТип">
+				<cml:annotation>
+					<cml:documentation>Строковое представление адреса. Например: Москва,  ул. Селезневская, д.21</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Комментарий" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Произвольный комментарий. Например, указание, как проехать на автомобиле</cml:documentation>
+				</cml:annotation>
+				<cml:simpleType>
+					<cml:restriction base="КомментарийТип"/>
+				</cml:simpleType>
+			</cml:element>
+			<cml:element name="АдресноеПоле" minOccurs="0" maxOccurs="10">
+				<cml:annotation>
+					<cml:documentation>Позволяет четко структурировать адрес и затем, например, производить отбор сущностей по региону, городу и т.п.</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Тип" type="АдресТип">
+							<cml:annotation>
+								<cml:documentation>Возможные значения: Почтовый индекс, Страна, Регион, Район, Населенный пункт, Город, Улица, Дом, Корпус, Квартира</cml:documentation>
+							</cml:annotation>
+						</cml:element>
+						<cml:element name="Значение" type="СтрокаТип"/>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="Банк">
+		<cml:annotation>
+			<cml:documentation>Служит для определения реквизитов КО или УБР (БИК, Наименование, Адрес и т.д.) через которые клиент осуществляет расчеты</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="СчетКорреспондентский" type="СчетНомерТип" minOccurs="0"/>
+			<cml:element name="Наименование" type="НаименованиеТип" minOccurs="0"/>
+			<cml:element name="Адрес" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Адрес (юридический) банка.</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:complexContent>
+						<cml:extension base="Адрес"/>
+					</cml:complexContent>
+				</cml:complexType>
+			</cml:element>
+			<cml:element name="Контакты" type="КонтактнаяИнформация" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Содержит описание возможных способов связи (по телефону, электронной почте и т.д.)</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:sequence>
+				<cml:choice>
+					<cml:element name="БИК" type="БИКТип">
+						<cml:annotation>
+							<cml:documentation>Банковский идентификационный код (БИК) в соответствии со "Справочником БИК РФ" </cml:documentation>
+						</cml:annotation>
+					</cml:element>
+					<cml:element name="SWIFT" type="cml:string">
+						<cml:annotation>
+							<cml:documentation>Код Swift</cml:documentation>
+						</cml:annotation>
+					</cml:element>
+				</cml:choice>
+			</cml:sequence>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="Группа">
+		<cml:annotation>
+			<cml:documentation>Описывает группу товаров в каталоге </cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Ид" type="ИдентфикаторГлобальныйТип">
+				<cml:annotation>
+					<cml:documentation>Идентификатор группы товаров в классификаторе</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Наименование" type="КомментарийТип">
+				<cml:annotation>
+					<cml:documentation>Наименование группы товаров</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Описание" type="КомментарийТип" minOccurs="0"/>
+			<cml:element name="Свойства" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Содержит коллекцию свойств, значения которых можно или нужно указать для товаров, принадлежащих данной группе, в каталоге, пакете предложений, документах</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Свойство" type="Свойство" maxOccurs="unbounded"/>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+			<cml:element name="Группы" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Содержит описание вложенных групп товаров</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Группа" type="Группа" maxOccurs="unbounded"/>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="ДопРасход">
+		<cml:annotation>
+			<cml:documentation>Дополнительный расход по номенклатурной позиции и/или по документу в целом (например, транспортировка, тара и т.п.)</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Наименование" type="НаименованиеТип"/>
+			<cml:element name="Сумма" type="СуммаТип"/>
+			<cml:element name="Процент" type="КоэффициентТип" minOccurs="0"/>
+			<cml:element name="УчтеноВСумме" type="ПереключательТип" minOccurs="0"/>
+			<cml:element name="Комментарий" type="КомментарийТип" minOccurs="0"/>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="ЗначениеРеквизита">
+		<cml:annotation>
+			<cml:documentation>Определяет значение поризвольного реквизита документа</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Наименование" type="НаименованиеТип"/>
+			<cml:element name="Значение" type="ЗначениеТип" maxOccurs="unbounded"/>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="ЗначенияСвойства">
+		<cml:annotation>
+			<cml:documentation>Определяет значения свойств номенклатурной позиции в каталоге, пакете предложений, документе</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Ид" type="ИдентфикаторГлобальныйТип">
+				<cml:annotation>
+					<cml:documentation>Идентификатор свойства в классификаторе товаров</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Наименование" type="НаименованиеТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Наименование свойства</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Значение" type="ЗначениеТип" maxOccurs="unbounded"/>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="КонтактнаяИнформация">
+		<cml:annotation>
+			<cml:documentation>Содержит описание возможных способов связи (по телефону, электронной почте и т.д.)</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Контакт" maxOccurs="unbounded">
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Тип" type="КонтактТип">
+							<cml:annotation>
+								<cml:documentation>Возможные значения: ТелефонВнутренний, ТелефонРабочий, ТелефонМобильный, ТелефонДомашний, Пейджер, Факс, Почта, ICQ, ВебСайт</cml:documentation>
+							</cml:annotation>
+						</cml:element>
+						<cml:element name="Значение" type="СтрокаТип">
+							<cml:annotation>
+								<cml:documentation>Контактная информация, например, номер рабочего телефона (095) 737-92-57</cml:documentation>
+							</cml:annotation>
+						</cml:element>
+						<cml:element name="Комментарий" type="КомментарийТип" minOccurs="0">
+							<cml:annotation>
+								<cml:documentation>Произвольный комментарий. Например: "звонить строго с 10 до 18 часов"</cml:documentation>
+							</cml:annotation>
+						</cml:element>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="Контрагент">
+		<cml:annotation>
+			<cml:documentation>Универсальное описание контрагента-участника бизнес-процессов. Содержит описание реквизитов юридического или физического лица контрагента.</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Ид" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Глобально уникальный идентификатор контрагента (рекомендуется использовать GUID)</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Наименование" type="НаименованиеТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Наименование контрагента</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:choice>
+				<cml:group ref="РеквизитыЮрЛица"/>
+				<cml:group ref="РеквизитыФизЛица"/>
+			</cml:choice>
+			<cml:element name="Комментарий" type="КомментарийТип" minOccurs="0"/>
+			<cml:element name="Адрес" type="Адрес" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Фактический адрес контрагента.</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Контакты" type="КонтактнаяИнформация" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Содержит описание возможных способов связи (по телефону, электронной почте и т.д.)</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Представители" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Содержит описание представителей контрагента, например, контактных лиц или дочерних организаций</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Представитель" maxOccurs="unbounded">
+							<cml:complexType>
+								<cml:complexContent>
+									<cml:extension base="Контрагент">
+										<cml:sequence>
+											<cml:element name="Отношение" type="cml:string">
+												<cml:annotation>
+													<cml:documentation>Описывает отношение (связь) представителя и контрагента. Примеры значений: "Контактное лицо", "Филиал", "Главный офис" и т.п.</cml:documentation>
+												</cml:annotation>
+											</cml:element>
+										</cml:sequence>
+									</cml:extension>
+								</cml:complexContent>
+							</cml:complexType>
+						</cml:element>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="Налог">
+		<cml:annotation>
+			<cml:documentation>Определяет вид налога </cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Наименование" type="НаименованиеТип">
+				<cml:annotation>
+					<cml:documentation>Вид налога. Например, НДС</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="УчтеноВСумме" type="ПереключательТип" minOccurs="0"/>
+			<cml:element name="Акциз" type="ПереключательТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Флаг, указывающий, что налог является акцизом</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="РасчетныйСчет">
+		<cml:annotation>
+			<cml:documentation>Номер расчетного счета контрагента</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="НомерСчета" type="СчетНомерТип">
+				<cml:annotation>
+					<cml:documentation>Номер банковского счета.</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Банк" type="Банк">
+				<cml:annotation>
+					<cml:documentation>Банк, в котором открыт расчетный счет (собственной фирмы или контрагента)</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="БанкКорреспондент" type="Банк" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Банк для непрямых расчетов.</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Комментарий" type="КомментарийТип" minOccurs="0"/>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="ХарактеристикиТовара">
+		<cml:annotation>
+			<cml:documentation>Уточняет характеристики поставляемого товара. Товар с разными характеристиками может иметь разную цену</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="ХарактеристикаТовара" maxOccurs="unbounded">
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Наименование" type="НаименованиеТип"/>
+						<cml:element name="Значение" type="ЗначениеТип"/>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="Свойство">
+		<cml:annotation>
+			<cml:documentation>Описывает свойство товара и возможные варианты значений этого свойства</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Ид" type="ИдентфикаторГлобальныйТип">
+				<cml:annotation>
+					<cml:documentation>Идентификатор свойства в классификаторе</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Наименование" type="НаименованиеТип">
+				<cml:annotation>
+					<cml:documentation>Наименование свойства</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Описание" type="КомментарийТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Описание свойства, например, для чего оно предназначено</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Обязательное" type="ОбязательностьСвойствТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Определяет обязательность указания значений свойства для товаров в каталоге, пакете предложений, докуменах</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Множественное" type="ПереключательТип" minOccurs="0"/>
+			<cml:element name="ТипЗначений" type="ТипЗначенийТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Один из следующих типов: Строка (по умолчанию), Число,  ДатаВремя</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ВариантыЗначений" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Содержит коллекцию вариантов значений свойства. Если варианты указаны, то при указании  значений данного свойства для товаров должны использоваться значения СТРОГО из данного списка</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Значение" type="ЗначениеТип" maxOccurs="unbounded">
+							<cml:annotation>
+								<cml:documentation>Определяет вариант значения свойства</cml:documentation>
+							</cml:annotation>
+						</cml:element>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+			<cml:group ref="ИспользованиеСвойства"/>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="Скидка">
+		<cml:annotation>
+			<cml:documentation>Предоставляемая скидка на товарную позицию и/или в целом на сумму документа</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Наименование" type="НаименованиеТип"/>
+			<cml:element name="Сумма" type="СуммаТип"/>
+			<cml:element name="Процент" type="КоэффициентТип" minOccurs="0"/>
+			<cml:element name="УчтеноВСумме" type="ПереключательТип" minOccurs="0"/>
+			<cml:element name="Комментарий" type="КомментарийТип" minOccurs="0"/>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="Склад">
+		<cml:annotation>
+			<cml:documentation>Наименование и идентификатор склада</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Ид" type="ИдентфикаторГлобальныйТип">
+				<cml:annotation>
+					<cml:documentation>Глобально уникальный идентификатор склада (рекомендуется использовать GUID)</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Наименование" type="НаименованиеТип">
+				<cml:annotation>
+					<cml:documentation>Наименование склада</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Комментарий" type="КомментарийТип" minOccurs="0"/>
+			<cml:element name="Адрес" type="Адрес" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Фактический адрес склада</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Контакты" type="КонтактнаяИнформация" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Содержит описание возможных способов связи (по телефону, электронной почте и т.д.)</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="ТипЦены">
+		<cml:annotation>
+			<cml:documentation>Описывает цену, идентифицированную в каталоге с указанием кода валюты (если ранее не определена)</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Ид" type="ИдентфикаторГлобальныйТип">
+				<cml:annotation>
+					<cml:documentation>Идентификатор типа цены </cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Наименование" type="НаименованиеТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Наименование вида цены.  Например: Оптовая, Розничная. </cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Валюта" type="ВалютаТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Код валюты по международному классификатору валют  (ISO 4217).</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Описание" type="КомментарийТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Описание структуры цены. Дополнительные условия. Например, наличие дилерского соглашения</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Налог" minOccurs="0" maxOccurs="unbounded">
+				<cml:annotation>
+					<cml:documentation>Определяет вид налога и способ учета налога в цене (сумме)</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:complexContent>
+						<cml:extension base="Налог"/>
+					</cml:complexContent>
+				</cml:complexType>
+			</cml:element>
+		</cml:sequence>
+	</cml:complexType>
+	<cml:complexType name="Товар">
+		<cml:annotation>
+			<cml:documentation>Описывает идентифицированный в каталоге товар</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:group ref="ИдентификаторТовара"/>
+			<cml:element name="Наименование" type="НаименованиеТип">
+				<cml:annotation>
+					<cml:documentation>Наименование товара</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="БазоваяЕдиница">
+				<cml:annotation>
+					<cml:documentation>Имя базовой единицы измерения товара по ОКЕИ. В документах и коммерческих предложениях может быть указана другая единица измерения, но при этом обязательно указывается коэффициент пересчета количества в базовую единицу товара.</cml:documentation>
+				</cml:annotation>
+				<cml:complexType mixed="true">
+					<cml:sequence minOccurs="0">
+						<cml:element name="Пересчет" minOccurs="0" maxOccurs="unbounded">
+							<cml:annotation>
+								<cml:documentation>Могут быть указаны способы пересчета в другие единицы. Указанные способы пересчета следует использовать в  случаях несовпадения базовых единиц на одни и те же товары.</cml:documentation>
+							</cml:annotation>
+							<cml:complexType>
+								<cml:sequence>
+									<cml:group ref="ЕдиницаИзмерения"/>
+								</cml:sequence>
+							</cml:complexType>
+						</cml:element>
+					</cml:sequence>
+					<cml:attribute name="Код" type="Строка3" use="optional"/>
+					<cml:attribute name="НаименованиеПолное" type="СтрокаТип" use="optional"/>
+					<cml:attribute name="МеждународноеСокращение" type="Строка3" use="optional"/>
+				</cml:complexType>
+			</cml:element>
+			<cml:element name="ИдТовараУКонтрагента" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Идентификатор товара в системе контрагента.</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Группы" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Содержит идентификаторы групп, которым принадлежит данный товар в указанном классификаторе. Если классификатор не указан, то включать данный элемент не имеет смысла.</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Ид" type="ИдентфикаторГлобальныйТип" maxOccurs="unbounded">
+							<cml:annotation>
+								<cml:documentation>Идентификатор группы товаров в классификаторе</cml:documentation>
+							</cml:annotation>
+						</cml:element>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+			<cml:element name="Описание" type="СтрокаТип" minOccurs="0"/>
+			<cml:element name="Картинка" type="ИмяФайлаТип" minOccurs="0" maxOccurs="unbounded">
+				<cml:annotation>
+					<cml:documentation>Имя файла картинки для номенклатурной позиции. Файлы картинок могут поставляться отдельно от передаваемого файла с коммерческой информацией</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:group ref="Производитель" minOccurs="0"/>
+			<cml:element name="ЗначенияСвойств" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Описывает значения свойств (характеристик) номенклатурной позиции в соответствии с указанным классификатором.  Если классификатор не указан, то включать данный элемент не имеет смысла.</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="ЗначенияСвойства" type="ЗначенияСвойства" maxOccurs="unbounded"/>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+			<cml:element name="СтавкиНалогов" minOccurs="0">
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="СтавкаНалога" maxOccurs="unbounded">
+							<cml:complexType>
+								<cml:sequence>
+									<cml:element name="Наименование" type="СтрокаТип">
+										<cml:annotation>
+											<cml:documentation>Вид налога. Например, НДС</cml:documentation>
+										</cml:annotation>
+									</cml:element>
+									<cml:element name="Ставка" type="КоэффициентТип">
+										<cml:annotation>
+											<cml:documentation>Ставка налога в процентах</cml:documentation>
+										</cml:annotation>
+									</cml:element>
+								</cml:sequence>
+							</cml:complexType>
+						</cml:element>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+			<cml:element name="Акцизы" minOccurs="0">
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Акциз" maxOccurs="unbounded">
+							<cml:complexType>
+								<cml:sequence>
+									<cml:element name="Наименование" type="НаименованиеТип">
+										<cml:annotation>
+											<cml:documentation>Вид акцизного налога. </cml:documentation>
+										</cml:annotation>
+									</cml:element>
+									<cml:element name="СуммаЗаЕдиницу" type="СуммаТип">
+										<cml:annotation>
+											<cml:documentation>Сумма сбора за единицу (базовую) товара</cml:documentation>
+										</cml:annotation>
+									</cml:element>
+									<cml:element name="Валюта" type="ВалютаТип">
+										<cml:annotation>
+											<cml:documentation>Код валюты по международному классификатору валют  (ISO 4217).</cml:documentation>
+										</cml:annotation>
+									</cml:element>
+								</cml:sequence>
+							</cml:complexType>
+						</cml:element>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+			<cml:element name="Комплектующие" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Для изделий, содержащих комплектующие</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Комплектующее" maxOccurs="unbounded">
+							<cml:annotation>
+								<cml:documentation>Элементы типа «Товар» - определяют комплектующие составных товаров - наборов.</cml:documentation>
+							</cml:annotation>
+							<cml:complexType>
+								<cml:complexContent>
+									<cml:extension base="Товар">
+										<cml:sequence>
+											<cml:element name="ИдКаталога" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+												<cml:annotation>
+													<cml:documentation>Идентификатор каталога </cml:documentation>
+												</cml:annotation>
+											</cml:element>
+											<cml:element name="ИдКлассификатора" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+												<cml:annotation>
+													<cml:documentation>Идентификатор классификатора, в соответствии с которым описано комплектующее</cml:documentation>
+												</cml:annotation>
+											</cml:element>
+											<cml:element name="Количество" type="КоличествоТип"/>
+										</cml:sequence>
+									</cml:extension>
+								</cml:complexContent>
+							</cml:complexType>
+						</cml:element>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+			<cml:element name="Аналоги" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Аналоги товара, например для медикаментов другие лекарства, заменяющие данное</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="Аналог" maxOccurs="unbounded">
+							<cml:annotation>
+								<cml:documentation>Элементы типа «Товар» - определяют аналогичные товары, например, в другом каталоге </cml:documentation>
+							</cml:annotation>
+							<cml:complexType>
+								<cml:complexContent>
+									<cml:extension base="Товар">
+										<cml:sequence>
+											<cml:element name="ИдКаталога" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+												<cml:annotation>
+													<cml:documentation>Идентификатор каталога </cml:documentation>
+												</cml:annotation>
+											</cml:element>
+											<cml:element name="ИдКлассификатора" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+												<cml:annotation>
+													<cml:documentation>Идентификатор классификатора, в соответствии с которым описан аналог</cml:documentation>
+												</cml:annotation>
+											</cml:element>
+										</cml:sequence>
+									</cml:extension>
+								</cml:complexContent>
+							</cml:complexType>
+						</cml:element>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+			<cml:element name="ХарактеристикиТовара" type="ХарактеристикиТовара" minOccurs="0"/>
+			<cml:element name="ЗначенияРеквизитов" minOccurs="0">
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="ЗначениеРеквизита" type="ЗначениеРеквизита" maxOccurs="unbounded">
+							<cml:annotation>
+								<cml:documentation>Дополнительные  значения реквизитов товара</cml:documentation>
+							</cml:annotation>
+						</cml:element>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+		</cml:sequence>
+		<cml:attribute name="Статус" type="СтатусТип" use="optional"/>
+	</cml:complexType>
+	<cml:complexType name="Цена">
+		<cml:annotation>
+			<cml:documentation>Цена по номенклатурной позиции</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Представление" type="НаименованиеТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Представление цены так, как оно отбражается в прайс-листе. Например: 10у.е./за 1000 шт</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ИдТипаЦены" type="ИдентфикаторГлобальныйТип">
+				<cml:annotation>
+					<cml:documentation>Идентификатор типа цены </cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ЦенаЗаЕдиницу" type="СуммаТип">
+				<cml:annotation>
+					<cml:documentation>Цена за единицу товара</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Валюта" type="ВалютаТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Код валюты по международному классификатору валют  (ISO 4217). Если не указана, то используется валюта установленная для данного типа цен</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:group ref="ЕдиницаИзмерения" minOccurs="0"/>
+			<cml:element name="МинКоличество" type="КоличествоТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Минимальное количество товара в указанных единицах, для которого действует данная цена. </cml:documentation>
+				</cml:annotation>
+			</cml:element>
+		</cml:sequence>
+	</cml:complexType>
+	<!--Описание групп элементов-->
+	<cml:group name="ЕдиницаИзмерения">
+		<cml:annotation>
+			<cml:documentation>Определяет единицу измерения товара и коэффициент пересчета количества в базовую единицу. Если отсутсвует, то используется базовая единица товара.</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Единица" type="ЕдиницаТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Имя единицы измерения товара по ОКЕИ.</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Коэффициент" type="КоэффициентТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Коэффициент пересчета количества товара в базовую единицу.</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ДополнительныеДанные" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Содержит дополнительную информацию о единице измерения товара</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="ЗначениеРеквизита" type="ЗначениеРеквизита" maxOccurs="unbounded"/>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+		</cml:sequence>
+	</cml:group>
+	<cml:group name="ИспользованиеСвойства">
+		<cml:annotation>
+			<cml:documentation>Определяет способы использования свойства.</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:choice>
+				<cml:annotation>
+					<cml:documentation>Указывает на то, что должен быть указан хотя бы один вариант использования свойства</cml:documentation>
+				</cml:annotation>
+				<cml:element name="ДляТоваров" type="ПереключательТип" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Свойство может (или должно) использоваться при описании товаров в каталоге, пакете предложений, документах</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="ДляПредложений" type="ПереключательТип" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Свойство может (должно) использоваться при описании товара в пакете предложений. Например: гарантийный срок, способ доставки</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="ДляДокументов" type="ПереключательТип" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Свойство может (должно) использоваться при описании товара в документе. Например: серийный номер</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+			</cml:choice>
+		</cml:sequence>
+	</cml:group>
+	<cml:group name="РеквизитыФизЛица">
+		<cml:annotation>
+			<cml:documentation>Содержит описание реквизитов контрагента, специфических для физических лиц </cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="ПолноеНаименование" type="НаименованиеТип">
+				<cml:annotation>
+					<cml:documentation>Полное наименование физического лица. Может включать обращение и суффикс</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Обращение" type="ОбращениеТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Например: Г-н, Г-жа, Докт., Проф. и т.д.   </cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Фамилия" type="СтрокаТип" minOccurs="0"/>
+			<cml:element name="Имя" type="СтрокаТип" minOccurs="0"/>
+			<cml:element name="Отчество" type="СтрокаТип" minOccurs="0"/>
+			<cml:element name="ДатаРождения" type="ДатаТип" minOccurs="0"/>
+			<cml:element name="МестоРождения" type="Адрес" minOccurs="0"/>
+			<cml:element name="Пол" type="ПолТип" minOccurs="0"/>
+			<cml:element name="ИНН" type="ИННТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Индивидуальный номер налогоплательщика (ИНН) </cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="КПП" type="КППТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Коп причины постановки на учет</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="УдостоверениеЛичности" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Документ, удостоверяющий личность</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="ВидДокумента" type="СтрокаТип">
+							<cml:annotation>
+								<cml:documentation>Вид документа, удостоверяющего личность. Например: паспорт</cml:documentation>
+							</cml:annotation>
+						</cml:element>
+						<cml:element name="Серия" type="СтрокаТип" minOccurs="0"/>
+						<cml:element name="Номер" type="НомерТип"/>
+						<cml:element name="ДатаВыдачи" type="ДатаТип"/>
+						<cml:element name="КемВыдан" type="НаименованиеТип">
+							<cml:annotation>
+								<cml:documentation>Организация, выдавшая документ</cml:documentation>
+							</cml:annotation>
+						</cml:element>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+			<cml:element name="АдресРегистрации" type="Адрес" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Адрес регистрации физического лица</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:group ref="МестоРаботы" minOccurs="0"/>
+		</cml:sequence>
+	</cml:group>
+	<cml:group name="РеквизитыЮрЛица">
+		<cml:annotation>
+			<cml:documentation>Содержит описание реквизитов контрагента, специфических для юридических лиц </cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="ОфициальноеНаименование" type="НаименованиеТип">
+				<cml:annotation>
+					<cml:documentation>Официальное наименование юридического лица в соответствии с учредительными документами</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ЮридическийАдрес" type="Адрес" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Юридический адрес контрагента</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ИНН" type="ИННТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Индивидуальный номер налогоплательщика (ИНН) 10 цифр</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="КПП" type="КППТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Код постановки предприятия на учет</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ОсновнойВидДеятельности" type="НаименованиеТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Основной вид деятельности по учредительным документам</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ЕГРПО" type="ЕГРПОТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Код по единому Государственному регистру предприятий и организаций</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ОКВЭД" type="ОКВЭДТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Код отрасли по ОКВЭД</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ОКДП" type="ОКДПТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Код по ОКДП основного вида деятельности</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ОКОПФ" type="ОКОПФТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Код организационно-правовой формы по ОКОПФ</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ОКФС" type="ОКФСТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Код формы собственности по ОКФС</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ОКПО" type="ОКПОТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Код ОКПО организации</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ДатаРегистрации" type="ДатаТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Дата регистрации организации</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Руководитель" type="Контрагент" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Руководитель организации</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="РасчетныеСчета" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Содержит описание расчетных счетов организации</cml:documentation>
+				</cml:annotation>
+				<cml:complexType>
+					<cml:sequence>
+						<cml:element name="РасчетныйСчет" type="РасчетныйСчет" maxOccurs="unbounded"/>
+					</cml:sequence>
+				</cml:complexType>
+			</cml:element>
+		</cml:sequence>
+	</cml:group>
+	<cml:group name="МестоРаботы">
+		<cml:annotation>
+			<cml:documentation>Содержит описание места работы физического лица и занимаемой должности</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Организация" type="Контрагент" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Описание организации может быть опущено, если физ.лицо описывается, как представитель организации</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Должность" type="СтрокаТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Должность в организации</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+		</cml:sequence>
+	</cml:group>
+	<cml:group name="Производитель">
+		<cml:annotation>
+			<cml:documentation>Содержит описание страны, непосредственного изготовителя и торговой марки товара</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Страна" type="СтрокаТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Наименование страны (по ОКСМ), в которой изготовлен товар</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ТорговаяМарка" type="СтрокаТип" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Наименование торговой марки (брэнда) товара</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="ВладелецТорговойМарки" type="Контрагент" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Контрагент (компания), которому принадлежит торговая марка товара</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+			<cml:element name="Изготовитель" type="Контрагент" minOccurs="0">
+				<cml:annotation>
+					<cml:documentation>Наименование непосредственного изготовителя товара</cml:documentation>
+				</cml:annotation>
+			</cml:element>
+		</cml:sequence>
+	</cml:group>
+	<cml:group name="ИдентификаторТовара">
+		<cml:annotation>
+			<cml:documentation>Товар может быть идентифицирован произвольным (например GUID или внутрисистемным) идентификатором, Штрихкодом, Артикулом. Контрагент может использовать любой удобный с его точки зрения  идентификатор - на выбор</cml:documentation>
+		</cml:annotation>
+		<cml:sequence>
+			<cml:element name="Ид" type="Идентификатор80" minOccurs="0"/>
+			<cml:element name="Штрихкод" type="ШтрихкодТип" minOccurs="0"/>
+			<cml:element name="Артикул" type="АртикулТип" minOccurs="0"/>
+		</cml:sequence>
+	</cml:group>
+	<!--Описание глобальных элементов-->
+	<cml:element name="КоммерческаяИнформация">
+		<cml:annotation>
+			<cml:documentation>Собирательный корневой элемент для всего, что может быть упомянуто в процессе обмена </cml:documentation>
+		</cml:annotation>
+		<cml:complexType>
+			<cml:sequence>
+				<cml:element ref="Классификатор" minOccurs="0"/>
+				<cml:choice>
+					<cml:element ref="Каталог" minOccurs="0"/>
+					<cml:element ref="ПакетПредложений" minOccurs="0"/>
+					<cml:element ref="Документ" minOccurs="0" maxOccurs="unbounded"/>
+				</cml:choice>
+			</cml:sequence>
+			<cml:attribute name="ВерсияСхемы" type="cml:string" use="required"/>
+			<cml:attribute name="ДатаФормирования" type="ДатаВремяТип" use="required"/>
+		</cml:complexType>
+	</cml:element>
+	<cml:element name="Каталог">
+		<cml:annotation>
+			<cml:documentation>Каталог товаров содержит перечень товаров. Может составляться разными предприятиями (например, каталог продукции фирмы «1С»). У каталога всегда определен владелец, а товары могут описываться по классификатору.</cml:documentation>
+		</cml:annotation>
+		<cml:complexType>
+			<cml:sequence>
+				<cml:element name="Ид" type="ИдентфикаторГлобальныйТип">
+					<cml:annotation>
+						<cml:documentation>Глобально уникальный идентификатор каталога (рекомендуется использовать GUID)</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="ИдКлассификатора" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Идентификатор классификатора, в соответствии с которым описываются товары</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Наименование" type="НаименованиеТип">
+					<cml:annotation>
+						<cml:documentation>Наименование каталога</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Владелец" type="Контрагент">
+					<cml:annotation>
+						<cml:documentation>Элемент типа "Контрагент". Служит для определения владельца данного каталога. </cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Товары">
+					<cml:annotation>
+						<cml:documentation/>
+					</cml:annotation>
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="Товар" type="Товар" maxOccurs="unbounded"/>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+				<cml:element name="Описание" type="КомментарийТип" minOccurs="0"/>
+			</cml:sequence>
+			<cml:attribute name="СодержитТолькоИзменения" type="ПереключательТип" use="optional"/>
+		</cml:complexType>
+	</cml:element>
+	<cml:element name="ПакетПредложений">
+		<cml:annotation>
+			<cml:documentation>Содержит перечень коммерческих предложений. Пакет предложений составляется по определенному (только одному) каталогу, а предложения в пакете могут быть описаны по  классификатору.</cml:documentation>
+		</cml:annotation>
+		<cml:complexType>
+			<cml:sequence>
+				<cml:element name="Ид" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Идентификатор пакета предложений</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Наименование" type="НаименованиеТип">
+					<cml:annotation>
+						<cml:documentation>Наименование пакета предложений, например: "Специальные предложения по комплектующим"</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="ИдКаталога" type="ИдентфикаторГлобальныйТип">
+					<cml:annotation>
+						<cml:documentation>Идентификатор каталога товаров, по которому составлен пакет предложений</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="ИдКлассификатора" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Идентификатор классификатора, в соответствии с которым описываются предложения</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="ДействительноС" type="ДатаТип" minOccurs="0"/>
+				<cml:element name="ДействительноДо" type="ДатаТип" minOccurs="0"/>
+				<cml:element name="Описание" type="КомментарийТип" minOccurs="0"/>
+				<cml:element name="Владелец" type="Контрагент">
+					<cml:annotation>
+						<cml:documentation>Служит для определения владельца пакета предложения.Определяется  уникальным идентификатором (например GUID). </cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="ТипыЦен">
+					<cml:annotation>
+						<cml:documentation>Описывает цены, которые могут быть использованы при форм ировании пакета коммерческих предложений</cml:documentation>
+					</cml:annotation>
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="ИдКлассификатора" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+								<cml:annotation>
+									<cml:documentation>Идентификатор классификатора, в соответствии с которым описываются цены на товары</cml:documentation>
+								</cml:annotation>
+							</cml:element>
+							<cml:element name="ТипЦены" type="ТипЦены" maxOccurs="unbounded"/>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+				<cml:element name="ЗначенияСвойств" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Значения свойств, распространяющиеся на ВСЕ предложения, входящие в пакет. Например: Способ доставки, гарантийный срок в месяцах и т.п.</cml:documentation>
+					</cml:annotation>
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="ЗначенияСвойства" type="ЗначенияСвойства" maxOccurs="unbounded"/>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+				<cml:element name="Предложения">
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="Предложение" maxOccurs="unbounded">
+								<cml:complexType>
+									<cml:complexContent>
+										<cml:extension base="Товар">
+											<cml:sequence>
+												<cml:element name="Цены">
+													<cml:complexType>
+														<cml:sequence>
+															<cml:element name="Цена" type="Цена" maxOccurs="unbounded"/>
+														</cml:sequence>
+													</cml:complexType>
+												</cml:element>
+												<cml:element name="Количество" type="КоличествоТип" minOccurs="0">
+													<cml:annotation>
+														<cml:documentation>Количество предлагаемого товара. Например, может быть указан остаток на складе.</cml:documentation>
+													</cml:annotation>
+												</cml:element>
+											</cml:sequence>
+										</cml:extension>
+									</cml:complexContent>
+								</cml:complexType>
+							</cml:element>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+			</cml:sequence>
+			<cml:attribute name="СодержитТолькоИзменения" type="ПереключательТип" use="optional"/>
+		</cml:complexType>
+	</cml:element>
+	<cml:element name="Документ">
+		<cml:annotation>
+			<cml:documentation>Элемент определяет хоз. операцию и реквизиты документа, а также роль предприятия в хоз операции</cml:documentation>
+		</cml:annotation>
+		<cml:complexType>
+			<cml:sequence>
+				<cml:element name="Ид" type="ИдентфикаторГлобальныйТип">
+					<cml:annotation>
+						<cml:documentation>Идентификатор документа уникальный в рамках файла обмена</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Номер" type="НомерТип"/>
+				<cml:element name="Дата" type="ДатаТип">
+					<cml:annotation>
+						<cml:documentation>Дата документа</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="ХозОперация" type="ХозОперацияТип">
+					<cml:annotation>
+						<cml:documentation>Возможные значения: ЗаказТовара;
+CчетНаОплату;
+ОтпускТовара;
+СчетФактура;
+ВозвратТовара;
+ПередачаТовараНаКомиссию;
+ВозвратКомиссионногоТовара;
+ОтчетОПродажахКомиссионногоТовара;
+ВыплатаНаличныхДенег;
+ВозвратНаличныхДенег;
+ВыплатаБезналичныхДенег;
+ВозвратБезналичныхДенег:
+Прочее.</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Роль" type="РольТип">
+					<cml:annotation>
+						<cml:documentation>Роль предприятия в документе. Возможные значения: Продавец; Покупатель; Плательщик; Получатель.</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Валюта" type="ВалютаТип">
+					<cml:annotation>
+						<cml:documentation>Код валюты по международному классификатору валют  (ISO 4217).</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Курс" type="КоэффициентТип">
+					<cml:annotation>
+						<cml:documentation>Курс указанной валюты по отношению к национальной валюте. Для национальной валюты курс равен 1. </cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Сумма" type="СуммаТип">
+					<cml:annotation>
+						<cml:documentation>Общая сумма по документу. Налоги, скидки и дополнительные расходы  включаются в данную сумму в зависимости от установленных флажков "УчтеноВСумме" </cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Контрагенты">
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="Контрагент" maxOccurs="unbounded">
+								<cml:complexType>
+									<cml:complexContent>
+										<cml:extension base="Контрагент">
+											<cml:sequence>
+												<cml:element name="Роль" type="РольТип">
+													<cml:annotation>
+														<cml:documentation>Возможные значения:   Покупатель, Продавец, Плательщик, Получатель, Комитент, Комиссионер</cml:documentation>
+													</cml:annotation>
+												</cml:element>
+												<cml:element name="РасчетныйСчет" type="РасчетныйСчет" minOccurs="0">
+													<cml:annotation>
+														<cml:documentation>Элемент типа "Расчетный счет" описывает Расчетный счет Контрагента в банке</cml:documentation>
+													</cml:annotation>
+												</cml:element>
+												<cml:element name="Склад" type="Склад" minOccurs="0">
+													<cml:annotation>
+														<cml:documentation>Элемент типа "Склад" содержит информацию о складе в объеме, необходимом для оформления (и передачи) документов. </cml:documentation>
+													</cml:annotation>
+												</cml:element>
+											</cml:sequence>
+										</cml:extension>
+									</cml:complexContent>
+								</cml:complexType>
+							</cml:element>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+				<cml:element name="Время" type="ВремяТип" minOccurs="0"/>
+				<cml:element name="СрокПлатежа" type="ДатаТип" minOccurs="0"/>
+				<cml:element name="Комментарий" type="КомментарийТип" minOccurs="0"/>
+				<cml:element name="Налоги" minOccurs="0">
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="Налог" maxOccurs="unbounded">
+								<cml:annotation>
+									<cml:documentation>Вид, ставка и сумма налога.</cml:documentation>
+								</cml:annotation>
+								<cml:complexType>
+									<cml:complexContent>
+										<cml:extension base="Налог">
+											<cml:sequence>
+												<cml:element name="Сумма" type="СуммаТип"/>
+												<cml:element name="Ставка" type="КоэффициентТип" minOccurs="0"/>
+											</cml:sequence>
+										</cml:extension>
+									</cml:complexContent>
+								</cml:complexType>
+							</cml:element>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+				<cml:element name="Скидки" minOccurs="0">
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="Скидка" type="Скидка" maxOccurs="unbounded">
+								<cml:annotation>
+									<cml:documentation>Скидка, сумма, проценты.</cml:documentation>
+								</cml:annotation>
+							</cml:element>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+				<cml:element name="ДопРасходы" minOccurs="0">
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="ДопРасход" type="ДопРасход" maxOccurs="unbounded">
+								<cml:annotation>
+									<cml:documentation>Дополнительный расход, сумма, проценты.</cml:documentation>
+								</cml:annotation>
+							</cml:element>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+				<cml:element name="Товары" minOccurs="0">
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="Товар" maxOccurs="unbounded">
+								<cml:annotation>
+									<cml:documentation>Определяет информацию о товарной позиции (строке документа) в объеме, необходимом для оформления (и передачи) документов. </cml:documentation>
+								</cml:annotation>
+								<cml:complexType>
+									<cml:complexContent>
+										<cml:extension base="Товар">
+											<cml:sequence>
+												<cml:element name="ИдКаталога" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+													<cml:annotation>
+														<cml:documentation>Идентификатор каталога товаров </cml:documentation>
+													</cml:annotation>
+												</cml:element>
+												<cml:element name="ИдКлассификатора" type="ИдентфикаторГлобальныйТип" minOccurs="0">
+													<cml:annotation>
+														<cml:documentation>Идентификатор классификатора, в соответствии с которым описан товар в документе</cml:documentation>
+													</cml:annotation>
+												</cml:element>
+												<cml:element name="ЦенаЗаЕдиницу" type="СуммаТип" minOccurs="0">
+													<cml:annotation>
+														<cml:documentation>Цена за единицу товара</cml:documentation>
+													</cml:annotation>
+												</cml:element>
+												<cml:element name="Количество" type="КоличествоТип" minOccurs="0"/>
+												<cml:element name="Сумма" type="СуммаТип" minOccurs="0"/>
+												<cml:group ref="ЕдиницаИзмерения" minOccurs="0"/>
+												<cml:element name="СтранаПроисхождения" type="СтрокаТип" minOccurs="0">
+													<cml:annotation>
+														<cml:documentation>Наименование страны (по ОКСМ), из которой ввезен импортный товар согласно таможенным документам </cml:documentation>
+													</cml:annotation>
+												</cml:element>
+												<cml:element name="ГТД" type="СтрокаТип" minOccurs="0">
+													<cml:annotation>
+														<cml:documentation>Номер грузовой таможенной декларации</cml:documentation>
+													</cml:annotation>
+												</cml:element>
+												<cml:element name="Налоги" minOccurs="0">
+													<cml:complexType>
+														<cml:sequence>
+															<cml:element name="Налог" maxOccurs="unbounded">
+																<cml:annotation>
+																	<cml:documentation>Вид, ставка и сумма налога.</cml:documentation>
+																</cml:annotation>
+																<cml:complexType>
+																	<cml:complexContent>
+																		<cml:extension base="Налог">
+																			<cml:sequence>
+																				<cml:element name="Сумма" type="СуммаТип"/>
+																				<cml:element name="Ставка" type="КоэффициентТип" minOccurs="0"/>
+																			</cml:sequence>
+																		</cml:extension>
+																	</cml:complexContent>
+																</cml:complexType>
+															</cml:element>
+														</cml:sequence>
+													</cml:complexType>
+												</cml:element>
+												<cml:element name="Скидки" minOccurs="0">
+													<cml:complexType>
+														<cml:sequence>
+															<cml:element name="Скидка" maxOccurs="unbounded">
+																<cml:annotation>
+																	<cml:documentation>Скидка, сумма, проценты.</cml:documentation>
+																</cml:annotation>
+																<cml:complexType>
+																	<cml:complexContent>
+																		<cml:extension base="Скидка"/>
+																	</cml:complexContent>
+																</cml:complexType>
+															</cml:element>
+														</cml:sequence>
+													</cml:complexType>
+												</cml:element>
+												<cml:element name="ДопРасходы" minOccurs="0">
+													<cml:complexType>
+														<cml:sequence>
+															<cml:element name="ДопРасход" type="ДопРасход" maxOccurs="unbounded">
+																<cml:annotation>
+																	<cml:documentation>Дополнительный расход, сумма, проценты.</cml:documentation>
+																</cml:annotation>
+															</cml:element>
+														</cml:sequence>
+													</cml:complexType>
+												</cml:element>
+												<cml:element name="ДополнительныеЗначенияРеквизитов" minOccurs="0">
+													<cml:annotation>
+														<cml:documentation>Описывает значения дополнительных реквизитов товара для данного вида документа</cml:documentation>
+													</cml:annotation>
+													<cml:complexType>
+														<cml:sequence>
+															<cml:element name="ЗначениеРеквизита" type="ЗначениеРеквизита" maxOccurs="unbounded"/>
+														</cml:sequence>
+													</cml:complexType>
+												</cml:element>
+											</cml:sequence>
+										</cml:extension>
+									</cml:complexContent>
+								</cml:complexType>
+							</cml:element>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+				<cml:element name="ЗначенияРеквизитов" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Описывает значения дополнительных реквизитов документа</cml:documentation>
+					</cml:annotation>
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="ЗначениеРеквизита" type="ЗначениеРеквизита" maxOccurs="unbounded"/>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+			</cml:sequence>
+		</cml:complexType>
+	</cml:element>
+	<cml:element name="Классификатор">
+		<cml:annotation>
+			<cml:documentation>Группа элементов описывающих классификацию товаров</cml:documentation>
+		</cml:annotation>
+		<cml:complexType>
+			<cml:sequence>
+				<cml:element name="Ид" type="ИдентфикаторГлобальныйТип">
+					<cml:annotation>
+						<cml:documentation>Идентификатор классификатора товаров. </cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Наименование" type="НаименованиеТип">
+					<cml:annotation>
+						<cml:documentation>Наименование классификатора товаров.</cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Владелец" type="Контрагент">
+					<cml:annotation>
+						<cml:documentation>Элемент типа "Контрагент". Служит для определения владельца данного классификатора. </cml:documentation>
+					</cml:annotation>
+				</cml:element>
+				<cml:element name="Описание" type="КомментарийТип" minOccurs="0"/>
+				<cml:element name="Группы" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Определяет иерархическую структуру групп номенклатуры</cml:documentation>
+					</cml:annotation>
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="Группа" type="Группа" maxOccurs="unbounded">
+								<cml:annotation>
+									<cml:documentation>Группа служит для описания категорий товаров.  Может содержать неограниченное число вложений.</cml:documentation>
+								</cml:annotation>
+							</cml:element>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+				<cml:element name="Свойства" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Содержит коллекцию свойств, значения которых можно или нужно указать ДЛЯ ВСЕХ товаров в каталоге, пакете предложений, документах</cml:documentation>
+					</cml:annotation>
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="Свойство" type="Свойство" maxOccurs="unbounded"/>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+				<cml:element name="ТипыЦен" minOccurs="0">
+					<cml:annotation>
+						<cml:documentation>Определяет типы цен, которые могут быть использованы при форм ировании пакета коммерческих предложений</cml:documentation>
+					</cml:annotation>
+					<cml:complexType>
+						<cml:sequence>
+							<cml:element name="ТипЦены" type="ТипЦены" maxOccurs="unbounded"/>
+						</cml:sequence>
+					</cml:complexType>
+				</cml:element>
+			</cml:sequence>
+		</cml:complexType>
+	</cml:element>
+	<cml:simpleType name="СчетНомерТип">
+		<cml:annotation>
+			<cml:documentation>Номер счета, сформированный в соответствии со "Схемой обозначения лицевых счетов и их нумерации (по основным счетам)" приложения 1 Правил ведения бухгалтерского учета в Банке России от 18.09.97 №66 или Правил ведения бухгалтерского учета в кредитных организациях, расположенных на территории РФ, от 05.12.2002 №205 с учетом изменений и дополнений. </cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:length value="20"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="КомментарийТип">
+		<cml:annotation>
+			<cml:documentation>Текст комментария (пояснения, описания)</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:minLength value="1"/>
+			<cml:maxLength value="3000"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="БИКТип">
+		<cml:annotation>
+			<cml:documentation>Банковский идентификационный код (БИК). В соответствии со "Справочником БИК РФ"</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:length value="9"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="НаименованиеТип">
+		<cml:annotation>
+			<cml:documentation>Наименование контрагента, описание товара (изделия) и дополнительная информация при ее наличии</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:minLength value="1"/>
+			<cml:maxLength value="250"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="ДатаТип">
+		<cml:annotation>
+			<cml:documentation>Представление даты</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:date"/>
+	</cml:simpleType>
+	<cml:simpleType name="ВремяТип">
+		<cml:annotation>
+			<cml:documentation>Представление времени</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:time"/>
+	</cml:simpleType>
+	<cml:simpleType name="КонтактТип">
+		<cml:annotation>
+			<cml:documentation>Тип связи с контрагентом</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:minLength value="1"/>
+			<cml:maxLength value="100"/>
+			<cml:enumeration value="Телефон внутренний"/>
+			<cml:enumeration value="Телефон рабочий"/>
+			<cml:enumeration value="Телефон мобильный"/>
+			<cml:enumeration value="Телефон домашний"/>
+			<cml:enumeration value="Пейджер"/>
+			<cml:enumeration value="Факс"/>
+			<cml:enumeration value="Почта"/>
+			<cml:enumeration value="ICQ"/>
+			<cml:enumeration value="ВебСайт"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="АдресТип">
+		<cml:annotation>
+			<cml:documentation>Почтовый адрес </cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:enumeration value="Почтовый индекс"/>
+			<cml:enumeration value="Страна"/>
+			<cml:enumeration value="Регион"/>
+			<cml:enumeration value="Район"/>
+			<cml:enumeration value="Населенный пункт"/>
+			<cml:enumeration value="Город"/>
+			<cml:enumeration value="Улица"/>
+			<cml:enumeration value="Дом"/>
+			<cml:enumeration value="Корпус"/>
+			<cml:enumeration value="Квартира"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="СтатусТип">
+		<cml:annotation>
+			<cml:documentation>Определяет статус описанного товара</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:enumeration value="Новый"/>
+			<cml:enumeration value="Изменен"/>
+			<cml:enumeration value="Удален"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="ИННТип">
+		<cml:annotation>
+			<cml:documentation>Индивидуальный номер налогоплательщика (ИНН). Область значений [ИНН]. 10 цифр - для юридических лиц, 12 цифр - для физических лиц.</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:minLength value="10"/>
+			<cml:maxLength value="12"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="КППТип">
+		<cml:annotation>
+			<cml:documentation>Код причины постановки на учет (КПП)</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:length value="9"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="ИдентфикаторТип">
+		<cml:restriction base="cml:string">
+			<cml:minLength value="1"/>
+			<cml:maxLength value="20"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="СуммаТип">
+		<cml:annotation>
+			<cml:documentation>Числовое представление суммы. Разделитель целой и дробной части: «.».</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:decimal">
+			<cml:totalDigits value="18"/>
+			<cml:fractionDigits value="2"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="ИдентфикаторГлобальныйТип">
+		<cml:annotation>
+			<cml:documentation>Уникальный идентификатор (рекомендуется использовать GUID - Globally Unique Identifier)</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:minLength value="1"/>
+			<cml:maxLength value="40"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="ПереключательТип">
+		<cml:annotation>
+			<cml:documentation>Переключатель значений (да / нет, 0 / 1, правда / ложь).</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:boolean"/>
+	</cml:simpleType>
+	<cml:simpleType name="ОбязательностьСвойствТип">
+		<cml:annotation>
+			<cml:documentation>Определяет обязательность указания значений свойства для товаров в каталоге, пакете предложений, докуменах</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:enumeration value="Для каталога"/>
+			<cml:enumeration value="Для документа"/>
+			<cml:enumeration value="Для предложений"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="ТипЗначенийТип">
+		<cml:annotation>
+			<cml:documentation>Определяет принадлежность описываемых свойств</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:enumeration value="Строка"/>
+			<cml:enumeration value="Число"/>
+			<cml:enumeration value="Время"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="ВалютаТип">
+		<cml:annotation>
+			<cml:documentation>Код валюты по международному классификатору валют  (ISO 4217). Если не указана, то используется валюта установленная для данного типа цен</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:length value="3"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="ЕГРПОТип">
+		<cml:annotation>
+			<cml:documentation>Единый Государственный регистр предприятий и организаций</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="КоличествоТип">
+		<cml:annotation>
+			<cml:documentation>Числовая информация</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:decimal"/>
+	</cml:simpleType>
+	<cml:simpleType name="КоэффициентТип">
+		<cml:annotation>
+			<cml:documentation>Коэффициент (например коэффициент пересчета в базовую единицу измерения), процент</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="НомерТип">
+		<cml:annotation>
+			<cml:documentation>Номер (например документа)</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ОбращениеТип">
+		<cml:annotation>
+			<cml:documentation>Описывает возможные обращения (Господин, Госпожа и др.)</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:minLength value="1"/>
+			<cml:enumeration value=""/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="СВИФТТип">
+		<cml:annotation>
+			<cml:documentation>Код SWIFT</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ОКВЭДТип">
+		<cml:annotation>
+			<cml:documentation>Код в общероссийском классификаторе видов экономической деятельности (ОК 029-2001).</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ОКОПФТип">
+		<cml:annotation>
+			<cml:documentation>Код в общероссийском классификаторе организационно-правовой формы</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ОКПОТип">
+		<cml:annotation>
+			<cml:documentation>Код в общероссийском классификаторе предприятий и организаций</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ОКФСТип">
+		<cml:annotation>
+			<cml:documentation>Код в общероссийском классификаторе форм собственности</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ПолТип">
+		<cml:annotation>
+			<cml:documentation>Пол (мужской, женский).</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:enumeration value="М"/>
+			<cml:enumeration value="Ж"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="РольТип">
+		<cml:annotation>
+			<cml:documentation>Определяет роль участника обмена</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:enumeration value="Продавец"/>
+			<cml:enumeration value="Покупатель"/>
+			<cml:enumeration value="Плательщик"/>
+			<cml:enumeration value="Получатель"/>
+			<cml:enumeration value="Комитент"/>
+			<cml:enumeration value="Комиссионер"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="СтрокаТип">
+		<cml:annotation>
+			<cml:documentation>Определяет строковое значение передаваемой информации</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ШтрихкодТип">
+		<cml:annotation>
+			<cml:documentation>Штрихкод (GTIN)  товара (код EAN/UPC).</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:minLength value="8"/>
+			<cml:maxLength value="14"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="АртикулТип">
+		<cml:annotation>
+			<cml:documentation>Артикул</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ЕдиницаТип">
+		<cml:annotation>
+			<cml:documentation>Единица измерения по ОКЕИ</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ХозОперацияТип">
+		<cml:annotation>
+			<cml:documentation>Определяет хозяйственную или торговую операцию</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:enumeration value="Заказ товара"/>
+			<cml:enumeration value="Счет на оплату"/>
+			<cml:enumeration value="Отпуск товара"/>
+			<cml:enumeration value="Счет-фактура"/>
+			<cml:enumeration value="Возврат товара"/>
+			<cml:enumeration value="Передача товара на комиссию"/>
+			<cml:enumeration value="Возврат комиссионного товара"/>
+			<cml:enumeration value="Отчет о продажах комиссионного товара"/>
+			<cml:enumeration value="Выплата наличных денег"/>
+			<cml:enumeration value="Возврат наличных денег"/>
+			<cml:enumeration value="Выплата безналичных денег"/>
+			<cml:enumeration value="Возврат безналичных денег"/>
+			<cml:enumeration value="Переоценка товаров"/>
+			<cml:enumeration value="Прочие"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="ИмяФайлаТип">
+		<cml:annotation>
+			<cml:documentation>Имя передаваемого файла (картинки)</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ОКДПТип">
+		<cml:annotation>
+			<cml:documentation>Код в общероссийском классификаторе видов экономической деятельности, продукции и услуг (ОК 004-93).</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+	<cml:simpleType name="ДатаВремяТип">
+		<cml:annotation>
+			<cml:documentation>Представление даты и времени</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:dateTime"/>
+	</cml:simpleType>
+	<cml:simpleType name="ЗначениеТип">
+		<cml:annotation>
+			<cml:documentation>Строка длиной до 1000 символов для определения значения сущности в документе</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:minLength value="1"/>
+			<cml:maxLength value="1000"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="Идентификатор80">
+		<cml:annotation>
+			<cml:documentation>Идентификатор группы, свойства в классификаторе товаров, типа цены в классификаторе, документа в рамках файла обмена</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:maxLength value="80"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="Строка3">
+		<cml:annotation>
+			<cml:documentation>Определяетдлину строки</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string">
+			<cml:minLength value="1"/>
+			<cml:maxLength value="3"/>
+		</cml:restriction>
+	</cml:simpleType>
+	<cml:simpleType name="ВидДеятельностиТип">
+		<cml:annotation>
+			<cml:documentation>Основной вид деятельности по учредительным документам</cml:documentation>
+		</cml:annotation>
+		<cml:restriction base="cml:string"/>
+	</cml:simpleType>
+</cml:schema>

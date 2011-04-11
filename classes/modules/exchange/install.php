@@ -1,0 +1,2 @@
+<?php
+    $v551b723eafd6a31d444fcb2f5920fbd3 = Array();$v551b723eafd6a31d444fcb2f5920fbd3['name'] = "exchange";$v551b723eafd6a31d444fcb2f5920fbd3['filename'] = "modules/exchange/class.php";$v551b723eafd6a31d444fcb2f5920fbd3['config'] = "0";$v551b723eafd6a31d444fcb2f5920fbd3['ico'] = "exchange";$v551b723eafd6a31d444fcb2f5920fbd3['default_method'] = "import";$v551b723eafd6a31d444fcb2f5920fbd3['default_method_admin'] = "import";$v551b723eafd6a31d444fcb2f5920fbd3['func_perms'] = "";?>

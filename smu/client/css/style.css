@@ -1,0 +1,185 @@
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: url(/smu/client/img/left_bg.gif) repeat-y;
+	font-family: Trebuchet MS;
+}
+.clear {
+	clear: both;
+}
+#page {
+	background: url(/smu/client/img/logo.png) no-repeat right bottom;
+	min-height: 100%;
+	_height: 100%;
+}
+#left {
+	width: 48px;
+	height: 100%;
+	float: left;
+}
+#left div {
+	font-size: 13pt;
+	color: white;
+	text-align: center;
+	line-height: 33px;
+}
+#left div#update-init {
+	margin-top: 25px;
+	}
+#left div.act {
+	color: #0370c2;
+	background: url(/smu/client/img/step_bg.gif) no-repeat 6px 3px;
+}
+#content {
+	padding: 30px 0 100px 50px;
+	margin: 0 0 0 48px;
+}
+#content h1 {
+	font-size: 13pt;
+	font-weight: normal;
+	margin: 0 0 50px 0;
+	color: #7c7c7c;
+}
+#content h1 span.umi {
+	color: #0370c2;
+}
+#content h1 span#step_header {
+	display: none;
+}
+#content h1 span.step {
+	color: #ff6500;
+}
+#content h1 span.step span.def {
+	color: #7c7c7c;
+}
+#content h2#error_header {
+	color: #ff6500;
+	font-size: 13pt;
+	font-weight: normal;
+}
+#content #updates_container table {
+	border: solid 2px #c8d5e6;
+	border-collapse: collapse;
+	font-size: 10pt;
+	width: 500px;
+	margin: 0 0 30px 0;
+}
+#content #updates_container table tr th {
+	border: solid 1px #c8d5e6;
+	border-bottom: solid 2px #c8d5e6;
+	text-align: center;
+	padding: 10px;
+	color: #7a7d80;
+	background: #ebf0f6;
+}
+#content #updates_container table tr td {
+	border: solid 1px #c8d5e6;
+	text-align: center;
+	padding: 5px 10px;
+}
+#content #updates_container table tr td.left {
+	text-align: left;
+	padding-left: 20px;
+}
+#content #updates_container table tr td a {
+	font-size: 9pt;
+	color: #0078d5;
+}
+#content div#progres_bar {
+	width: 410px;
+	height: 24px;
+	border: solid 1px #a0a0a0;
+	position: relative;
+}
+#content div#progres_bar div#progres {
+	width: 0;
+	height: 24px;
+	background: url(/smu/client/img/progres.gif) repeat-x;
+	z-index: 10;
+}
+#content div#progres_bar div#digits {
+	width: 410px;
+	height: 24px;
+	line-height: 26px;
+	position: absolute;
+	z-index: 20;
+	text-align: center;
+	color: white;
+	font-size: 9pt;
+	font-weight: bold;
+	top: 0;
+}
+#content p {
+	font-size: 10pt;
+	margin: 5px 0 0 0;
+}
+#win_pop_up {
+	width: 500px;
+	height: 500px;
+	position: fixed;
+	_position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -250px 0 0 -250px;
+	border: solid 2px #c8d5e6;
+	background: white;
+	display: none;
+}
+#win_pop_up h2 {
+	width: 460px;
+	margin: 20px 20px 0px 20px;
+	font-size: 13pt;
+	font-weight: normal;
+	color: #7c7c7c;
+}
+#win_pop_up #win_pop_up_text {
+	width: 440px;
+	height: 355px;
+	font-size: 10pt;
+	margin: 20px;
+	padding: 10px;
+	overflow: auto;
+	border: solid 1px #c8d5e6;
+}
+#win_pop_up #win_pop_up_button {
+	float: right;
+	margin: 0 20px 0 0;
+}
+#win_pop_up #win_pop_up_button span {
+	float: right;
+}
+.button {
+	height: 27px;
+	line-height: 25px;
+	cursor: pointer;
+	margin: 20px 0 0 0;
+}
+.button span {
+	display: block;
+	height: 27px;
+	font-size: 10pt;
+	color: white;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.button span.c {
+	text-align: center;
+	background: url(/smu/client/img/bc_bg.gif) repeat-x;
+}
+.button span.r {
+	width: 12px;
+	background: url(/smu/client/img/br_bg.gif) no-repeat;
+}
+.button span.l {
+	width: 12px;
+	background: url(/smu/client/img/bl_bg.gif) no-repeat;
+}

@@ -1,0 +1,91 @@
+ul.contextMenu {
+	position:			absolute !important;
+	width:				190px !important;
+	height:				auto !important;
+	background-color: 	#DCDCDC !important;
+	border:				#777 1px solid !important;
+	
+	padding:			2px 0 2px 0 !important;
+	margin:				0 !important;
+	list-style:			none !important;
+	z-index:            9550 !important;
+}
+
+	ul.contextMenu li {
+		width:				190px !important;
+		padding:			2px 0 2px 0 !important;
+		margin:				0 !important;
+		display:			inline;
+	}
+	
+		ul.contextMenu li a, ul.contextMenu li a:visited {
+			text-decoration:	none !important;
+			color:				#000 !important;
+			display:			block !important;
+			font-family:		Tahoma !important;
+			font-size:			11px !important;
+			font-weight:		normal !important;
+			padding:			2px 0 2px 0 !important;
+			width:				190px !important;
+			margin:				0 !important;
+            opacity: 3;
+		}
+		
+		ul.contextMenu li a:hover, ul.contextMenu li.menuItemHover a {
+			background-color:	darkblue !important;
+			color:				#FFF !important;
+		}
+		
+		ul.contextMenu li a.disabled,
+		ul.contextMenu li a.disabled:hover {
+			background-color:	#DDD !important;
+			color:				#555 !important;
+		}
+		
+			ul.contextMenu a span {
+				white-space:	nowrap !important;
+				padding:		0 15px 0 17px !important;
+				display:		block !important;
+			}
+		
+		ul.contextMenu span.booleanTrue {
+			background-image:	url('/images/cms/admin/mac/context/check.gif') !important;
+			background-repeat:	no-repeat !important;
+			background-position: left top !important;
+		}
+		
+		ul.contextMenu span.booleanTrue:hover, ul.contextMenu li.menuItemHover span.booleanTrue {
+			background-image:	url('/images/cms/admin/mac/context/check_highlighted.gif') !important;
+		}
+		
+		ul.contextMenu a.disabled span.booleanTrue:hover, ul.contextMenu li.menuItemHover a.disabled span.booleanTrue {
+			background-image:	url('/images/cms/admin/mac/context/check.gif') !important;
+		}
+		
+		ul.contextMenu a.arrow  {
+			width: auto !important;
+			height: 16px !important;
+			background-image: url('/images/cms/admin/mac/context/arrow.gif') !important;
+			background-repeat: no-repeat !important;
+			background-position: right 2px !important;
+		}
+		
+		ul.contextMenu a.arrow:hover, ul.contextMenu li.menuItemHover a.arrow {
+			background-image: url('/images/cms/admin/mac/context/arrow_highlighted.gif') !important;
+		}
+		
+		ul.contextMenu a.disabled, ul.contextMenu a.disabled:hover, ul.contextMenu li.menuItemHover a.disabled {
+			background-image: none !important;
+		}
+		
+		ul.contextMenu li.menuSeparator div {
+		    width:              160px !important;
+		    height:             1px !important;
+		    background-color:   #777 !important;
+		    border:             0 !important;
+		    margin-left:        15px !important;
+		    font-size:			0 !important;
+		    padding:			0 !important;
+		    margin-top:			4px !important;
+		    margin-bottom:		4px !important;
+		}

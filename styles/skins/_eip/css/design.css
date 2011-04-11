@@ -1,0 +1,237 @@
+/* Common design styles */
+body, p, legend, label, textarea, input {
+	font-family: normal Verdana,Tahoma,sans-serif;
+	font-size: 0.85em;
+	color: #555;
+	background-color: #FFF;
+}
+
+h1 {
+	color:#767676;
+	font-family:normal Verdana,Tahoma,sans-serif;
+	font-size:2.167em;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:118%;
+	margin-bottom:20px;
+}
+
+a { color: #4D7285; }
+
+	a img { border: 0; }
+
+.error {
+	color: darkred;
+}
+
+input, select { padding-left: 4px; } input { padding-right: 4px;}
+
+/* Main modules menu */
+ul.main-menu {
+	list-style: none;
+	position: fixed;
+
+	right: 0; top: 0; bottom: 0;
+	margin: 0; padding: 0;
+	border-left: #4D7285 1px solid;
+}
+	ul.main-menu li {
+	}
+
+	ul.main-menu a {
+		display: block;
+		font-size: 0.8em;
+		text-decoration: none;
+		padding: 8 10 0 10;
+	}
+	
+	ul.main-menu a:hover {
+		text-decoration: underline;
+	}
+
+	ul.main-menu a.active {
+		font-weight: bold;
+	}
+
+
+/* Navibar */
+ul.navibar {
+	list-style: none;
+	padding: 0;
+	display: inline;
+}
+	ul.navibar li {
+		display: inline;
+	}
+	
+	ul.navibar li .arrow {
+		margin-left: 10px;
+	}
+	
+	.required {
+		margin-left: 4px;
+		color: red !important;
+	}
+
+
+/* Common fields style */
+form ul {
+	list-style: none;
+	padding-left: 10px;
+}
+
+	form ul label {
+		font-size: 0.9em;
+		color: #000;
+		display: block;
+		margin-bottom: 4px;
+	}
+	
+	form ul label.boolean {
+		display: inline;
+		margin-left: 3px;
+	}
+
+	form ul input, form ul textarea, form ul select {
+		font-size: 1.4em;
+		margin-top: 2px;
+	}
+
+	input.string, input.password, input.tags, form ul select { width: 90%; }
+	input.int, input.float, input.price { width: 11%; }
+	input.date { width: 40%; }
+	
+	textarea.wysiwyg, textarea.text {
+		width: 90%;
+		height: 85px;
+		
+		font-family: verdana,sans-serif;
+		font-size: 90%;
+		letter-spacing: 1px;
+	}
+	
+	form ul input, form ul textarea, form ul select {
+		color: #000;
+	}
+	
+	form ul label {
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+	
+	form ul select.relation {
+	}
+	
+	form ul input.relation-search {
+		width   : 90%;		
+	}
+
+	form ul input.relation-add {
+		background : url("/images/cms/admin/mac/tree/ico_add.png") no-repeat;		
+	}
+	
+	form ul input.boolean {
+		margin-top: 15px;
+	}
+	
+	p.tip {
+		margin: 0;
+		font-size: 0.75em;
+	}
+
+
+/* Save and cancel buttons */
+p.buttons {
+	text-align: left;
+	margin-left: 10px;
+}
+
+	p.buttons input {
+		font-size: 1.4em;
+		font-weight: normal;
+		color: #000;
+		margin-right: 25px;
+		
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	
+	p.buttons input.primary { font-weight: bold; }
+
+
+
+/* Fieldset + legend */
+fieldset.collapsible { border: none; border-top: 1px solid #888;}
+fieldset.collapsible legend { padding: 0 10px 0 10px; color: #4D7285; font-weight: bold; }
+fieldset.collapsible legend a { text-decoration: none; }
+fieldset.collapsed { }
+fieldset.collapsed p, fieldset.collapsed img, fieldset.collapsed table, fieldset.collapsed ul, fieldset.collapsed div fieldset.collapsed span { display: none; }
+
+
+.imgButtonWrapper div {
+	float: left;
+	font-weight: bold;
+	padding-top: 6px;
+}
+
+/* Module tabs */
+ul.tabs {
+	list-style: none;
+	padding-left: 0;
+}
+
+	ul.tabs li {
+		display: inline;
+		padding-right: 15px;
+	}
+	
+	ul.tabs li.active a {
+		font-weight: bold;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+<?php
+class __tagsAccountUsageCloud {public function tagsAccountUsageCloud($v3ed5b343328db107bc720771701a2e39 = "tags", $v31d6b76c1497a19da70f395ec9d06ea8 = -1, $v6016bcc6f7effd8b6eaaea39ee02896f = true) {return $this->tags_mk_cloud(NULL, $v3ed5b343328db107bc720771701a2e39, $v31d6b76c1497a19da70f395ec9d06ea8, $v6016bcc6f7effd8b6eaaea39ee02896f, true, array());}}?>

@@ -1,0 +1,104 @@
+table.permissionTable {
+	/*border : 1px solid #ddd;*/
+	border-collapse: collapse;
+	font-size      : 12px;
+	width : 100%;
+}
+
+table.permissionTable th {
+	border-right : 1px solid white;
+	background-color: #ccc;
+	height : 20px;
+	color: white;
+}
+
+table.permissionTable tr {
+	height : 20px;
+}
+
+table.permissionTable td {
+	border-right : 1px solid white;
+	padding-left : 5px;
+}
+
+table.permissionTable th.permissionType {
+	background-color: #999;
+	width : 22px;
+}
+
+table.permissionTable td.permissionType {
+	text-align : center;
+	padding    : 0;
+}
+
+table.permissionTable td.addOwner {
+	background-color: #fff;
+	border     : 0;
+	padding    : 0;
+	padding-top: 10px;
+}
+
+table.permissionTable td.addOwner input {
+	width : 50%;
+}
+
+table.permissionTable tr:nth-child(even) {
+	background-color: #eee;
+}
+
+table.permissionTable tr:hover {
+	background-color: #bdf;
+}
+
+table.permissionTable tr:hover td {
+	border-right : 1px solid white;
+}
+
+table.permissionTable input {
+	border : 1px solid #aaa;
+}
+
+table.permissionTable img {
+	padding-right : 5px;
+}
+
+/* Autosuggest styles */
+.permissionsAutosuggest * {
+	font-family:sans-serif;
+	font-size  : 12px;
+	margin  : 0;
+	padding : 0;
+	cursor  : default;
+}
+div.permissionsAutosuggest {
+	border     : 1px solid #aaa;
+	border-top : 0px;
+	background : #fff;
+}
+.permissionsAutosuggest ul {
+	list-style-type : none;
+}
+.permissionsAutosuggest li {
+	padding       : 6px 7px 6px;
+	border-bottom : 1px solid #eee;
+	line-height   : 18px;
+	overflow      : hidden;
+}
+.permissionsAutosuggest li.active {
+	background-color : #ffffd4;
+}
+.permissionsAutosuggest li>span {
+	color        : #aaa;
+	padding-left : 21px;
+	font-size    : 10px;
+}
+.permissionsAutosuggest li>a {
+	color       : #0088ea;
+	font-size   : 12px;
+	cursor      : pointer;
+	white-space : nowrap;
+}
+
+.permissionsAutosuggest li>img {
+	padding-right : 5px;
+}

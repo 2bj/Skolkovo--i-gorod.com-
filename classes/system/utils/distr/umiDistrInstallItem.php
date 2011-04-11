@@ -1,0 +1,2 @@
+<?php
+ abstract class umiDistrInstallItem {abstract public function __construct($v47826cacc65c665212b821e6ff80b9b0 = false);abstract public function pack();public static function unpack($v8d777f385d3dfec8815d20f7496026dc) {}abstract public function restore();public function getFilePath() {return $this->filePath;}};?>

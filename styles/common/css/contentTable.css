@@ -1,0 +1,235 @@
+	table.table-container {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 20px;
+		background: url('/images/cms/admin/mac/tree/grid.gif');
+		background-position: 0 0px;
+		border: #DDD dotted 1px;
+		-moz-user-select: element;
+		-khtml-user-select: element;
+	}
+
+
+
+	table.table-container td {
+		height: 22px;
+	}
+
+	table.table-container tr.filter-row th {
+		text-align: center;
+		height: 22px;
+		border-right: 1px dotted #DDD;
+	}
+
+	td.ti {
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	td.ti a.unactive, td.ti a.unactive:hover {
+		color: #000 !important;
+		text-decoration: none !important;
+	}
+
+	td.ti-toggle {
+		width: 20px;
+	}
+
+
+	img.ti-toggle {
+		border: 0;
+        width: 11px;
+        height: 11px;
+		margin-left: 2px;
+	}
+
+	td.pages-bar {
+		white-space: nowrap;
+	}
+
+		td.pages-bar a {
+			margin-left: 7px;
+			font-weight: bold;
+		}
+
+		td.pages-bar .current {
+			color: 000 !important;
+			cursor: default;
+		}
+		
+		td.pages-bar .pagesLabel {
+			color: #777;
+			margin-left: 5px;
+		}
+
+		td.pages-bar .empty-result {
+			color: #777;
+			margin-left: 35px;
+			font-weight: bold;
+		}
+
+	table.table-container td.icon {
+		vertical-align: top;
+		padding: 0;
+		height: 22px;
+	}
+	
+	table.table-container td {
+		padding: 0;
+	}
+	
+	table.table-container td.icon {
+		width: 30px;
+	}
+
+
+	table.table-container img.ti-icon {
+	}
+
+	table.table-container td {
+		color: black;
+		font-family: Tahoma, Helvetica, Sans-Serif;
+		font-size: 11px;
+		margin: 0;
+	}
+
+	table.table-container a.ti {
+		color: black;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+
+	table.table-container table {
+		width: 100%;
+	}
+
+
+	tr.hightlight {
+		background-color: #E5E5E5 !important;
+	}
+	
+	tr.selected {
+		background-color: #C8EFFF !important;
+	}
+	
+	tr.selected-highlight {	
+		background-color: #C8EFFF !important;
+	}
+
+
+
+.table-container .column {
+	width: 100px;
+	white-space: nowrap;
+}
+
+	.table-container .column div {
+		width: 100px;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+table.table-container th {
+	height: 22px;
+	font-weight: bold;
+	color: black;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+
+	.table-container th.column div {
+		margin-left: 8px;
+		padding: 0;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.table-container th.column div.asc {
+		background: url('/images/cms/admin/mac/tree/order-asc.gif') 0 1px no-repeat;
+	}
+
+	.table-container th.column div.desc {
+
+		background: url('/images/cms/admin/mac/tree/order-desc.gif') 0 2px no-repeat;
+	}
+
+	table.table-container th.column a.order {
+		color: black !important;
+	}
+
+	.table-container div.invoke-btn {
+		height: 16px;
+		padding: 1px;
+		margin-left: 4px;
+		margin-top: 3px;
+		width: 22px;
+		cursor: pointer;
+		background: url('/images/cms/admin/mac/tree/show_menu.png') 0 0 no-repeat;
+	}
+	/* resizer */
+	table.table-container th.column span {
+		cursor: e-resize;
+		position: absolute;
+		z-index: 1;
+		right: 0;
+
+		height: 20px;
+		overflow: hidden;
+		width: 8px;
+	}
+
+	table.table-container td.column div {
+		margin-left: 8px;
+	}
+
+
+table.table-container th.void, table.table-container th.filter-void {
+	width: 20px;
+	empty-cells: show;
+	border-right: none !important;
+}
+
+
+
+div.tree_toolbar {
+		width: 230px;
+		height:20px;
+		right: 0;
+		padding-top: 2px;
+	}
+
+		a.tree_toolbtn {
+			display: block;
+			float: right;
+			margin-left: 10px;
+			width: 22px;
+			height: 16px;
+		}
+
+
+.table-container .column, .table-container td.ti {
+	border-right: 1px dotted #DDD;
+}
+
+a.csvLink {
+	background-image: url('/images/cms/admin/mac/ico_csv_import.png');
+	background-repeat: no-repeat;
+	background-position: 0px 0;
+	padding-left: 18px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-right: 20px;
+}
+
+a.csvImport {
+	background-image: url('/images/cms/admin/mac/ico_csv_import.png');
+}
+
+a.csvExport {
+	background-image: url('/images/cms/admin/mac/ico_csv_export.png');
+}

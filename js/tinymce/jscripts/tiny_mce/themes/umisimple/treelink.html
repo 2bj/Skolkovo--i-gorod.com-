@@ -1,0 +1,283 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Выбор страницы из структуры</title>
+
+		<script src="/js/jquery/jquery-1.4.1.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/js/smc/compressed.js"></script>
+		<script language="javascript" type="text/javascript" src="/js/tinymce/jscripts/tiny_mce/tiny_mce_popup.js"></script>
+
+		<style type="text/css">
+			body {
+				padding : 5px 5px;
+			}
+			div.eip_buttons{
+				padding-top : 5px;
+				text-align  : right;
+			}
+			ul.tree-container {
+				padding: 0;
+				margin: 0;
+				margin-bottom: 20px;
+				position: relative;
+				-moz-user-select: none;
+				-khtml-user-select: none;
+			}
+			ul.tree-container, ul.ti-childs-container {
+				list-style: none;
+			}
+			ul.ti-childs-container {
+				margin  : 0 0 0 19px;
+				padding : 0;
+			}
+			li.tree-highlight {
+				display: block;
+				height: 16px;
+				width: 100%;
+				background-color: #d0d7dd;
+			}
+			li.tree_toolbar {
+				width: 230px;
+				height:20px;
+				right: 0;
+				padding-top: 2px;
+				background: #d0d7dd url('/images/cms/admin/mac/toolbar.gif') no-repeat 0 -1px;
+			}
+			a.tree_toolbtn {
+				display: block;
+				float: right;
+				margin-left: 10px;
+				width: 22px;
+				height: 16px;
+			}
+			img.ti-toggle {
+				border: 0;
+				margin-left: 2px;
+				vertical-align: middle;
+				width: 11px;
+				height: 11px;
+			}
+			li.ti {
+				padding: 0;
+				margin: 0;
+			}
+			.hover {
+				border-bottom: 1px dashed red;
+			}
+			img.ti-icon {
+				vertical-align: middle;
+				margin: 2px 5px;
+			}
+			div.ti {
+				display: block;
+				white-space: nowrap;
+				color:#3281CD;
+				font-family:Tahoma;
+				font-size:11px;
+				text-decoration:none;
+				height: 22px;
+				/*background-color: #fff;*/
+			}
+			div.hightlight {
+				background-color: #D0D7DD !important;
+			}
+			div.virtual-hightlight {
+				background-color: #C8EFFF !important;
+			}
+			div.ti-drop {
+				height: 2px;
+				overflow: hidden;
+			}
+			div.ti-drop-as-child {
+				height: 2px;
+				margin-left: 42px;
+				background: transparent;
+				overflow: hidden;
+			}
+			div.ti-drop-as-sibling {
+				height: 2px;
+				background: #00008b;
+				overflow: hidden;
+			}
+			div.ti-draggable {
+				height: 21px;
+				cursor: move;
+			}
+			div.ti-draggable div {
+				margin-left: 20px;
+				padding-top: 5px;
+			}
+			a.ti:active, a.ti:focus {
+				/*background-color: #d0d7dd;*/
+			}
+			/* indicators */
+			.page-status {
+				width: 7px;
+				height: 7px;
+				z-index: 2;
+				margin-top: 8px;
+				margin-left: -20px;
+				position: absolute;
+				_position: none;
+			}
+			/* Local styles */
+			div.tree-wrapper {
+				border-bottom : 1px solid #ccc;
+				/*border-top    : 1px solid #ccc;*/
+				/*border-left: 1px solid #ccc;
+				border-right: 1px solid #ccc;*/
+				height   : 240px;
+				overflow : auto;
+				position : relative;
+			}
+
+		</style>
+		
+		<script type="text/javascript">
+			function getArgs() {
+				var args = new Object();
+				var query = location.search.substring(1);
+				var pairs = query.split("&");
+				for(var i = 0; i < pairs.length; i++) {
+					var pos = pairs[i].indexOf('=');
+					if (pos == -1) continue;
+					var argname = pairs[i].substring(0,pos);
+					var value = pairs[i].substring(pos+1);
+					args[argname] = unescape(value);
+				}
+				return args;
+			}
+			var args = getArgs();
+			function retURL(pageId) {
+                var win      = tinyMCEPopup.getWindowArg("window");
+                var sInputId = tinyMCEPopup.getWindowArg("input");
+                win.document.getElementById(tinyMCEPopup.getWindowArg("input")).value = "%content get_page_url(" + pageId + ")%";
+                onClose();
+            }
+            document.onkeydown = function(e) {
+                var is_ie = !(navigator.appName.indexOf("Netscape") != -1);
+                if(!is_ie) event = e;
+                if(event.keyCode == 27) onClose();
+            }
+			function onClose() {
+				tinyMCEPopup.close();
+				return false;
+			}
+			var domainsLoaded  = false;
+			var settingsLoaded = false;
+			jQuery(function(){
+			$.ajax({url      : "/admin/content/sitetree.xml",
+					method   : "get",
+					complete : function(r) {
+											domainsLoaded = true;
+											var domains = r.responseXML.getElementsByTagName('domain');
+											var select  = document.getElementById('domainSelect');
+											for(var i=0; i<domains.length; i++) {
+												var option = new Option(domains[i].getAttribute('host'), domains[i].getAttribute('id'));
+												option.innerHTML = domains[i].getAttribute('host');
+												select.appendChild(option);
+											}
+											createDomainTree();
+										  }
+							 })
+		      });
+		</script>
+	</head>
+
+	<body id="treelink">
+
+	<div style="width:100%;text-align:right">
+		<select style="width:200px;" id="domainSelect" onchange="javascript:changeDomain();">
+			<!-- ololo -->
+		</select>
+	</div>
+
+	<script type="text/javascript">
+			var oDataSet  = null;
+			var oTree	  = null;
+			var oRoot     = null;
+			var sModule   = args.module ? args.module : 'content';
+			function createDomainTree() {
+				if(!settingsLoaded || !domainsLoaded) return;
+
+				oDataSet = new dataSet(sModule, true);
+				var oDefaultFilter = new filter();
+				oDataSet.setDefaultFilter(oDefaultFilter);
+
+				oDefaultFilter.setViewMode(false);
+				oDefaultFilter.setVirtualCopyChecking(false);
+
+				oTree = new Control(oDataSet, TreeItem, {
+					id 		  : 'tree_common0',
+					toolbar   : null,
+					iconsPath : '/images/cms/admin/mac/tree/',
+					container : document.getElementById('tree_container1'),
+					allowDrag : false,
+					onItemClick : function(Item) { retURL(Item.id); return false; }
+				});
+
+				oRoot = oTree.setRootNode({
+					'id'         	 : 0,
+					'allow-drag' 	 : false,
+					'iconbase'   	 : '/images/cms/admin/mac/tree/ico_domain.png',
+					'name'       	 : location.hostname,
+					'is-active'      : '1',
+					'allow-copy'     : false,
+					'allow-activity' : false,
+					'create-link' 	 : ''
+				});
+
+				var select = document.getElementById('domainSelect');
+
+				var oInitFltr = new filter();
+				oInitFltr.setParentElements(0);
+				//oInitFltr.setLang(args.lang_id);
+				oDefaultFilter.setDomain(select.options[select.selectedIndex].value);
+				oDefaultFilter.setViewMode(false);
+				oDefaultFilter.setVirtualCopyChecking(false);
+				oRoot.filter = oInitFltr;
+
+				settingsLoaded = false;
+				domainsLoaded  = false;
+
+				for (var i = 0; i < Control.instances.length; i++) {
+					Control.instances[i].init();
+				}
+			}
+			function changeDomain() {
+				var oInitFltr = new filter();
+				oInitFltr.setParentElements(0);
+				//oInitFltr.setLang(args.lang_id);
+				var select = document.getElementById('domainSelect');
+				 var oDefaultFilter = new filter(); 
+				oDefaultFilter.setDomain(select.options[select.selectedIndex].value);
+				oDefaultFilter.setViewMode(false);
+				oDefaultFilter.setVirtualCopyChecking(false);
+				oDataSet.setDefaultFilter(oDefaultFilter);
+				oTree.removeItem(oTree.getRootNodeId());
+				oRoot = oTree.setRootNode({
+					'id'         	 : 0,
+					'allow-drag' 	 : false,
+					'iconbase'   	 : '/images/cms/admin/mac/tree/ico_domain.png',
+					'name'       	 : select.options[select.selectedIndex].text,
+					'is-active'      : '1',
+					'allow-copy'     : false,
+					'allow-activity' : false,
+					'create-link' 	 : ''
+				});
+				oRoot.filter = oInitFltr;
+				oDataSet.clearFiltersCache();
+			}
+			settingsLoaded = true; createDomainTree();
+
+		</script>
+	<div class="tree-wrapper">
+		<ul id="tree_container1" class="tree-container"></ul>
+	</div>
+	<div class="eip_buttons">
+		<input type="button" id="cancel" name="cancel" class="back" value="Отмена" onclick="return onClose();" />
+		<div style="clear:both;"></div>
+	</div>
+	<div id="placer"></div>
+	</body>
+</html>

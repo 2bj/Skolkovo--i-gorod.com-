@@ -1,0 +1,2 @@
+<?php
+ class emailRestriction extends baseRestriction {protected $errorMessage = 'restriction-error-email';public function validate($v2063c1608d6e0baf80249c42e2be5804) {return (bool) ($v2063c1608d6e0baf80249c42e2be5804 ? preg_match("/.+\@.+\..+/", $v2063c1608d6e0baf80249c42e2be5804) : true);}};?>

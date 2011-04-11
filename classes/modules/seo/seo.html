@@ -1,0 +1,89 @@
+<html lang="en" border="0">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>siteauditor</title>
+
+<script type="text/javascript">
+	function runCrossDomainWrapper(url) {
+		window.status = "Loading " + url + "...";
+		var res = new String(document.wrapperApplet.getDocument(url));
+		return res.toString();
+	}
+	function wow(a) { /* void */ }
+</script>
+
+<script language="javascript"> AC_FL_RunContent = 0; </script>
+<script language="javascript"> DetectFlashVer = 0; </script>
+<script src="./js/AC_RunActiveContent.js" language="javascript"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 8;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Revision of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+<body bgcolor="#fafafa" style="margin: 0px; padding: 0px; border: 0px;">
+
+<script language="JavaScript" type="text/javascript">
+<!--
+if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
+	alert("This page requires AC_RunActiveContent.js.");
+} else {
+	var hasRightVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+	if(hasRightVersion) {  // if we've detected an acceptable version
+		// embed the flash movie
+		AC_FL_RunContent(
+			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0',
+			'width', '750',
+			'height', '610',
+			'src', 'siteauditor',
+			'quality', 'high',
+			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+			'align', 'middle',
+			'play', 'true',
+			'loop', 'true',
+			'scale', 'showall',
+			'wmode', 'transparent',
+			'devicefont', 'false',
+			'id', 'siteauditor',
+			'bgcolor', '#fafafa',
+			'name', 'siteauditor',
+			'menu', 'true',
+			'allowScriptAccess','always',
+			'allowNetworking', 'all',
+			'allowFullScreen','false',
+			'movie', 'siteauditor',
+			'salign', ''
+			); //end AC code
+	} else {  // flash is too old or we can't detect the plugin
+		var alternateContent = 'Alternate HTML content should be placed here.'
+			+ 'This content requires the Adobe Flash Player.'
+			+ '<a href=http://www.macromedia.com/go/getflash/>Get Flash</a>';
+		document.write(alternateContent);  // insert non-flash content
+	}
+}
+// -->
+</script>
+<noscript>
+	// Provide alternate content for browsers that do not support scripting
+	// or for those that have scripting disabled.
+  	Alternate HTML content should be placed here. This content requires the Adobe Flash Player.
+  	<a href="http://www.macromedia.com/go/getflash/">Get Flash</a>
+</noscript>
+
+
+<APPLET CODE="org/me/hello/MyApplet.class" type="application/x-java-applet" CODEBASE="classes" align="baseline" height="20" width="750" name="wrapperApplet" id="wrapperApplet" mayscript="true" scriptable="true">
+	<PARAM NAME="type" VALUE="application/x-java-applet"> 
+	<PARAM NAME="mayscript" VALUE="true"/>
+	<PARAM NAME="scriptable" VALUE="true">
+</APPLET>
+
+</body>
+</html>

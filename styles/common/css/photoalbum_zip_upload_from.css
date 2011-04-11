@@ -1,0 +1,77 @@
+div#zip_upload {
+	position: absolute;
+	width: 300px !important;
+	background: white;
+	border: silver 1px solid;
+	z-index: 10000;
+	padding: 0px;
+}
+
+	div#zip_upload form {
+		padding: 5px;
+		margin: 0px;
+
+
+	}
+
+	    
+		div#zip_upload form div input#zip_close_button {}
+
+div#zip_upload .tbutton {margin-left: 10px;}
+
+div#file_manager {
+	padding: 5px;
+}
+	div#file_manager div#zip_manager {
+		margin-top: 6px;
+		height: 140px;
+		border: gray 1px solid;
+		overflow: auto;
+	}
+	
+	div#file_manager p {
+		text-align: center;
+	}
+			div#file_manager p input {
+				width: 150px;
+			}
+	
+	div#file_manager div#zip_manager a {
+		display: block;
+		padding: 3px;
+		color: #000;
+		text-decoration: none;
+		font-size: 10px;
+	}
+	
+	div#file_manager div#zip_manager a.folder {}
+	
+	div#file_manager div#zip_manager a:hover {
+		background-color: #0066DF;
+		color: #FFF;
+	}
+
+#zip_div_1 {
+    margin: 15px 15px 15px 15px;
+    
+}
+
+#zip_div_2 {
+    margin: 0px 15px 15px 15px;
+}
+
+#browse_button {
+    margin-left: 10px;
+    height: 22px;
+    border: solid 1px #c0c0c0;
+    background: #efefef;
+    padding: 0 7px;
+    
+}
+#src_input {
+ width: 155px;
+    height: 22px;
+    float: left;
+}
+
+

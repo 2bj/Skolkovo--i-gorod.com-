@@ -1,0 +1,2 @@
+<?php
+ class publicExceptionWrapper extends translatorWrapper {public function translate($v8d777f385d3dfec8815d20f7496026dc) {return $this->translateData($v8d777f385d3dfec8815d20f7496026dc);}protected function translateData(publicException $v42552b1f133f9f8eb406d4f306ea9fd1) {return array(    'error' => array(     'node:msg' => $v42552b1f133f9f8eb406d4f306ea9fd1->getMessage()    )   );}};?>

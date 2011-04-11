@@ -1,0 +1,2 @@
+<?php
+ if(!defined("DB_DRIVER")) {mysql_query("SELECT tf FROM cms3_search_index LIMIT 1");if(mysql_error()) {mysql_query("TRUNCATE TABLE cms3_search_index");mysql_query("TRUNCATE TABLE cms3_search_index_words");mysql_query("TRUNCATE TABLE cms3_search");mysql_query("ALTER TABLE cms3_search_index ADD tf float default null");mysql_query("ALTER TABLE cms3_search_index ADD INDEX(tf)");}}?>

@@ -1,0 +1,4 @@
+RewriteEngine on
+
+#php5_value date.timezone "Europe/Moscow"
+#php_value MyVar "sdfsdf sdf"

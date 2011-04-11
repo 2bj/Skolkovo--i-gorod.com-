@@ -1,0 +1,2 @@
+<?php
+ class objectTypeRestriction extends baseRestriction {protected $errorMessage = 'restriction-error-object-type';public function validate($v2063c1608d6e0baf80249c42e2be5804) {return selector::get('object-type')->id($v2063c1608d6e0baf80249c42e2be5804) instanceof iUmiObjectType;}};?>

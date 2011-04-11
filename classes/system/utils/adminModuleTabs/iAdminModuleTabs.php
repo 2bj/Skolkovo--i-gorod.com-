@@ -1,0 +1,2 @@
+<?php
+ interface iAdminModuleTabs {public function __construct($v599dcce2998a6b40b1e38e8c6006cb0a = 'common');public function add($vddaa6e8c8c412299272e183087b8f7b6, $v9299da2529c98fccce0e32b476ba3266 = NULL);public function get($vddaa6e8c8c412299272e183087b8f7b6);public function getTabNameByAlias($v936f2c128d76b35569cff20ee7e04ed4);public function remove($vddaa6e8c8c412299272e183087b8f7b6);public function getAll();};?>

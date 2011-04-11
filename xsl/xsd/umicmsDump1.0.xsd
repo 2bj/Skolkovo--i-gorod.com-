@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Den, JFima 
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xml:lang="ru-RU">
+	<xs:annotation>
+		<xs:documentation xml:lang="ru-RU">
+
+			Данная схема описывает формат импорта/экспорта данных UMI.CMS
+
+		</xs:documentation>
+	</xs:annotation>
+	<xs:element name="umicmsDump">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="siteName" type="xs:string">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Название сайта</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="domain" type="xs:anyURI">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">URL домена на котором установлена UMI.CMS</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="sourceId" type="xs:string">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">
+							При импорте данных указывает на источник данных, например: rss, atom, YML, exel, commerceML, etc.
+
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="generateTime" type="dateTimeType">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Дата генерации документа</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="element" maxOccurs="unbounded"/>
+				<xs:element ref="object" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="element">
+		<xs:annotation>
+			<xs:documentation xml:lang="ru-RU">
+				element - это, грубо говоря, страница сайта. То что вы видите в дереве структуры это и есть элементы.
+				Но, element не содержит данных, вся информация, отображаемая на странице, находится в object, с которым element
+				связан с помощью атрибута objectId.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="link" type="xs:anyURI">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Уникальный URL страницы</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="altName" type="xs:string">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">
+							Псевдостатический адрес страницы, который прописывается в редактировании страницы,
+							например у страницы новостей - news
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="templateId" type="xs:string">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Идентификатор шаблона по которому отображается страница</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="templatePath" type="xs:string">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Путь по которому находится шаблон для отображения страницы относительно /tpls/content/ (например index.tpl)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="lang"/>
+				<xs:element name="domain" type="xs:anyURI">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">url домена на котором находится страница</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="behaviour"/>
+				<xs:element name="updateTime" type="dateTimeType">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Дата последнего обновления страницы</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">Идентификатор элемента</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="objectId" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">Идентификатор соответствующего объекта</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="parentId" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">Идентификатор родительского элемента в структуре</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="is_visible" type="booleanType" use="optional">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">Определяет видимость страницы на сайте (1 - видима, 0 - заблокирована)</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="is_active" type="booleanType" use="optional">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">Определяет видимость страницы в меню</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="is_deleted" type="booleanType" use="optional">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">Если свойство установлено, то объект помечается как удаленный и перемещается в корзину.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="lang">
+		<xs:annotation>
+			<xs:documentation xml:lang="ru-RU">Язык страницы</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="prefix" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="behaviour">
+		<xs:annotation>
+			<xs:documentation xml:lang="ru-RU">
+
+				Определяет тип страницы (новость, объект каталога, etc.) двумя параметрами: module и method.
+				В title передается название, например: "Раздел каталога".
+
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="title" type="xs:string">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Название типа страницы</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="module" type="xs:string">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Определяет к какому модулю относится страница: catalog, news, etc.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="method" type="xs:string">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">
+
+							Определяет чем является страница, например в модуле каталог может быть "раздел каталога" (category),
+							или "объект каталога" (object)
+
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="object">
+		<xs:annotation>
+			<xs:documentation xml:lang="ru-RU">Это своего рода контейнер для любых данных. 
+				Объект состоит из свойств, поделенных на блоки propertiesBlock в которых хранятся свойства property
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element ref="propertiesBlock" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">Идентификатор объекта</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="isLocked" type="booleanType" use="required">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">
+
+						Принимает значение "1" если объект заблокирован и "0" в противном случае.
+					
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="typeId" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">
+
+						Идентификатор типа объекта данных, определяемого в "шаблонах данных".
+
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="propertiesBlock">
+		<xs:annotation>
+			<xs:documentation xml:lang="ru-RU">Группа свойств</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="title" type="xs:string"/>
+				<xs:element ref="property" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="isLocked" type="booleanType" use="required">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">
+						Принимает значение "1" если группа свойств заблокирована и "0" в противном случае.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="isPublic" type="booleanType" use="required">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">
+						Принимает значение "1" если группа свойств приватна (скрыта) для всех пользователей и "0" в противном случае.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="property">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="title" type="xs:string"/>
+				<xs:element name="fieldType" type="xs:string">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Тип свойства: строка, текст, список, etc.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="isMultiple" type="booleanType">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">
+
+							Принимает значение "1" если свойство имеет несколько значений и "0" в противном случае.
+
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="isIndexed" type="booleanType">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">
+
+							Принимает значение "1" если свойство индексируется и "0" в противном случае.
+
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="isFilterable" type="booleanType">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">
+
+							Принимает значение "1" если свойство используется в фильтрах и "0" в противном случае.
+
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="guideId" type="xs:string">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Идентификатор справочника</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="tip" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="ru-RU">Подсказка (в админке) всплывающая при наведении курсора.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="values"/>
+			</xs:sequence>
+			<xs:attribute name="isLocked" type="booleanType" use="required">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">
+
+						Принимает значение "1" если группа свойств заблокирована и "0" в противном случае.
+
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="isPublic" type="booleanType" use="required">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">
+
+						Принимает значение "1" если группа свойств приватна (скрыта) для всех пользователей и "0" в противном случае.
+
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="values">
+		<xs:annotation>
+			<xs:documentation xml:lang="ru-RU">Значения свойства.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="value" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="value">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation xml:lang="ru-RU">В том случае если значение является датой.</xs:documentation>
+				</xs:annotation>
+				<xs:element ref="RFC"/>
+				<xs:element ref="UTC"/>
+				<xs:element ref="timestamp"/>
+			</xs:choice>
+			<xs:attribute name="id" type="xs:string"/>
+			<xs:attribute name="link" type="xs:anyURI"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="booleanType">
+		<xs:restriction base="xs:token">
+			<xs:pattern value="0|1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="dateTimeType">
+		<xs:sequence>
+			<xs:element ref="timestamp"/>
+			<xs:element ref="RFC"/>
+			<xs:element ref="UTC"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="timestamp" type="xs:decimal">
+		<xs:annotation>
+			<xs:documentation xml:lang="ru-RU">Дата/Время в секундах.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="RFC" type="xs:string">
+		<xs:annotation>
+			<xs:documentation xml:lang="ru-RU">Дата/Время записанное по стандарту RFC.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="UTC" type="xs:dateTime">
+		<xs:annotation>
+			<xs:documentation xml:lang="ru-RU">Дата/Время записанное по стандарту UTC.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

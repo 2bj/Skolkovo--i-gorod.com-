@@ -1,0 +1,2 @@
+<?php
+ interface iTemplater {public function init($va43c1b0aa53a0c908810c06ab1ff3967);public function loadLangs();public function putLangs($va43c1b0aa53a0c908810c06ab1ff3967);public function parseInput($va43c1b0aa53a0c908810c06ab1ff3967);public function parseMacros($vdc3ef687d19cc2fb071d846f9360ecbe);public function executeMacros($v8ee1d4327d02df333859c8dd0101aae8);public static function pushEditable($v22884db148f0ffb0d830ba431102b0b5, $vea9f6aca279138c58f705c8d4cb4b8ce, $vb80bb7740288fda1f201890375a60c8f);public function cleanUpResult($va43c1b0aa53a0c908810c06ab1ff3967);}?>

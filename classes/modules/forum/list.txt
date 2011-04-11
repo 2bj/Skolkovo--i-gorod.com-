@@ -1,0 +1,87 @@
+"FORUM" module specification
+2008-04-28
+
+
+========================|=======================|===============|===============
+========	FRONTEND MODE METHODS	========================================
+========================|=======================|===============|===============
+ FRONTEND MACROS	| FILE			| CLASS		| ADMIN MODE	
+========================|=======================|===============|===============
+ confs_list		| class.php		| forum		| lists
+ conf			| class.php		| forum		| -
+ conf_last_message	| class.php		| forum		| -
+------------------------|-----------------------|-------------------------------
+ topic			| class.php		| forum		| -
+ topic_post		| class.php		| forum		| -
+ topic_post_do		| class.php		| forum		| -
+ topic_last_message	| class.php		| forum		| -
+------------------------|-----------------------|-------------------------------
+ message		| class.php		| forum		| -
+ message_post		| class.php		| forum		| -
+ message_post_do	| class.php		| forum		| -
+ getMessageLink		| class.php		| forum		| -
+========================|=======================|===============================
+
+
+
+========================|=======================|===============================
+========	ADMIN MODE METHODS	========================================
+========================|=======================|===============================
+ ADMIN METHOD		| FILE			| CLASS
+========================|=======================|===============================
+ lists			| __admin.php		| __forum
+ last_messages		| __admin.php		| __forum
+ edit			| __admin.php		| __forum
+ add			| __admin.php		| __forum
+ del			| __admin.php		| __forum
+ activity		| __admin.php		| __forum
+ config			| __admin.php		| __forum
+========================|=======================|===============================
+
+
+
+========================|=======================|===============================
+========	INNER SERVICES		========================================
+========================|=======================|===============================
+ METHOD			| FILE			| CLASS
+========================|=======================|===============================
+ getConfTopicsCount	| class.php		| forum
+ getConfMessagesCount	| class.php		| forum
+------------------------|-----------------------|-------------------------------
+ makeAdminOutputList	| class.php		| forum
+ makeAdminOutputForm	| class.php		| forum
+------------------------|-----------------------|-------------------------------
+ getHTypeByName		| class.php		| forum
+ getOTypeByName		| class.php		| forum
+ getFieldId		| class.php		| forum
+------------------------|-----------------------|-------------------------------
+ increaseCounts		| __events_handlers.php	| __events_handlers_forum
+ decreaseCounts		| __events_handlers.php	| __events_handlers_forum
+ creaseCounts		| __events_handlers.php	| __events_handlers_forum
+========================|=======================|===============================
+
+
+
+========================|===============|===============|=======================
+========	RAISING EVENTS		========================================
+========================|===============|===============|=======================
+ EVENT			| FILE		| CLASS		| METHOD
+========================|===============|===============|=======================
+ forum_topic_post_do	| class.php	| forum		| topic_post_do
+ forum_message_post_do	| class.php	| forum		| message_post_do
+========================|===============|===============|=======================
+
+
+
+========================|===============================|=======================
+========	HANDLING EVENTS		========================================
+========================|===============================|=======================
+ HANDLER		| EVENT				| FILE
+========================|=======================================================
+ onDispatchChanges	| forum_message_post_do		| __sysevents.php
+ onAddTopicToDispatch	| forum_topic_post_do		| __sysevents.php
+------------------------|-------------------------------|-----------------------
+ onElementAppend	| systemCreateElement		| __events_handlers.php
+ onElementRemove	| systemDeleteElement		| __events_handlers.php
+ onElementActivity	| systemSwitchElementActivity	| __events_handlers.php
+========================|===============================|=======================

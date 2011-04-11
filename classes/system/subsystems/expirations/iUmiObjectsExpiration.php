@@ -1,0 +1,2 @@
+<?php
+ interface iUmiObjectsExpiration {public function run();public function set($v16b2b26000987faccb260b9d39df1269, $v018e77635d40709feb0c09c6fb84ee00 = false);public function clear($v16b2b26000987faccb260b9d39df1269);};?>

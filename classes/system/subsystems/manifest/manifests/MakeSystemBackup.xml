@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<enviroment>
+		<temporary-directory path="./sys-temp/manifest/temp-sys-files/" />
+		<backup-directory path="./sys-temp/manifest/backup/" />
+		<logger-directory path="./sys-temp/manifest/logs/" />
+	</enviroment>
+	
+	<route>
+		<transaction name="make_system_backup">
+			<title>Make system backup</title>
+			
+			<action name="CheckPermissions">
+				<title>Check root directory permissions</title>
+				
+				<param name="mode" value="write" />
+				<param name="target" value="." />
+			</action>
+			
+			<action name="CheckEnviroment">
+				<title>Check enviroment</title>
+			</action>
+			
+			<action name="MakeSystemFilesBackup">
+				<title>Make backup copy of system files</title>
+				
+				<param name="targets">
+					<param name=".htaccess" value=".htaccess" />
+					<param name="classes" value="classes" />
+					<param name="autothumbs.php" value="autothumbs.php" />
+					<param name="cacheControl.php" value="cacheControl.php" />
+					<param name="captcha.php" value="captcha.php" />
+					<param name="config.php" value="config.php" />
+					<param name="cron.php" value="cron.php" />
+					<param name="def_macroses.php" value="def_macroses.php" />
+					<param name="dtd" value="dtd" />
+					<param name="errors" value="errors" />
+					<param name="errors.php" value="errors.php" />
+					<param name="index.php" value="index.php" />
+					<param name="js" value="js" />
+					<param name="lib.php" value="lib.php" />
+					<param name="man" value="man" />
+					<param name="morph.php" value="morph.php" />
+					<param name="mysql.php" value="mysql.php" />
+					<param name="pwindows" value="pwindows" />
+					<param name="releaseStreams.php" value="releaseStreams.php" />
+					<param name="sbots.php" value="sbots.php" />
+					<param name="scriptaculous" value="scriptaculous" />
+					<param name="security.php" value="security.php" />
+					<param name="ssl" value="ssl" />
+					<param name="standalone.php" value="standalone.php" />
+					<param name="static_banner.php" value="static_banner.php" />
+					<param name="streams.php" value="streams.php" />
+					<param name="styles" value="styles" />
+					<param name="system.php" value="system.php" />
+					<param name="tinymce" value="tinymce" />
+					<param name="tpls" value="tpls" />
+					<param name="umaps" value="umaps" />
+					<param name="xsl" value="xsl" />
+					<param name="usels" value="usels" />
+					<param name="xsltTpls" value="xsltTpls" />
+				</param>
+			</action>
+			
+			<action name="CompressDirectory">
+				<title>Compress backup files</title>
+				
+				<param name="target-directory" value="./sys-temp/manifest/temp-sys-files/" />
+				<param name="output-file-name" value="./sys-temp/manifest/backup/backup-files-{Y-m-d-H-i-s}.zip" />
+			</action>
+			
+			<action name="RemoveDirectory">
+				<title>Remove temporary files</title>
+				
+				<param name="target-directory" value="./sys-temp/manifest/temp-sys-files" />
+			</action>
+		</transaction>
+	</route>
+</manifest>

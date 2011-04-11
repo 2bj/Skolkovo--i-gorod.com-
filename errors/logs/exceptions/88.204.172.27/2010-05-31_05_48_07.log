@@ -1,0 +1,83 @@
+[_COOKIE]
+	[__utma]
+	(string) 73111947.253013115.1274958208.1274958208.1275280406.2
+
+	[__utmz]
+	(string) 73111947.1275280406.2.2.utmcsr=yandex|utmccn=(organic)|utmcmd=organic|utmctr=www.i-gorod.com 
+
+	[__utmc]
+	(string) 73111947
+
+	[stat_id]
+	(string) a7fc5d73f69967f147b6952bffb48762
+
+	[user_captcha]
+	(string) a5usjx
+
+	[PHPSESSID]
+	(string) 2ea61e9c0b657df245642bf2a6856170
+
+	[umi_captcha]
+	(string) 479ce05e772df836966642ba7fe98cd3
+
+
+[_SESSION]
+	[user_id]
+	(string) 2373
+
+	[is_admin]
+	(array) ['']
+
+	[old_logged_in_value]
+	(boolean) 
+
+	[stat]
+	(array) ['', 'a7fc5d73f69967f147b6952bffb48762', '10025', '1', '17198', '9', '7', '7']
+
+	[4f0ac1919a1a999723f5307a32ca8147]
+	(array) ['['content', '', '1']', '['content', '', '16']', '['content', '', '23']']
+
+	[session-crossdomain-sync]
+	(integer) 1
+
+	[2dd13e8a918fa519b952883faa36f6f4]
+	(array) ['['news', 'item', '144']', '['content', '', '16']', '['content', '', '23']']
+
+	[ef0ad63858dd9f1238ab762ee60b9a27]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '582']', '['news', 'item', '405']', '['news', 'item', '401']', '['news', 'item', '406']', '['news', 'item', '396']', '['news', 'item', '397']', '['news', 'item', '381']', '['news', 'item', '382']', '['news', 'item', '354']', '['news', 'item', '352']', '['content', '', '16']', '['content', '', '23']']
+
+	[0fbad71ff365339aebf6e715544bc957]
+	(array) ['['news', 'rubric', '11']', '['news', 'item', '353']', '['news', 'item', '337']', '['news', 'item', '334']', '['news', 'item', '152']', '['news', 'item', '153']', '['news', 'item', '149']', '['news', 'item', '151']', '['news', 'item', '143']', '['news', 'item', '20']', '['content', '', '16']', '['content', '', '23']']
+
+	[358bfc42b3b5df0d25cc1548d073c331]
+	(array) ['['news', 'rubric', '172']', '['content', '', '16']', '['content', '', '331']', '['content', '', '23']']
+
+	[90c4612b47319ae2fedb40a229d278cd]
+	(array) ['['content', '', '5']', '['content', '', '16']', '['content', '', '23']']
+
+	[2f2292bb47632265931540b61f7bafd8]
+	(array) ['['content', '', '50']', '['content', '', '370']', '['content', '', '16']', '['content', '', '23']']
+
+	[umi_captcha]
+	(string) 479ce05e772df836966642ba7fe98cd3
+
+	[umi_captcha_plain]
+	(string) mymq9d
+
+	[errors_1275284887]
+	(array) ['['Вы ввели неверный код с картинки', '', '']']
+
+
+[_GET]
+	[path]
+	(string) webforms/send/
+
+
+[0.0035272]	Can't find error redirect string
+[0.0037980]	#0 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2): def_module-&gt;errorPanic()
+#1 /www_servers/utemp/pub/htdocs/classes/modules/webforms/class.php(2): def_module-&gt;errorNewMessage('%errors_wrong_c...')
+#2 /www_servers/utemp/pub/htdocs/classes/modules/def_module.php(2): webforms-&gt;send()
+#3 /www_servers/utemp/pub/htdocs/libs/def_macroses.php(2): def_module-&gt;cms_callMethod('send', NULL)
+#4 /www_servers/utemp/pub/htdocs/libs/root-src/index.php(2): macros_content()
+#5 /www_servers/utemp/pub/htdocs/index.php(2): require('/www_servers/ut...')
+#6 {main}

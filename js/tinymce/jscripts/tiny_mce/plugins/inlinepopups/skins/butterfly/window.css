@@ -1,0 +1,96 @@
+/* Clearlooks 2 */
+
+/* Reset */
+.butterfly, .butterfly div, .butterfly span, .butterfly a {vertical-align:baseline; text-align:left; position:absolute; border:0; padding:0; margin:0; background:transparent; font-family:Tahoma,Arial; font-size:11px; color:#000; text-decoration:none; font-weight:normal; width:auto; height:auto; overflow:hidden; display:block}
+
+/* General */
+.butterfly {position:absolute; direction:ltr}
+.butterfly .mceWrapper {position:static}
+.mceEventBlocker {position:fixed; left:0; top:0; background:url(img/horizontal.gif) no-repeat 0 -75px; width:100%; height:100%}
+.butterfly .mcePlaceHolder {border:1px solid #000; background:#888; top:0; left:0; opacity:0.5; -ms-filter:'alpha(opacity=50)'; filter:alpha(opacity=50)}
+.butterfly_modalBlocker {position:fixed; left:0; top:0; width:100%; height:100%; background:#000; opacity:0.6; -ms-filter:'alpha(opacity=60)'; filter:alpha(opacity=60); display:none}
+
+/* Top */
+.butterfly .mceTop, .butterfly .mceTop div {top:0; width:100%; height:23px}
+.butterfly .mceTop .mceLeft {
+	width:6px; 
+	background: url(/images/cms/eip/title_bg.png) no-repeat scroll 0 -27px;
+}
+.butterfly .mceTop .mceCenter {
+	right:6px; width:100%; height:23px; background:url(/images/cms/eip/title_bg.png) no-repeat -8px 0;
+}
+.butterfly .mceTop .mceRight { right:0; width:6px; height:23px; background:url(/images/cms/eip/title_bg.png) right top }
+.butterfly .mceTop span {margin-left: 15px; color: white; width:100%; text-align:left; vertical-align:middle; line-height:23px; font-weight:bold}
+
+
+/* Middle */
+.butterfly .mceMiddle {
+	outline: 1px solid #E3E3E3;
+}
+
+.butterfly .mceMiddle, .butterfly .mceMiddle div {top:0}
+.butterfly .mceMiddle {width:100%; height:100%; clip:rect(23px auto auto auto)}
+.butterfly .mceMiddle .mceLeft {left:0; width:5px; height:100%; background: #F9F9F9}
+.butterfly .mceMiddle span {top:23px; left:5px; width:100%; height:100%; background:#FFF}
+.butterfly .mceMiddle .mceRight {right:0; width:5px; height:100%; background: #F9F9F9}
+
+/* Bottom */
+.butterfly .mceBottom, .butterfly .mceBottom div {height:6px}
+.butterfly .mceBottom {left:0; bottom:0; width:100%}
+.butterfly .mceBottom div {top:0}
+.butterfly .mceBottom .mceLeft {left:0; width:5px; background:#F9F9F9}
+.butterfly .mceBottom .mceCenter {left:5px; width:100%; background:#F9F9F9}
+.butterfly .mceBottom .mceRight {right:0; width:5px; background:#F9F9F9}
+.butterfly .mceBottom span {display:none}
+.butterfly .mceStatusbar .mceBottom, .butterfly .mceStatusbar .mceBottom div {height:23px}
+.butterfly .mceStatusbar .mceBottom .mceLeft {background:#F9F9F9}
+.butterfly .mceStatusbar .mceBottom .mceCenter {background:#F9F9F9}
+.butterfly .mceStatusbar .mceBottom .mceRight {background:#F9F9F9}
+.butterfly .mceStatusbar .mceBottom span {display:block; left:7px; font-family:Arial, Verdana; font-size:11px; line-height:23px}
+
+/* Actions */
+.butterfly a {width:29px; height:16px; top:3px;}
+.butterfly .mceClose {height: 9px; width: 9px; top: 7px; right:7px; background: url(/images/cms/eip/close.png)}
+.butterfly .mceMin {display:none; right:68px; background:url(img/buttons.gif) 0 0}
+.butterfly .mceMed {display:none; right:37px; background:url(img/buttons.gif) -29px 0}
+.butterfly .mceMax {display:none; right:37px; background:url(img/buttons.gif) -58px 0}
+.butterfly .mceMove {display:none;width:100%;cursor:move;background:url(img/corners.gif) no-repeat -100px -100px}
+.butterfly .mceMovable .mceMove {display:block}
+.butterfly .mceFocus .mceClose {height: 9px; width: 9px; top: 7px; right:7px; background:url(/images/cms/eip/close.png)}
+.butterfly .mceFocus .mceMin {right:68px; background:url(img/buttons.gif) 0 -16px}
+.butterfly .mceFocus .mceMed {right:37px; background:url(img/buttons.gif) -29px -16px}
+.butterfly .mceFocus .mceMax {right:37px; background:url(img/buttons.gif) -58px -16px}
+.butterfly .mceFocus .mceClose:hover {height: 9px; width: 9px; top: 7px; right:7px; background:url(/images/cms/eip/close.png)}
+.butterfly .mceFocus .mceClose:hover {height: 9px; width: 9px; top: 7px; right:7px; background:url(/images/cms/eip/close.png)}
+.butterfly .mceFocus .mceMin:hover {right:68px; background:url(img/buttons.gif) 0 -32px}
+.butterfly .mceFocus .mceMed:hover {right:37px; background:url(img/buttons.gif) -29px -32px}
+.butterfly .mceFocus .mceMax:hover {right:37px; background:url(img/buttons.gif) -58px -32px}
+
+/* Resize */
+.butterfly .mceResize {top:auto; left:auto; display:none; width:5px; height:5px; background:url(img/horizontal.gif) no-repeat 0 -75px}
+.butterfly .mceResizable .mceResize {display:block}
+.butterfly .mceResizable .mceMin, .butterfly .mceMax {display:none}
+.butterfly .mceMinimizable .mceMin {display:block}
+.butterfly .mceMaximizable .mceMax {display:block}
+.butterfly .mceMaximized .mceMed {display:block}
+.butterfly .mceMaximized .mceMax {display:none}
+.butterfly a.mceResizeN {top:0; left:0; width:100%; cursor:n-resize}
+.butterfly a.mceResizeNW {top:0; left:0; cursor:nw-resize}
+.butterfly a.mceResizeNE {top:0; right:0; cursor:ne-resize}
+.butterfly a.mceResizeW {top:0; left:0; height:100%; cursor:w-resize;}
+.butterfly a.mceResizeE {top:0; right:0; height:100%; cursor:e-resize}
+.butterfly a.mceResizeS {bottom:0; left:0; width:100%; cursor:s-resize}
+.butterfly a.mceResizeSW {bottom:0; left:0; cursor:sw-resize}
+.butterfly a.mceResizeSE {bottom:0; right:0; cursor:se-resize}
+
+/* Alert/Confirm */
+.butterfly .mceButton {font-weight:bold; bottom:10px; width:80px; height:30px; background:url(img/button.gif); line-height:30px; vertical-align:middle; text-align:center; outline:0}
+.butterfly .mceMiddle .mceIcon {left:15px; top:35px; width:32px; height:32px}
+.butterfly .mceAlert .mceMiddle span, .butterfly .mceConfirm .mceMiddle span {background:transparent;left:60px; top:35px; width:320px; height:50px; font-weight:bold; overflow:auto; white-space:normal}
+.butterfly a:hover {font-weight:bold;}
+.butterfly .mceAlert .mceMiddle, .butterfly .mceConfirm .mceMiddle {background:#D6D7D5}
+.butterfly .mceAlert .mceOk {left:50%; top:auto; margin-left: -40px}
+.butterfly .mceAlert .mceIcon {background:url(img/alert.gif)}
+.butterfly .mceConfirm .mceOk {left:50%; top:auto; margin-left: -90px}
+.butterfly .mceConfirm .mceCancel {left:50%; top:auto}
+.butterfly .mceConfirm .mceIcon {background:url(img/confirm.gif)} 

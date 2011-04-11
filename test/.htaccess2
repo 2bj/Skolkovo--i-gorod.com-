@@ -1,0 +1,2 @@
+RewriteEngine on
+php_value date.timezone "Europe/Moscow"

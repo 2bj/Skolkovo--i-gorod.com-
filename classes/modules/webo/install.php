@@ -1,0 +1,2 @@
+<?php
+    $v551b723eafd6a31d444fcb2f5920fbd3 = Array();$v551b723eafd6a31d444fcb2f5920fbd3['name'] = "webo";$v551b723eafd6a31d444fcb2f5920fbd3['filename'] = "modules/webo/class.php";$v551b723eafd6a31d444fcb2f5920fbd3['config'] = "0";$v551b723eafd6a31d444fcb2f5920fbd3['ico'] = "seo";$v551b723eafd6a31d444fcb2f5920fbd3['default_method'] = "meth";$v551b723eafd6a31d444fcb2f5920fbd3['default_method_admin'] = "show";$v551b723eafd6a31d444fcb2f5920fbd3['func_perms'] = "";?>

@@ -1,0 +1,2 @@
+<?php
+ interface iXslTemplater {public function init($v09f0d882e960f872a868272b657b7462 = false);public function getIsInited();public function getXmlDocument();public function parseResult();public function flushXml();};?>

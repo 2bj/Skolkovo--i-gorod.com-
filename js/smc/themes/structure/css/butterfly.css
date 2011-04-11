@@ -1,0 +1,119 @@
+	table.table-container {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 20px;
+		background-image: url('/js/smc/themes/structure/img/table-bg.gif');
+		-moz-user-select: none;
+		-khtml-user-select: none;
+	}
+
+	tbody.table-container {
+		position: relative;
+	}
+
+	td.tbli {
+		height: 18px;
+		width: 90%;
+	}
+
+	td.tbli-toggle {
+		width: 30px;
+	}
+
+	img.tbli-toggle {
+		border: 0;
+		margin-left: 6px;
+	}
+
+
+	a.tbli-expand-btn {
+		display:block;
+		float: left;
+		width: 30px;
+		height: 18px;
+		background: url('/js/smc/themes/structure/img/arrow-right.gif') 8px 3px no-repeat;
+	}
+
+	a.tbli-collapse-btn {
+		display:block;
+		float: left;
+		width: 30px;
+		height: 18px;
+		background: url('/js/smc/themes/structure/img/arrow-bottom.gif') 8px 3px no-repeat;
+	}
+
+	a.tbli-expand-disabled-btn {
+		display: none;
+	}
+	
+	table.table-container td.icon {
+		vertical-align: top;
+		padding: 0;
+		height: 18px;
+	}
+	
+	table.table-container td {
+		padding: 0;
+	}
+	
+	table.table-container td.icon {
+		width: 30px;
+	}
+
+
+			table.table-container img.tbli-icon {
+			}
+			
+			table.table-container td {
+				color: black;
+				font-family: Tahoma, Helvetica, Sans-Serif;
+				font-size: 11px;
+				margin: 0;
+			}
+			
+			table.table-container a.tbli {
+				color: black;
+				text-decoration: none;
+				white-space: nowrap;
+			}
+			
+			td.testColumn {
+				width: 200px;
+			}
+			
+			table.table-container table {
+				width: 100%;
+			}
+
+table.table-container th {
+	height: 18px;
+	font-weight: bold;
+	color: black;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	white-space: nowrap;
+}
+	table.table-container th a.order {
+		color: black !important;
+	}
+
+
+table.table-container a.order {
+		float: left;
+		display:block;
+		width: 95px;
+		height: 18px;
+		background: url('/js/smc/themes/structure/img/arrow-bottom.gif') 60px 4px no-repeat;	
+		color: #000;
+		text-decoration: none;
+		padding: 0;
+		margin: 0;
+}
+
+table.table-container th.void {
+	width: 60px;
+}
+

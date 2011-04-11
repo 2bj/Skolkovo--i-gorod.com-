@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sitemap> 
+	<match pattern="^google-sitemap$">
+		<param name="cache" value="10" />
+		<generate src="udata://content/sitemap/" />
+		<transform src="./xsltTpls/sys-tpls/google-sitemap.xsl">
+			<param name="domain" value="{_http_host}" />
+		</transform>
+		<serialize type="xml" />
+	</match>
+</sitemap>

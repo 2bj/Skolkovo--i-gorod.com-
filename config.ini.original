@@ -1,0 +1,168 @@
+; Настройки системы
+[system]
+db-driver = mysql
+
+default-lang = ru
+default-skin = mac
+default-interface-lang = ru
+
+skins[] = mac
+
+interface-langs[] = "ru"
+interface-langs[] = "en"
+
+session-lifetime = 60 ; Minutes
+default-date-format = "Y-m-d H:i:s"
+default-currency = "RUR"
+eip.fake-delete = "0"
+
+; Настройки ядра
+[kernel]
+property-value-mode = "" ; XML_PROP_VALUE_MODE
+xslt-nested-menu = 1 ;XLST_NESTED_MENU
+disable-getvalue-optimization = 0 ; DISABLE_GETVAL_OPT
+selection-calc-found-rows-disable = 0; DISABLE_CALC_FOUND_ROWS
+;selection-max-joins = -1 ; MAX_SELECTION_TABLE_JOINS = 10
+selection-max-joins = -1
+cluster-cache-correction = 0 ; CLUSTER_CACHE_CORRECTION
+grab-all-keyword = "mode=all"
+use-reflection-extension = 0
+cluster-cache-correction = 0
+ignore-module-names-overwrite = 0 ; IGNORE_MODULE_NAMES_OVERWRITE
+pages-auto-index = 0 ;
+import-auto-index = 0
+enable-pre-auth = 0
+xml-format-output = 1 ; XML_FORMAT_OUTPUT
+matches-enabled = 1 ; enable or disable matches subsystems (also presented as umaps:// scheme)
+xml-macroses-disable = 0
+sql-query-cache = 1 ; SQL_QUERY_CACHE
+
+; Настройки режима отладки
+[debug]
+enabled = 0
+;filter.ip[] = "127.0.0.1"
+
+; Настройки подключения к базе данных
+[connections]
+core.type = mysql	; Тип подключения (сейчас доступем только "mysql")
+
+core.host = "%db-core-host%"	; Хост
+core.login = "%db-core-login%"		; Логин
+core.password = "%db-core-password%"	; Пароль
+core.dbname = "%db-core-name%"	; Имя базы данных
+core.port = 	; Порт
+core.persistent = 0	; Постоянное соединение
+core.compression = 0	; Использовать сжатие при передачи данных между БД и системой
+
+[streams]
+enable[] = "udata"
+enable[] = "utype"
+enable[] = "upage"
+enable[] = "uobject"
+enable[] = "ufs"
+enable[] = "usel"
+enable[] = "umap"
+enable[] = "uhttp"
+enable[] = "ulang"
+enable[] = "umess"
+
+udata.http.allow = 1
+;uobject.http.allow = 1
+;uobject.http.permissions = "all"
+upage.http.allow = 1
+umess.http.allow = 1
+;usel.http.allow = 1
+;uhttp.http.allow = 1
+;ufs.http.allow = 1
+
+user-agent = "UMI.CMS libxml agent"
+
+[includes]
+system.kernel = "~/classes/system/"
+system.kernel.streams = "~/classes/system/subsystems/streams/"
+system.kernel.assebled = "~/sys-temp/kernel.php"
+system.default-module = "~/classes/modules/"
+system.modules = "~/classes/modules/"
+system.virtual-modules = "~/classes/modules/"
+system.libs = "~/libs/"
+system.manifest = "~/sys-temp/manifest/"
+system.runtime-cache = "~/sys-temp/runtime-cache/"
+system.static-cache = "~/sys-temp/static-cache/"
+system.error = "~/errors/"
+system.stub = "~/errors/stub.php"
+
+templates.skins = "~/styles/skins/{skin}/"
+templates.tpl = "~/tpls/"
+templates.xsl = "~/xsltTpls/"
+
+; Настройки кеширования системы
+[cache]
+engine = "auto"				; Текущий кеширующий механизм
+static.enabled = 0			; Включение/выключение статического кеширования
+static.mode = "normal"				; Режим работы статического кеширования
+static.ignore-stat = 0		; Отключить сбор статистики при выдаче страниц из статического кеша
+
+; Настройки страницы-заглушки
+[stub]
+enabled = 0
+;filter.ip[] = "127.0.0.1"
+;filter.ip[] = "192.168.0.100"
+
+
+[seo]
+;url-extension = ".html"
+folder-redirect = 1
+calculate-last-modified = 0
+calculate-e-tag = 0
+watch-redirects-history = 1
+crawl-delay = 3
+primary-domain-redirect = 0
+
+
+[anti-spam]
+service.enabled = 1
+service.name = "akisment"
+akisment.wp-api-key = "6317fd125041";
+
+captcha.enabled = 1
+captcha.drawer = "default"
+
+[messages]
+catch-system-events = 0
+
+[modules]
+emarket.numbers = "default"
+emarket.currency.sync.source = "http://www.cbr.ru/scripts/XML_daily.asp"
+emarket.currency.sync.xsl = "cbr2internal.xsl"
+emarket.compare.max-items = 10
+emarket.order-types.optioned.groups[] = "catalog_option_props"
+
+exchange.splitter.limit = 50
+exchange.translator.1c_price_type_id = "3c49a673-e8ba-11de-adfb-000c297d6967"
+exchange.translator.catalog_rubric_activity = 0
+exchange.translator.catalog_item_activity = 1
+exchange.translator.catalog_rubric_visible = 1
+exchange.translator.catalog_item_visible = 0
+exchange.translator.catalog_item_template = ""
+exchange.translator.catalog_rubric_template = ""
+
+[edit-in-place]
+allowed-types[] = "content::page <- *"
+allowed-types[] = "news::rubric <- *"
+allowed-types[] = "news::item <- news::rubric"
+allowed-types[] = "catalog::category <- *"
+allowed-types[] = "catalog::object <- catalog::category"
+allowed-types[] = "faq::project <- *"
+allowed-types[] = "faq::category <- faq::project"
+allowed-types[] = "faq::question <- faq::category"
+allowed-types[] = "forum::conf <- *"
+allowed-types[] = "forum::topic <- forum::conf"
+allowed-types[] = "filemanager::shared_file <- *"
+allowed-types[] = "photoalbum::album <- *"
+allowed-types[] = "photoalbum::photo <- photoalbum::album"
+allowed-types[] = "blogs20::blog <- *"
+allowed-types[] = "blogs20::post <- blogs20::blog"
+
+[casual-skins]
+_picasa[] = "photoalbum::picasa"
+_eip[] = "content::eip_add_page"

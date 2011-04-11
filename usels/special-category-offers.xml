@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selection>
+	<target result="pages">
+			<type module="catalog" method="object" />
+			<category depth="1">{1}</category>
+	</target>
+
+	<limit page="0">{limit}</limit>
+</selection>

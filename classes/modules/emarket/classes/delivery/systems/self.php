@@ -1,0 +1,2 @@
+<?php
+ class selfDelivery extends delivery {public function validate(order $v70a17ffa722a3985b86d30b034ad06d7) {return true;}public function getDeliveryPrice(order $v70a17ffa722a3985b86d30b034ad06d7) {return 0;}};?>

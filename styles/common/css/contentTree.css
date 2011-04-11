@@ -1,0 +1,377 @@
+ul.tree-container {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 20px;
+	position: relative;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+
+ul.tree-container a {
+	text-decoration: none;
+}
+
+ul.tree-container, ul.ti-childs-container {
+	list-style: none;
+}
+
+ul.ti-childs-container {
+	margin: 0 0 0 19px;
+	padding: 0;
+}
+
+div.tree-highlight {
+	display: block;
+	height: 16px;
+	width: 100%;
+	background-color: #d0d7dd;
+}
+
+div.tree_toolbar {
+	width: 230px;
+	height: 22px;
+	padding: 0;
+	overflow: hidden;
+}
+
+a.tree_toolbtn {
+	display: block;
+	float: right;
+	margin-top: 2px;
+	margin-left: 10px;
+	width: 22px;
+	height: 16px;
+}
+
+img.ti-toggle {
+	border: 0;
+	width: 11px;
+	height: 11px;
+	margin-left: 5px;
+}
+
+li.ti {
+	padding: 0;
+	margin: 0;
+	margin-top: 2px;
+}
+
+.hover {
+	border-bottom: 1px dashed red;
+}
+
+img.ti-icon {
+	vertical-align: middle;
+	margin: 2px 5px;
+	width: 16px;
+	height: 16px;
+	cursor: move;
+}
+
+div.ti {
+	display: block;
+	white-space: nowrap;
+	color: #3281CD;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	text-decoration: none;
+	height: 22px;
+	
+}
+
+
+div.hightlight {
+	background-color: #E5E5E5 !important;
+}
+
+div.virtual * {}
+
+.main-page * {
+	font-weight: bold !important;
+}
+
+.label-virtual {
+	font-weight: normal !important;
+	font-style: italic;
+}
+
+div.selected {
+	background-color: #C8EFFF !important;
+}
+
+div.selected-highlight {
+	background-color: #C8EFFF !important;
+}
+
+div.ti-drop {
+	height: 2px;
+	overflow: hidden;
+	background: #00008b;
+	position: absolute;
+}
+
+div.ti-drop-as-child {
+	height: 2px;
+	margin-left: 20px;
+	background: #00008b;
+	overflow: hidden;
+}
+
+div.ti-drop-as-sibling {
+	height: 2px;
+	background: #00008b;
+	overflow: hidden;
+}
+
+div.ti-draggable {
+	height: 21px;
+	cursor: move;
+}
+
+div.ti-draggable div {
+	margin-left: 20px;
+	padding-top: 5px;
+}
+
+a.ti:active, a.ti:focus {
+/*background-color: #d0d7dd;*/
+}
+
+/* indicators */
+.page-status {
+	width: 7px;
+	height: 7px;
+	z-index: 2;
+	margin-top: 8px;
+	margin-left: -20px;
+	position: absolute;
+	_position: none;
+}
+
+/* Filter Controller styles*/
+
+
+.fcContainer {	
+	text-align: left;
+	width : 400px;
+	float : right;
+	clear : right;	
+}
+
+.fcModeContainer {
+	width: 400px;
+	float: right;
+	clear: right;
+	margin-bottom: 15px;
+}
+
+.fcTable {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.fcTitleCell {
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-size: 11px;
+	height: 35px;
+	text-decoration: none;
+	padding-right: 10px;
+}
+
+.fcValueCell {
+	max-width: 100%;
+	min-width: 200px;
+	width: 250px;
+}
+
+.fcDeleteCell {
+	padding: 3px 0px 0px 0px;
+	width: 16px;
+	height: 16px;
+    cursor: pointer;
+    #cursor: hand;
+}
+
+
+.fcFreeFieldsCell {
+	width: 250px;
+}
+
+.fcAddCell {
+	width: 16px;
+}
+
+.fcApplyCell {
+	padding-top: 10px;
+	text-align: right;
+}
+
+.fcLogicCell {
+	padding-top: 10px;
+	text-align: right;
+}
+
+.fcApplyButton {
+	width: 55px;
+	height: 20px;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0px 0px 0px 15px;
+	padding-bottom: 3px;
+	padding-top: 2px;
+}
+
+.fcExpandButton {
+	margin-bottom: 10px;
+}
+
+.fcTitle {
+	margin-bottom: 10px;
+}
+
+.fcTitleImage {
+	padding-right: 5px;
+}
+
+.fcTitleText {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.fcLogicTitle {
+	font-weight: bold;
+	vertical-align: top;
+}
+
+.fcLogicInput {
+	border: none;
+}
+
+.fcLogicLabel {
+}
+
+.fcQuicksearchInput {
+	margin: 0;
+	border: 1px solid #aaa;
+	height: 20px;
+	width: 330px !important;
+	font-size: 12px;
+	padding-top: 2px;
+	padding-left: 19px;
+	background: #fff url('/images/cms/admin/mac/tree/search.gif') 2px 2px no-repeat;
+}
+
+.fcLogicLine {
+	padding-top: 10px;
+}
+
+.fcStringInput {
+	border    : 1px solid #aaa;
+	background-color: #fff;
+	width     : 100%;
+	font-size : 11px;
+	
+}
+
+
+
+
+.fcStringInput_error {
+	border: 1px solid #f00;
+	background-color: #fee;
+	font-size: 11px;
+	width: 100%;
+}
+
+
+th .fcStringInput_error {
+	
+}
+
+.fcSelectInput {
+	border: 1px solid #aaa;
+	background-color: #fff;
+	height: 60px;
+	font-size: 11px;
+}
+
+th .fcSelectInput {
+	height    : auto;
+	font-size : 11px;	
+}
+
+
+.fcBooleanInput {
+	border: none;
+}
+
+.fcSelectInput {
+	border: 1px solid #aaa;
+}
+
+.fcAddSelect {
+	border: 1px solid #aaa;
+	width: 100%;
+}
+
+.fcAddImage {
+	padding-left: 5px;
+}
+
+.fcAddRow {
+     cursor: pointer;
+     #cursor: hand;
+
+}
+
+.fcDeleteImage {
+	padding-left: 5px;
+}
+
+.fcTargetContainer {
+	width: 400px;
+	clear: right;
+	float: right;
+	margin: 0;
+}
+
+.fcTarget {
+}
+
+.fcEmptyTarget {
+	font-style: italic;
+	color: #999;
+
+}
+
+.fcTip {
+	background: url( '/images/cms/admin/mac/tree/tip_background.png' ) no-repeat;
+	font-family: Tahoma, Helvetica, Sans-Serif;
+	font-weight: bold;
+	font-size: 11px;
+	width: 210px;
+	height: 70px;
+	text-align: center;
+
+	padding: 20px 40px 10px 20px;
+}
+
+
+input.editableCtrl {
+	border: 1px dashed #AAA;
+	width: 95%;
+
+}
+
+select.editableCtrl {
+	border: 1px dashed #AAA;
+	width: 95%;
+}
+
+.relInput {
+	position: absolute;
+	z-index: 5;
+	margin-top: 1px;
+	padding: 2px;
+}

@@ -1,0 +1,2 @@
+<?php
+ interface iUmiDate {public function __construct($v87a3cb5c3554b2d9d8a1a773ad0936be = false);public function getFormattedDate($v3c64ab0a1c8c902a8cfc3bdeedccd50a = false);public function getCurrentTimeStamp();public function getDateTimeStamp();public function setDateByTimeStamp($v87a3cb5c3554b2d9d8a1a773ad0936be);public function setDateByString($ved2f216e8eb7276d3e828504ebdf5437);public static function getTimeStamp($ved2f216e8eb7276d3e828504ebdf5437);}?>

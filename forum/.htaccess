@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteBase /forum/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /forum/index.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?path=$1&%{QUERY_STRING} [L]

@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" xmlns:umi="http://www.umi-cms.ru/TR/umi">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content=""></meta>
+		<meta name="keywords" content=""></meta>
+		<title>i-GOROD.com — Сайт Рабочей группы по созданию Иннограда в Сколково  |  Будущее</title>
+		<!--<link rel="shortcut icon" href="/favicon.ico" />-->
+		<script type="text/javascript" src="/js/cross-domain.php"></script>
+		<link rel="stylesheet" href="/css/constant.css" type="text/css" />
+		<link rel="stylesheet" href="/css/template.css" type="text/css" />
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" href="/css/ie.css" type="text/css" />
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" href="/css/ie6.css" type="text/css" />
+		<![endif]-->
+						<link rel="stylesheet" href="/js/client/edit-in-place/design.css" type="text/css"></link>
+				<link rel="stylesheet" href="/js/client/panel/design.css" type="text/css"></link>
+				
+				<link rel="stylesheet" href="/js/jquery/ui.all.css" type="text/css"></link>
+				<link rel="stylesheet" href="/styles/common/css/popup.css" type="text/css"></link>
+				
+				<link type="text/css" rel="stylesheet" href="/styles/skins/mac/design/calendar/calendar.css"></link>
+				
+				<script type="text/javascript" src="/ulang/common.js" charset="utf-8"></script>
+				
+				<script type="text/javascript" src="/js/jquery/jquery-1.4.1.min.js" charset="utf-8"></script>
+				<script type="text/javascript" src="/js/jquery/jquery.cookie.js" charset="utf-8"></script>
+				
+				<script type="text/javascript" src="/js/jquery/jquery-ui-1.8.custom.min.js" charset="utf-8"></script>
+				<script type="text/javascript" src="/js/jquery/jquery.umipopups.js" charset="utf-8"></script>
+				<script type="text/javascript" src="/js/jquery/jquery.jgrowl_minimized.js" charset="utf-8"></script>
+				<script type="text/javascript" src="/js/jquery/jquery-ui-i18n.min.js" charset="utf-8"></script>
+				
+				<script type="text/javascript" src="/js/client/edit-in-place/compiled.js" charset="utf-8"></script>
+				
+					<script type="text/javascript">
+				var currentElementId = '5';
+				var editable = 0;
+			</script>
+
+			<script type="text/javascript" src="/js/tinymce/jscripts/tiny_mce/tinymce_defs.js" charset="utf-8"></script>
+			<script type="text/javascript" src="/js/tinymce/jscripts/tiny_mce/tinymce_custom.js" charset="utf-8"></script>
+			<script type="text/javascript" src="/js/tinymce/jscripts/tiny_mce/tiny_mce_src.js" charset="utf-8"></script>
+
+			<script type="text/javascript" src="/js/client/editInPlace.js" charset="utf-8"></script>
+
+			<script type="text/javascript">
+				var commStgs = jQuery.extend(window.mceCommonSettings, window.mceCustomSettings);
+				
+				tinyMCE.init(jQuery.extend(commStgs, {
+					theme : "editinplace",
+					plugins: "",
+					width: '100%'
+				}));
+			</script>
+
+		
+		
+	</head>
+	
+	<body id="body">
+		<div class="main">
+			<div class="header">
+			<h1 id="logo"><a href="/" title="i-Gorod.com"><img title="i-Gorod.com" src="/images/logo.gif" alt="i-Gorod.com" /></a></h1>
+			<div id="menu" umi:element-id="0" umi:module="content" umi:method="menu">
+			<div class="top_menu">
+				<ul id="mainlevel-nav">
+								<li><a href="/konkurs/" umi:element-id="50" umi:field-name="name">Конкурс</a></li>
+				<li><a href="/ist/" umi:element-id="4" umi:field-name="name">История</a></li>
+				<li><a class="active" href="/future/" umi:element-id="5" umi:field-name="name" id="active_menu-nav">Будущее</a></li>
+				<li><a href="/news1/" umi:element-id="86" umi:field-name="name">Новости и события</a></li>
+				<li><a href="/team/" umi:element-id="7" umi:field-name="name">Люди</a></li>
+				<li><a href="/vacancies/" umi:element-id="8" umi:field-name="name">Вакансии</a></li>
+				<li><a href="/press/" umi:element-id="87" umi:field-name="name">Пресса</a></li>
+				<li><a href="/contacts/" umi:element-id="131" umi:field-name="name">Контакты</a></li>
+
+				</ul>
+			</div>
+</div>
+			<!--<form method="get" action="/sitesearch/">
+	<div class="search" style="background:url(/images/search_bg_.gif) no-repeat 100% 0%;">
+		<div class="search-input"><input name="searchword" id="mod_search_searchword" maxlength="20" alt="Искать" class="inputbox" type="text" size="20" value="искать..." onblur="if(this.value=='') this.value='искать...';" onfocus="if(this.value=='искать...') this.value='';" /></div>
+		<div class="search-button"><input type="submit" value="Search" class="button" onclick="this.form.searchword.focus();"/></div>
+	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+</form>-->
+		</div>
+		<!--<div class="indent"><div class="row-flash">
+			<img title="i-Gorod.com" src="/images/main.jpg" alt="i-Gorod.com" />
+		</div></div>-->
+		<div class="wrapper">
+			<!--banner--><div class="block1 module s1">
+<div class="boxTitle">
+<h3><img title="Конкурс" src="../../../../images/s1_h_interview_.gif" alt="Конкурс" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Виктор Вексельберг: &laquo;Сколково &mdash; это рисковый бизнес... Но этот риск содержит и возможности для того, чтобы опередить конкурентов и неплохо на этом заработать&raquo;</p>
+<a href="../../../../presslist/20100427/"><img src="../../../../images/b1_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+<div class="block1 module s2">
+<div class="boxTitle">
+<h3><img title="Новость дня" src="../../../../images/s2_h_news_.gif" alt="Новость дня" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Экс-глава корпорации Intel Крейг Барретт вошел в структуру управления проекта по созданию инновационного центра в подмосковном в Сколково</p>
+<a href="../../../../news/"><img src="../../../../images/b2_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+<div class="block1 module s3">
+<div class="boxTitle">
+<h3><img title="Вы с нами?" src="../../../../images/s3_h_vysnami_.gif" alt="Вы с нами?" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Прикоснуться к будущему можно уже сейчас! Если Вы хотите присоединиться к нашей команде, следите за разделом &laquo;Вакансии&raquo; &mdash; он будет регулярно обновляться</p>
+<a href="../../../../vacancies/"><img src="../../../../images/b3_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+			<div class="clear1 pad">
+				<div id="content">
+					<div class="clear">
+					<!--left-->
+						<div id="left" class="equal">
+							<div class="top_left_bg equal">
+								<div class="bottom_left_bg equal">
+									<div class="left-indent">
+										<div class="wrapper-box module_menu">
+											<div class="clear">
+												<div class="boxIndent">
+													<img style="margin-left:28px;" title="Будущее проекта" src="/images/h1_future_.gif" alt="Будущее проекта" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!--right-->
+					<!--center-->
+						<div id="container" class="equal">
+							<div class="clear">
+								<div class="article-text-indent">
+									<div class="clear">
+										<table class="contentpaneopen">
+											<tr><td valign="top">
+												
+												<p>Под руководством Виктора Вексельберга при тесном взаимодействии с Администрацией Президента России, Правительством, профильными министерствами в течение месяца была разработана концепция Центра инноваций. Главное &mdash; сформулирована цель проекта: создание благоприятной среды для концентрации интеллектуального капитала, способного генерировать инновации.</p>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Мировой опыт</strong></span></p>
+<div id="__ss_3869742" style="width: 650px; margin-bottom: 30px;">
+<object width="650" height="545" data="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=innocity-100427064918-phpapp02&amp;stripped_title=innocity" type="application/x-shockwave-flash">
+<param name="allowFullScreen" value="true" />
+<param name="allowScriptAccess" value="always" />
+<param name="src" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=innocity-100427064918-phpapp02&amp;stripped_title=innocity" />
+<param name="allowfullscreen" value="true" />
+</object>
+</div>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Правовой статус и структура управления</strong></span></p>
+<p>Для управления проектом в Сколково создается Фонд. Его соучредителями станет ряд государственных и частных организаций, список которых на данный момент фактически определён. Это Российская Академия наук, &laquo;Роснано&raquo;, Внешэкономбанк, Российская венчурная компания, Фонд содействия развитию малых форм предприятий в научно-технической сфере, собственник земли (т.е. государство через Фонд содействия развитию жилищного строительства) и некоммерческая организация, в которую войдёт ряд вузов. Предполагается, что штат Фонда будет насчитывать 50-70 человек.</p>
+<p>В 2010 году будет подготовлено техническое задание на строительство и первые проекты архитектурной концепции города. Строительство возглавит компания, специально учреждённая Фондом. Впоследствии эта компания возьмёт на себя эксплуатацию построенного комплекса. В рамках проекта функции органов местного самоуправления будут переданы в Фонд.</p>
+<p>Виктор Вексельберг, вместе с международным партнёром, станет сопредседателем Совета Фонда. Одновременно он займёт должность Президента Фонда. В рамках Фонда будет создан Консультативный научный совет, который с российской стороны возглавит лауреат Нобелевской премии по физике академик Жорес Алфёров. Кандидатура международного сопредседателя обсуждается, но наиболее вероятным кандидатом является нобелевский лауреат Роджер Корнберг &mdash; американский биохимик, профессор медицинской школы Стэнфордского университета.</p>
+<p>По предварительным подсчётам, в новом городе будут проживать 25-30 тысяч человек. Перед началом строительства будет объявлен тендер &mdash; в нём примут участие как российские, так и иностранные участники. Строительство технополиса должно быть основано на использовании новейших подходов к градостроительству по всему спектру: в вопросах экологии, энергоэффективности, внутригородской логистики, обеспечения водой, теплом, утилизации мусора и пр. Весь комплекс проблем, с которым сталкивается современный город, должен быть переосмыслен. Предполагается в каком-то роде создание &laquo;старт-апа&raquo; в градостроительстве: опробованные новые технологии в дальнейшем могут быть распространены.</p>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Инфраструктура</strong></span></p>
+<p>В городе будут определённые элементы инфраструктуры, которые обеспечат появление нового качества жизни. Замысел архитектурно-строительной части проекта состоит в создании среды, способной обеспечить необходимые условия для возникновения идей, высокотехнологичных решений, их превращения в инновационные проекты. Там будет академическая наука. Безусловно, будут институты и другие организации, которые займутся фундаментальными исследованиями. Будут учреждения образования. Вероятно, речь не идёт о полномасштабном университете, но магистерские программы, аспирантура, докторантура там будут.</p>
+<p>Жителями нового города станут люди, которые имеют базовое высшее образование, но стремятся его продолжить в области научно-технических исследований. Будут построены офисные здания и сотни малых предприятий, занимающихся инновациями.</p>
+<p>И, наконец, там создадут передовую лабораторную базу для тех отраслей, которым требуется проведение определённых исследований, испытаний, тестов.</p>
+<p>Дорогостоящее оборудование будет предоставлено в совместное пользование инновационных компаний в рамках создаваемых центров коллективного пользования.</p>
+<p>Естественно, в городе будут и школы, и детские сады, и больницы, а также рестораны, спортивные центры и прочие учреждения, призванные обеспечить человеку комфортную жизнь и посвятить свою деятельность творческому процессу.</p>
+<p>С Москвой будущий город соединят Минское, Сколковское и Боровское шоссе, а также железнодорожное сообщение Смоленского и Киевского направлений. Недалеко находится аэропорт Внуково.</p>
+<div style="width: 650px; margin-bottom: 30px;">
+<object width="650" height="545" data="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=random-100427082447-phpapp02&amp;stripped_title=ss-3870555" type="application/x-shockwave-flash">
+<param name="allowFullScreen" value="true" />
+<param name="allowScriptAccess" value="always" />
+<param name="src" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=random-100427082447-phpapp02&amp;stripped_title=ss-3870555" />
+<param name="allowfullscreen" value="true" />
+</object>
+</div>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Особый правовой статус</strong></span></p>
+<p>Инновационной компании, учреждённой на территории реализации проекта в Сколково, присваивается статус участника, если предложенный ею к реализации инновационный проект пройдёт процедуры отбора. Участник приобретает широкий набор преференций, к числу которых относятся беспрецедентные налоговые льготы, освобождение от многих бюрократических процедур, связанных с созданием юридического лица, льготная аренда офисных площадей и пользование инфраструктурой, доступ к исследовательскому оборудованию, жильё для своих работников, а также специализированные сервисы, призванные способствовать успешному завершению разработок и коммерциализации инновационных продуктов. Большое внимание будет уделено оформлению и защите авторских прав, работе с патентами.</p>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Помощь инновационным компаниям</strong></span></p>
+<p>В рамках Проекта будет создан &laquo;бизнес-инкубатор&raquo; для компаний на начальном этапе своего развития, оказывающий им дополнительные услуги. В проекте будут представлены различные источники финансирования: гранты, фонды посевного финансирования, венчурные фонды. Для участия в проекте будут приглашаться и крупные международные компании, которые смогут включить в Проект свои R&amp;D-центры.</p>
+<p><span style="color: #ff6600; font-size: medium;"><strong>Финансирование</strong></span></p>
+<p>На первых этапах финансирование проекта будет осуществляться за счёт бюджета. Конкретные суммы станут известны после подготовки финансовых документов.</p>
+<p>С момента объявления о строительстве инновационного центра проект стал &laquo;обрастать&raquo; энтузиастами &mdash; рабочей группе каждый день поступают предложения с проектами и резюме со всей России. Все письма внимательно рассматриваются, здравые идеи будут конвертироваться в конкретные действия &mdash; ведь именно личная активность дает жизнь таким проектам.</p>
+<p>По прогнозам, уже через несколько лет первые жители Иннограда смогут заселиться в построенные дома&hellip;</p>
+											</td></tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tail-footer clear">
+			<div class="main">
+				<div class="footer"><!--copyrights--><p style="line-height:10px;"><small>&copy; Рабочая группа по разработке проекта создания территориального обособленного комплекса<br /> для развития исследований и разработок и коммерциализации их результатов, 2010</small></p>
+<p><small>При использовании информации ссылка на i-Gorod.com обязательна</small></p></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-16088512-1");
+			pageTracker._trackPageview();
+			} catch(err) {}</script>
+	</body>
+</html>

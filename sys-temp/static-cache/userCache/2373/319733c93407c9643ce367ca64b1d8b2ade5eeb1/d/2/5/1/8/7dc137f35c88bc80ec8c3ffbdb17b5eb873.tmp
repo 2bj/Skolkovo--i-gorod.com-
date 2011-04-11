@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" xmlns:umi="http://www.umi-cms.ru/TR/umi">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content=""></meta>
+		<meta name="keywords" content=""></meta>
+		<title>i-GOROD.com — Сайт Рабочей группы по созданию Иннограда в Сколково  |  Люди</title>
+		<!--<link rel="shortcut icon" href="/favicon.ico" />-->
+		<script type="text/javascript" src="/js/cross-domain.php"></script>
+		<link rel="stylesheet" href="/css/constant.css" type="text/css" />
+		<link rel="stylesheet" href="/css/template.css" type="text/css" />
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" href="/css/ie.css" type="text/css" />
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" href="/css/ie6.css" type="text/css" />
+		<![endif]-->
+						<script type="text/javascript" src="/js/jquery/jquery-1.4.1.min.js" charset="utf-8"></script>
+				<script type="text/javascript" src="/js/guest.js" charset="utf-8"></script>
+		
+		
+		
+	</head>
+	
+	<body id="body">
+		<div class="main">
+			<div class="header">
+			<h1 id="logo"><a href="/" title="i-Gorod.com"><img title="i-Gorod.com" src="/images/logo.gif" alt="i-Gorod.com" /></a></h1>
+			<div id="menu" umi:element-id="0" umi:module="content" umi:method="menu">
+			<div class="top_menu">
+				<ul id="mainlevel-nav">
+								<li><a href="/konkurs/" umi:element-id="50" umi:field-name="name">Конкурс</a></li>
+				<li><a href="/ist/" umi:element-id="4" umi:field-name="name">История</a></li>
+				<li><a href="/future/" umi:element-id="5" umi:field-name="name">Будущее</a></li>
+				<li><a href="/news1/" umi:element-id="86" umi:field-name="name">Новости и события</a></li>
+				<li><a class="active" href="/team/" umi:element-id="7" umi:field-name="name" id="active_menu-nav">Люди</a></li>
+				<li><a href="/vacancies/" umi:element-id="8" umi:field-name="name">Вакансии</a></li>
+				<li><a href="/press/" umi:element-id="87" umi:field-name="name">Пресса</a></li>
+				<li><a href="/contacts/" umi:element-id="131" umi:field-name="name">Контакты</a></li>
+
+				</ul>
+			</div>
+</div>
+			<!--<form method="get" action="/sitesearch/">
+	<div class="search" style="background:url(/images/search_bg_.gif) no-repeat 100% 0%;">
+		<div class="search-input"><input name="searchword" id="mod_search_searchword" maxlength="20" alt="Искать" class="inputbox" type="text" size="20" value="искать..." onblur="if(this.value=='') this.value='искать...';" onfocus="if(this.value=='искать...') this.value='';" /></div>
+		<div class="search-button"><input type="submit" value="Search" class="button" onclick="this.form.searchword.focus();"/></div>
+	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+</form>-->
+		</div>
+		<!--<div class="indent"><div class="row-flash">
+			<img title="i-Gorod.com" src="/images/main.jpg" alt="i-Gorod.com" />
+		</div></div>-->
+		<div class="wrapper">
+			<!--banner--><div class="block1 module s1">
+<div class="boxTitle">
+<h3><img title="Конкурс" src="../../../../images/s1_h_interview_.gif" alt="Конкурс" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Виктор Вексельберг: &laquo;Сколково &mdash; это рисковый бизнес... Но этот риск содержит и возможности для того, чтобы опередить конкурентов и неплохо на этом заработать&raquo;</p>
+<a href="../../../../presslist/20100427/"><img src="../../../../images/b1_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+<div class="block1 module s2">
+<div class="boxTitle">
+<h3><img title="Новость дня" src="../../../../images/s2_h_news_.gif" alt="Новость дня" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Экс-глава корпорации Intel Крейг Барретт вошел в структуру управления проекта по созданию инновационного центра в подмосковном в Сколково</p>
+<a href="../../../../news/"><img src="../../../../images/b2_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+<div class="block1 module s3">
+<div class="boxTitle">
+<h3><img title="Вы с нами?" src="../../../../images/s3_h_vysnami_.gif" alt="Вы с нами?" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Прикоснуться к будущему можно уже сейчас! Если Вы хотите присоединиться к нашей команде, следите за разделом &laquo;Вакансии&raquo; &mdash; он будет регулярно обновляться</p>
+<a href="../../../../vacancies/"><img src="../../../../images/b3_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+			<div class="clear1 pad">
+				<div id="content">
+					<div class="clear">
+					<!--left-->
+						<div id="left" class="equal">
+							<div class="top_left_bg equal">
+								<div class="bottom_left_bg equal">
+									<div class="left-indent">
+										<div class="wrapper-box module_menu">
+											<div class="clear">
+												<div class="boxIndent">
+													<img style="margin-left:25px;" title="Люди в проекте" src="/images/h1_people_.gif" alt="Люди в проекте" />
+													<ul class="menu">
+														<li><a href="/team/s/">Алфёров Ж. И.</a></li>
+														<li><a href="/team/a/">Алдошин С. М.</a></li>
+														<li><a href="/team/u/">Барретт К.</a></li>
+														<li><a href="/team/b/">Белоусов А. Р.</a></li>
+														<li><a href="/team/c/">Брычева Л. И.</a></li>
+														<li><a href="/team/r/">Вексельберг В. Ф.</a></li>
+														<li><a href="/team/d/">Воскресенский С. С.</a></li>
+														<li><a href="/team/e/">Греф Г. О.</a></li>
+														<li><a href="/team/f/">Громов Б. В.</a></li>
+														<li><a href="/team/g/">Дайсон Э.</a></li>
+														<li><a href="/team/h/">Дворкович А. В.</a></li>
+														<li><a href="/team/i/">Дементьев А. В.</a></li>
+														<li><a href="/team/t/">Корнберг Р. Д.</a></li>
+														<li><a href="/team/j/">Новак А. В.</a></li>
+														<li><a href="/team/l/">Плутник А. А.</a></li>
+														<li><a href="/team/m/">Сурков В. Ю.</a></li>
+														<li><a href="/team/n/">Фаш Д.</a></li>
+														<li><a href="/team/o/">Хлунов А. В.</a></li>
+														<li><a href="/team/p/">Холм С. -Т.</a></li>
+														<li><a href="/team/q/">Чубайс А. Б.</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!--right-->
+					<!--center-->
+						<div id="container" class="equal">
+							<div class="clear">
+								<div class="article-text-indent">
+									<div class="clear">
+										<table class="contentpaneopen">
+											<tr><td valign="top">
+												
+												<p>Любой проект начинается с людей. В нашу команду уже входят десятки специалистов в самых разных областях. Представляем Вашему вниманию вершину айсберга &mdash; тех, кто непосредственно руководит процессом формирования команды и создания Инновационного центра.</p>
+<p>&nbsp;</p>
+<p><img style="float: left; border: 0pt none; margin: 10px;" src="../../../../images/551.jpg" alt="Виктор Вексельберг" width="166" height="162" /></p>
+<p><span style="font-size: small; color: #ff6600; font-size: large;">Виктор Феликсович Вексельберг</span></p>
+<p><span style="font-size: small; color: #ff6600; font-size: large;"><span style="font-size: small;">координатор российской части проекта строительства Иннограда</span><br /></span></p>
+<p>Родился 14 апреля 1957 года в городе Дрогобыче Львовской области. С отличием окончил Московский институт инженеров транспорта (МИИТ) и поступил в аспирантуру при вычислительном центре Академии наук СССР. Кандидат математических наук.</p>
+<p>В 1990 году Виктор Вексельберг основал управляющую компанию &laquo;Ренова&raquo; (первоначально &mdash; в форме российско-американского Совместного предприятия) и занял пост её генерального директора.В настоящее время &mdash;<span style="font-size: small;"><span style="color: #ff6600;"><span style="font-size: large;">&nbsp;</span></span></span> Председатель Наблюдательного Комитета Группы компаний &laquo;Ренова&raquo;.</p>
+<p>В 1996 году основал Группу &laquo;СУАЛ&raquo; и до 2003 года занимал пост Президента компании Группы &laquo;СУАЛ&raquo;, а затем возглавил Совет директоров Группы.</p>
+<p>2002-2003 &mdash; Председатель Правления ОАО &laquo;Тюменская нефтяная компания&raquo;. В настоящее время Вексельберг является членом Совета директоров &laquo;ТНК-ВР&raquo;, Исполнительным директором по развитию газового бизнеса ОАО &laquo;ТНК-ВР Менеджмент&raquo;.</p>
+<p>С 2007 года &mdash; Председатель совета директоров Объединенной компании Rusal (UC Rusal).</p>
+<p>Виктор Вексельберг &mdash; член Бюро Правления Российского Союза промышленников и предпринимателей (РСПП), Председатель Комитета по международной деятельности РСПП.</p>
+<p>В марте 2010 года решением Президента РФ Д.А. Медведева Виктор Вексельберг был назначен руководителем российской части проекта по созданию Инновационного центра в Сколково.</p>
+<p>&nbsp;</p>
+<p><img style="border: 0pt none; margin: 10px; float: left;" src="../../../../images/alferov.jpg" alt="" width="200" height="263" /></p>
+<p><span style="color: #ff6600; font-size: large;">Жорес Иванович Алфёров </span></p>
+<p><span style="color: #ff6600; font-size: large;"><span style="font-size: small;">cопредседатель научно-технического совета Иннограда</span></span></p>
+<p>Родился 15 марта 1930 года в Витебске (Белоруссия). В 1952 году окончил факультет электроники Ленинградского электротехнического института им. В. И. Ульянова (Ленина). Кандидат технических наук (1961), доктор физико-математических наук (1970), профессор (ЛЭТИ) &mdash; с 1972 г. С 1953 г. Жорес Иванович работает в Физико-техническом институте им. А. Ф. Иоффе РАН; с 1987 по 2003 год был его&nbsp; директором.</p>
+<p>Основатель (2002) и руководитель Академического физико-технологического университета. С 1990 по 1991 год &mdash; вице-президент АН СССР, председатель Президиума Ленинградского научного центра, с 1991 года по настоящее время &mdash; вице-президент РАН, председатель Президиума Санкт-Петербургского научного центра РАН. Председатель Бюро Комиссии РАН по нанотехнологиям.</p>
+<p>Жорес Алфёров &mdash; один из крупнейших российских учёных в области физики и техники полупроводников, получивший широкую известность и мировое признаниеАвтор более 500 научных работ, в том числе 3 монографий, более 50  изобретений.</p>
+<p>В 2000 году Шведская Королевская Академия наук присвоила Жоресу Алфёрову (совместно с Г. Кремером) Нобелевскую премию по физике за &laquo;фундаментальные работы, заложившие основы современных информационных технологий посредством создания полупроводниковых гетероструктур, используемых в сверхвысокочастотной и оптической электронике&raquo;.</p>
+<p>Главный редактор журнала &laquo;Письма в Журнал технической физики&raquo;.</p>
+<p>С 1989 по 1992 год &mdash; народный депутат СССР. С 1995 года по настоящее время &mdash; депутат Государственной Думы Федерального собрания Российской Федерации.</p>
+<p>За высокие достижения Ж. И. Алфёров удостоен почётных званий: Российской Академии Наук, Гаванского университета (Куба, 1987); Франклиновского института (США, 1971); Польской АН (Польша, 1988); Национальной инженерной Академии (США, 1990); Национальной академии наук (США, 1990); Метрологической академии наук (С-Петербург, 1994); Академии наук Республики Беларусь (1995); Академии науки и технологии Кореи (1995); Общества физики и технологии полупроводников Пакистана (1996); Международной академии холода (1997); Оптического общества США (1997); Международной академии наук экологии, безопасности человека и природы; Института общей и ядерной физики Российского научного центра "Курчатовский институт" (1998), Санкт-Петербургского гуманитарного университета (1998).</p>
+<p>Научные награды и премии Алферова: Премия Балантайна института Франклина (США, 1971); Ленинская премия (СССР, 1972); Хьюллет-Паккардовская премия Европейского физического общества, Государственная премия (СССР, 1984); Награда Симпозиума по GaAs (1987); медаль Х. Велькера (1987); Премия А. П. Карпинского, Премия им. А. Ф. Иоффе РАН (1996); Общенациональная неправительственная Демидовская премия (Российская Федерация, 1999).</p>
+<p>Жорес Алфёров награжден орденами Ленина, Октябрьской Революции, Трудового Красного Знамени, Знаком Почёта, Орденами &laquo;3a заслуги перед Отечеством&raquo; III и II степени, медалями СССР и Российской Федерации.</p>
+<p>Ж. И. Алфёров &mdash; учредитель Фонда поддержки образования и науки для поддержки талантливой учащейся молодёжи, содействия её профессиональному росту, поощрения творческой активности в проведении научных исследований в приоритетных областях науки. Первый вклад в Фонд был сделан Жоресом Алфёровым из средств Нобелевской премии.</p>
+<p>За работу &laquo;Фундаментальные исследования процессов формирования и свойств гетероструктур с квантовыми точками и создание лазеров на их основе&raquo; Жорес Алфёров и команда ученых, работающих вместе с ним, были удостоены в 2002 году Государственной премии.</p>
+<p>&nbsp;</p>
+<p><span style="color: #ff9900;"><span style="font-size: large;"><img style="border: 0pt none; margin: 10px; float: left;" src="../../../../images/1517123.jpg" alt="" width="300" height="225" /><span style="color: #ff6600;">Роджер Дэвид Корнберг</span></span></span></p>
+<p><span style="color: #ff6600;"><span style="font-size: small;">Сопредседатель научно-технического совета</span></span></p>
+<p>Родился в 1947 году в США. Его отец - тоже нобелевский лауреат Артур Корнберг, признанный авторитет в области биохимии ферментов, получил премию по физиологии и медицине в 1959 году. На вручении премии отцу в Стокгольме присутствовал и 12-летний Роджер.</p>
+<p>В 1967 году закончил Гарвардский университет со степенью бакалавра, в 1972 году получил учёную степень доктора в Стэнфордском университете. Выполнял исследовательские работы в лаборатории при Кембриджском университете в Великобритании.</p>
+<p>С 1976 года работал в военно-медицинской школе при Гарвардском университете в должности доцента.</p>
+<p>В 1978 году вернулся в Стэнфордский университет на должность профессора. Корнберг - член Национальной академии наук Соединенных Штатов и американской Академии Искусств и Наук. В 1997 году Корнберг стал лауреатом премии Харви.</p>
+<p>В 2006&nbsp;году был удостоен Нобелевской премии по химии за исследование механизма копирования клетками генетической информации.</p>
+											</td></tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tail-footer clear">
+			<div class="main">
+				<div class="footer"><!--copyrights--><p style="line-height:10px;"><small>&copy; Рабочая группа по разработке проекта создания территориального обособленного комплекса<br /> для развития исследований и разработок и коммерциализации их результатов, 2010</small></p>
+<p><small>При использовании информации ссылка на i-Gorod.com обязательна</small></p></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-16088512-1");
+			pageTracker._trackPageview();
+			} catch(err) {}</script>
+	</body>
+</html>

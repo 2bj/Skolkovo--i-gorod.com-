@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" xmlns:umi="http://www.umi-cms.ru/TR/umi">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content=""></meta>
+		<meta name="keywords" content=""></meta>
+		<title>i-GOROD.com — Сайт Рабочей группы по созданию Иннограда в Сколково  |&nbsp;Сурков В. Ю.</title>
+		<!--<link rel="shortcut icon" href="/favicon.ico" />-->
+		<script type="text/javascript" src="/js/cross-domain.php"></script>
+		<link rel="stylesheet" href="/css/constant.css" type="text/css" />
+		<link rel="stylesheet" href="/css/template.css" type="text/css" />
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" href="/css/ie.css" type="text/css" />
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" href="/css/ie6.css" type="text/css" />
+		<![endif]-->
+						<script type="text/javascript" src="/js/jquery/jquery-1.4.1.min.js" charset="utf-8"></script>
+				<script type="text/javascript" src="/js/guest.js" charset="utf-8"></script>
+		
+		
+		
+	</head>
+	
+	<body id="body">
+		<div class="main">
+			<div class="header">
+			<h1 id="logo"><a href="/" title="i-Gorod.com"><img title="i-Gorod.com" src="/images/logo.gif" alt="i-Gorod.com" /></a></h1>
+			<div id="menu" umi:element-id="0" umi:module="content" umi:method="menu">
+			<div class="top_menu">
+				<ul id="mainlevel-nav">
+								<li><a href="/konkurs/" umi:element-id="50" umi:field-name="name">Конкурс</a></li>
+				<li><a href="/ist/" umi:element-id="4" umi:field-name="name">История</a></li>
+				<li><a href="/future/" umi:element-id="5" umi:field-name="name">Будущее</a></li>
+				<li><a href="/news1/" umi:element-id="86" umi:field-name="name">Новости и события</a></li>
+				<li><a class="active" href="/team/" umi:element-id="7" umi:field-name="name" id="active_menu-nav">Люди</a></li>
+				<li><a href="/vacancies/" umi:element-id="8" umi:field-name="name">Вакансии</a></li>
+				<li><a href="/press/" umi:element-id="87" umi:field-name="name">Пресса</a></li>
+				<li><a href="/contacts/" umi:element-id="131" umi:field-name="name">Контакты</a></li>
+
+				</ul>
+			</div>
+</div>
+			<!--<form method="get" action="/sitesearch/">
+	<div class="search" style="background:url(/images/search_bg_.gif) no-repeat 100% 0%;">
+		<div class="search-input"><input name="searchword" id="mod_search_searchword" maxlength="20" alt="Искать" class="inputbox" type="text" size="20" value="искать..." onblur="if(this.value=='') this.value='искать...';" onfocus="if(this.value=='искать...') this.value='';" /></div>
+		<div class="search-button"><input type="submit" value="Search" class="button" onclick="this.form.searchword.focus();"/></div>
+	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+</form>-->
+		</div>
+		<!--<div class="indent"><div class="row-flash">
+			<img title="i-Gorod.com" src="/images/main.jpg" alt="i-Gorod.com" />
+		</div></div>-->
+		<div class="wrapper">
+			<!--banner--><div class="block1 module s1">
+<div class="boxTitle">
+<h3><img title="Конкурс" src="../../../../images/s1_h_interview_.gif" alt="Конкурс" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Виктор Вексельберг: &laquo;Сколково &mdash; это рисковый бизнес... Но этот риск содержит и возможности для того, чтобы опередить конкурентов и неплохо на этом заработать&raquo;</p>
+<a href="../../../../presslist/20100427/"><img src="../../../../images/b1_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+<div class="block1 module s2">
+<div class="boxTitle">
+<h3><img title="Новость дня" src="../../../../images/s2_h_news_.gif" alt="Новость дня" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Экс-глава корпорации Intel Крейг Барретт вошел в структуру управления проекта по созданию инновационного центра в подмосковном в Сколково</p>
+<a href="../../../../news/"><img src="../../../../images/b2_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+<div class="block1 module s3">
+<div class="boxTitle">
+<h3><img title="Вы с нами?" src="../../../../images/s3_h_vysnami_.gif" alt="Вы с нами?" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Прикоснуться к будущему можно уже сейчас! Если Вы хотите присоединиться к нашей команде, следите за разделом &laquo;Вакансии&raquo; &mdash; он будет регулярно обновляться</p>
+<a href="../../../../vacancies/"><img src="../../../../images/b3_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+			<div class="clear1 pad">
+				<div id="content">
+					<div class="clear">
+					<!--left-->
+						<div id="left" class="equal">
+							<div class="top_left_bg equal">
+								<div class="bottom_left_bg equal">
+									<div class="left-indent">
+										<div class="wrapper-box module_menu">
+											<div class="clear">
+												<div class="boxIndent">
+													<img style="margin-left:25px;" title="Люди в проекте" src="/images/h1_people_.gif" alt="Люди в проекте" />
+													<ul class="menu">
+														<li><a href="/team/s/">Алфёров Ж. И.</a></li>
+														<li><a href="/team/a/">Алдошин С. М.</a></li>
+														<li><a href="/team/u/">Барретт К.</a></li>
+														<li><a href="/team/b/">Белоусов А. Р.</a></li>
+														<li><a href="/team/c/">Брычева Л. И.</a></li>
+														<li><a href="/team/r/">Вексельберг В. Ф.</a></li>
+														<li><a href="/team/d/">Воскресенский С. С.</a></li>
+														<li><a href="/team/e/">Греф Г. О.</a></li>
+														<li><a href="/team/f/">Громов Б. В.</a></li>
+														<li><a href="/team/g/">Дайсон Э.</a></li>
+														<li><a href="/team/h/">Дворкович А. В.</a></li>
+														<li><a href="/team/i/">Дементьев А. В.</a></li>
+														<li><a href="/team/t/">Корнберг Р. Д.</a></li>
+														<li><a href="/team/j/">Новак А. В.</a></li>
+														<li><a href="/team/l/">Плутник А. А.</a></li>
+														<li><a href="/team/m/">Сурков В. Ю.</a></li>
+														<li><a href="/team/n/">Фаш Д.</a></li>
+														<li><a href="/team/o/">Хлунов А. В.</a></li>
+														<li><a href="/team/p/">Холм С. -Т.</a></li>
+														<li><a href="/team/q/">Чубайс А. Б.</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!--right-->
+					<!--center-->
+						<div id="container" class="equal">
+							<div class="clear">
+								<div class="article-text-indent">
+									<div class="clear">
+										<table class="contentpaneopen">
+											<tr><td valign="top">
+												
+												<p>&nbsp;</p>
+<p><span style="color: #ff9900;"><span style="font-size: large;"><img style="border: 0pt none; margin: 10px; float: left;" src="../../../../images/surkov_s.jpg" alt="" width="240" height="170" /><span style="color: #ff6600;">Владислав Юрьевич Сурков</span></span></span></p>
+<p>Первый заместитель руководителя Администрации Президента РФ.</p>
+<p>Родился 21 сентября 1964 года в селе Солнцево Липецкой области.</p>
+<p>В 1980-х &mdash; начале 90-х гг. &mdash; руководитель ряда организаций и предприятий негосударственных форм собственности.</p>
+<p>В 1991-1996&nbsp;&nbsp; гг.&nbsp;&nbsp; занимал&nbsp; руководящие&nbsp; должности&nbsp; в&nbsp; Объединении кредитно-финансовых&nbsp;&nbsp; предприятий&nbsp;&nbsp; "Менатеп",&nbsp;&nbsp; в&nbsp; дальнейшем&nbsp; -&nbsp; банка "Менатеп".</p>
+<p>В 1996-1997 гг. &mdash; заместитель руководителя, руководитель департамента по связям с общественностью ЗАО &laquo;Роспром&raquo;^; первый заместитель председателя совета коммерческого инновационного банка &laquo;Альфа-Банк&raquo;.</p>
+<p>В 1998-1999 гг. &mdash; первый заместитель генерального директора, директор по связям с общественностью ОАО &laquo;Общественное Российское телевидение&raquo;.</p>
+<p>В 1999 г. - помощник руководителя администрации президента РФ.</p>
+<p>В марте 2004 года был назначен заместителем руководителя Администрации Президента РФ &mdash; помощником Президента РФ.</p>
+<p>13.05.08 г. назначен на должность первого заместителя руководителя Администрации Президента РФ.</p>
+<p>31 декабря 2009 года распоряжением президента Дмитрия Медведева включён в состав рабочей группы по разработке проекта создания территориально обособленного комплекса для развития исследований и разработок и коммерциализации их результатов.</p>
+											</td></tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tail-footer clear">
+			<div class="main">
+				<div class="footer"><!--copyrights--><p style="line-height:10px;"><small>&copy; Рабочая группа по разработке проекта создания территориального обособленного комплекса<br /> для развития исследований и разработок и коммерциализации их результатов, 2010</small></p>
+<p><small>При использовании информации ссылка на i-Gorod.com обязательна</small></p></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-16088512-1");
+			pageTracker._trackPageview();
+			} catch(err) {}</script>
+	</body>
+</html>

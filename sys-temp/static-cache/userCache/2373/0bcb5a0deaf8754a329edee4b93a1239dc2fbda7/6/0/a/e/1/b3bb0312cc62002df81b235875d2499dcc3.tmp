@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" xmlns:umi="http://www.umi-cms.ru/TR/umi">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content=""></meta>
+		<meta name="keywords" content=""></meta>
+		<title>i-GOROD.com — Сайт Рабочей группы по созданию Иннограда в Сколково  |  История</title>
+		<!--<link rel="shortcut icon" href="/favicon.ico" />-->
+		<script type="text/javascript" src="/js/cross-domain.php"></script>
+		<link rel="stylesheet" href="/css/constant.css" type="text/css" />
+		<link rel="stylesheet" href="/css/template.css" type="text/css" />
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" href="/css/ie.css" type="text/css" />
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" href="/css/ie6.css" type="text/css" />
+		<![endif]-->
+						<script type="text/javascript" src="/js/jquery/jquery-1.4.1.min.js" charset="utf-8"></script>
+				<script type="text/javascript" src="/js/guest.js" charset="utf-8"></script>
+		
+		
+		
+	</head>
+	
+	<body id="body">
+		<div class="main">
+			<div class="header">
+			<h1 id="logo"><a href="/" title="i-Gorod.com"><img title="i-Gorod.com" src="/images/logo.gif" alt="i-Gorod.com" /></a></h1>
+			<div id="menu" umi:element-id="0" umi:module="content" umi:method="menu">
+			<div class="top_menu">
+				<ul id="mainlevel-nav">
+								<li><a href="/konkurs/" umi:element-id="50" umi:field-name="name">Конкурс</a></li>
+				<li><a class="active" href="/ist/" umi:element-id="4" umi:field-name="name" id="active_menu-nav">История</a></li>
+				<li><a href="/future/" umi:element-id="5" umi:field-name="name">Будущее</a></li>
+				<li><a href="/news1/" umi:element-id="86" umi:field-name="name">Новости и события</a></li>
+				<li><a href="/team/" umi:element-id="7" umi:field-name="name">Люди</a></li>
+				<li><a href="/vacancies/" umi:element-id="8" umi:field-name="name">Вакансии</a></li>
+				<li><a href="/press/" umi:element-id="87" umi:field-name="name">Пресса</a></li>
+				<li><a href="/contacts/" umi:element-id="131" umi:field-name="name">Контакты</a></li>
+
+				</ul>
+			</div>
+</div>
+			<!--<form method="get" action="/sitesearch/">
+	<div class="search" style="background:url(/images/search_bg_.gif) no-repeat 100% 0%;">
+		<div class="search-input"><input name="searchword" id="mod_search_searchword" maxlength="20" alt="Искать" class="inputbox" type="text" size="20" value="искать..." onblur="if(this.value=='') this.value='искать...';" onfocus="if(this.value=='искать...') this.value='';" /></div>
+		<div class="search-button"><input type="submit" value="Search" class="button" onclick="this.form.searchword.focus();"/></div>
+	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+</form>-->
+		</div>
+		<!--<div class="indent"><div class="row-flash">
+			<img title="i-Gorod.com" src="/images/main.jpg" alt="i-Gorod.com" />
+		</div></div>-->
+		<div class="wrapper">
+			<!--banner--><div class="block1 module s1">
+<div class="boxTitle">
+<h3><img title="Конкурс" src="../../../../images/s1_h_interview_.gif" alt="Конкурс" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Виктор Вексельберг: &laquo;Сколково &mdash; это рисковый бизнес... Но этот риск содержит и возможности для того, чтобы опередить конкурентов и неплохо на этом заработать&raquo;</p>
+<a href="../../../../presslist/20100427/"><img src="../../../../images/b1_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+<div class="block1 module s2">
+<div class="boxTitle">
+<h3><img title="Новость дня" src="../../../../images/s2_h_news_.gif" alt="Новость дня" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Экс-глава корпорации Intel Крейг Барретт вошел в структуру управления проекта по созданию инновационного центра в подмосковном в Сколково</p>
+<a href="../../../../news/"><img src="../../../../images/b2_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+<div class="block1 module s3">
+<div class="boxTitle">
+<h3><img title="Вы с нами?" src="../../../../images/s3_h_vysnami_.gif" alt="Вы с нами?" /></h3>
+</div>
+<div class="clear">
+<div class="boxIndent">
+<div>
+<p>Прикоснуться к будущему можно уже сейчас! Если Вы хотите присоединиться к нашей команде, следите за разделом &laquo;Вакансии&raquo; &mdash; он будет регулярно обновляться</p>
+<a href="../../../../vacancies/"><img src="../../../../images/b3_.gif" alt="" /></a></div>
+</div>
+</div>
+</div>
+			<div class="clear1 pad">
+				<div id="content">
+					<div class="clear">
+					
+					<!--left-->
+<div id="left" class="equal">
+<div class="top_left_bg equal">
+<div class="bottom_left_bg equal">
+<div class="left-indent">
+<div class="wrapper-box module_menu">
+<div class="clear">
+<div class="boxIndent"><img style="margin-left:28px;" title="История проекта" src="../../../../images/h1_start_.gif" alt="История проекта" /> 
+<ul class="menu">
+<li class="item1"><a href="#12nov09">12 ноября 2009</a></li>
+<li class="item53"><a href="#31dec09">31 декабря 2009</a></li>
+<li class="item2"><a href="#14feb10">15 февраля 2010</a></li>
+<li class="item49"><a href="#19mar10">19 марта 2010</a></li>
+<li class="item62"><a href="#21mar10">21 марта 2010</a></li>
+<li class="item63"><a href="#23mar10">23 марта 2010</a></li>
+<li class="item64"><a href="#5apr10">5 апреля 2010 </a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--right--> <!--center-->
+<div id="container" class="equal">
+<div class="clear">
+<div class="article-text-indent">
+<div class="clear">
+<table class="contentpaneopen" border="0">
+<tbody>
+<tr>
+<td valign="top">
+<p><strong>&nbsp;</strong></p>
+<p><a name="12nov09"></a><span style="color: #ff6600; font-size: medium;"><strong>12 ноября 2009</strong></span></p>
+<p>Дмитрий Медведев в своём ежегодном Послании Федеральному собранию заявил, что поручает Правительству обеспечить расширение грантовой поддержки разработчиков новейших технологий на конкурсной основе. &laquo;Институты развития должны заниматься поиском и отбором перспективных проектов по всей территории страны, &mdash; отметил Президент, &mdash; предоставлять финансовое содействие инновационным предприятиям, в том числе малым инновационным предприятиям, которые создаются сегодня по известному закону при вузах и научных учреждениях, при этом разделять риски и с частными инвесторами&raquo;.</p>
+<p>Кроме того, глава государства сказал, что надо завершить &laquo;разработку предложений по созданию в России мощного центра исследований и разработок, который был бы сфокусирован на поддержку всех приоритетных направлений&raquo;.&nbsp;&nbsp;</p>
+<p style="text-align: center;"><img style="border: 0pt none; margin: 10px;" src="../../../../images/damedvedev12.jpg" alt="" width="650" height="353" /></p>
+<p>По словам Дмитрия Медведева, речь идёт о создании современного  технологического центра, &laquo;если хотите, по примеру Силиконовой долины и  других подобных зарубежных центров&raquo;. &laquo;Там будут формироваться условия, привлекательные для работы ведущих учёных, инженеров, конструкторов, программистов, менеджеров и финансистов. И создаваться новые конкурентоспособные на мировом рынке технологии&raquo;.</p>
+<p>&nbsp;</p>
+<p><a name="31dec09"></a><span style="color: #ff6600; font-size: medium;"><strong>31 декабря 2009</strong></span></p>
+<p>Дмитрий Медведев издал распоряжение &laquo;О рабочей группе по разработке проекта создания территориально обособленного комплекса для развития исследований и разработок и коммерциализации их результатов&raquo;. Руководителем рабочей группы был назначен первый замглавы администрации президента, зампредседателя комиссии по модернизации Владислав Сурков.</p>
+<p>&nbsp;</p>
+<p><a name="15feb10"></a><span style="color: #ff6600; font-size: medium;"><strong>15 февраля 2010</strong></span></p>
+<p>В статье &laquo;Чудо возможно&raquo; (газета &laquo;Ведомости&raquo;) Владислав Сурков впервые рассказал, где и зачем Россия создаст национальный аналог Кремниевой долины. По его словам, в неё &laquo;пересадят&raquo; инновации, которые сперва вырастят в кластерах отечественные корпорации. Среди мест, где может быть построен такой Центр, назывались Томск, Новосибирск, Санкт-Петербург, Обнинск, ряд территорий в непосредственной близости от Москвы.</p>
+<p>&nbsp;</p>
+<p><a name="19mar10"></a><span style="color: #ff6600; font-size: medium;"><strong>19 марта 2010</strong></span></p>
+<p>В итоге выбор пал на подмосковное Сколково. Об этом объявил Дмитрий Медведев на встрече со студентами-победителями Олимпиад. По словам Президента, там будет построен ультрасовременный научно-технологический комплекс по разработке и коммерциализации новых технологий.</p>
+<p style="text-align: center;"><img style="border: 0pt none; margin: 10px; vertical-align: middle;" src="../../../../images/pres_studs.jpg" alt="" width="650" height="353" /></p>
+<p>&laquo;На базе этого центра будут развиваться все пять президентских высокотехнологичных направлений, направлений модернизации: это прежде всего энергетика, IT, телекоммуникации, биомедицинские технологии и ядерные технологии. И я принял решение &mdash; будем строить этот центр в том месте, где у нас уже есть неплохой задел для того, чтобы это сделать быстро. Скорость имеет особое значение, поэтому будем строить его в Сколково&raquo;, &mdash; сказал глава государства.</p>
+<p>&nbsp;</p>
+<p><a name="21mar10"></a><span style="color: #ff6600; font-size: medium;"><strong>21 марта 2010</strong></span></p>
+<p>Владислав Сурков, отвечая в телеэфире на вопрос о том, в какие сроки может быть создан новый комплекс, отметил, что непосредственно строительные работы могут занять от трёх до семи лет. По его словам, &laquo;сначала будет строиться ядро города, его центральная часть, потом оно будет разрастаться уже в значительной степени самостоятельно, без какого-то участия государства&raquo;. Сурков отметил, что государство должно будет &laquo;в какой-то момент отойти от этого всего&raquo; и дать ему &laquo;развиваться самостоятельно&raquo;. Что касается формирования научной среды, то она может сформироваться, по мнению замглавы президентской администрации, за 10-15 лет: &laquo;Это то время, за которое может возникнуть цепная реакция, которую трудно будет остановить, и возникнет волна изобретений российского происхождения&raquo;.</p>
+<p>&nbsp;</p>
+<p><a name="23mar10"></a><span style="color: #ff6600; font-size: medium;"><strong>23 марта 2010</strong></span></p>
+<p>В ходе заседания в Ханты-Мансийске президентской комиссии по модернизации Дмитрий Медведев объявил, что инновационный центр в Сколково с российской стороны возглавит глава группы компаний &laquo;Ренова&raquo; Виктор Вексельберг.</p>
+<p style="text-align: center;">f<img src="../../../../images/vexel.jpg" border="0" alt="" width="650" height="353" /></p>
+<p>Вопрос о том, кто станет международным сопредседателем Рабочей группы, остаётся открытым.</p>
+<p>&laquo;Пора переходить к практической работе, &mdash; сказал Дмитрий Медведев. &mdash; Мы должны создать не только материальную базу, но и эффективную действующую систему&raquo;. &laquo;Мы всё это затеяли не для того, чтобы построить определённое количество коттеджей или создать там нормальные производственные лаборатории. Это всё инфраструктура&raquo;, &mdash; подчеркнул Президент. Самое главное, по мнению Дмитрия Медведева, чтобы там появились люди, для чего должна появиться внятная система управления. С учётом масштабности этого проекта и того, что в реализации его должны быть заинтересованы не только государственные структуры, но и бизнес, последний этим и должен заняться, уверен Президент.</p>
+<p>&nbsp;</p>
+<p><span style="color: #ff6600; font-size: medium;"><strong>5 апреля 2010 </strong></span></p>
+<p>Владислав Сурков заявил, что в &laquo;сколковском проекте&raquo; будет сформирован научно-технический совет, в который войдут российские и иностранные учёные, инженеры и эксперты. У совета будут два сопредседателя. С российской стороны&nbsp;&mdash; нобелевский лауреат Жорес Алфёров, который, в свою очередь, предложит кандидатуру второго сопредседателя&nbsp;&mdash; &laquo;от иностранцев&raquo;.</p>
+<p><span style="color: #ff6600;"><span style="font-size: medium;"><br /></span></span></p>
+<p style="text-align: center;"><span style="color: #ff6600;"><span style="font-size: medium;"><em>За дальнейшей историей проекта следите в разделе &laquo;<a href="/newslist/">Новости</a>&raquo;</em></span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 1520px; width: 1px; height: 1px; overflow: hidden;"><!--  /* Font Definitions */  @font-face 	{font-family:"Arial Narrow"; 	panose-1:2 11 5 6 2 2 2 3 2 4; 	mso-font-charset:204; 	mso-generic-font-family:swiss; 	mso-font-pitch:variable; 	mso-font-signature:647 0 0 0 159 0;}  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal 	{mso-style-parent:""; 	margin:0cm; 	margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:12.0pt; 	font-family:"Times New Roman"; 	mso-fareast-font-family:"Times New Roman";} a:link, span.MsoHyperlink 	{color:blue; 	text-decoration:underline; 	text-underline:single;} a:visited, span.MsoHyperlinkFollowed 	{color:purple; 	text-decoration:underline; 	text-underline:single;} p 	{mso-margin-top-alt:auto; 	margin-right:0cm; 	mso-margin-bottom-alt:auto; 	margin-left:0cm; 	mso-pagination:widow-orphan; 	font-size:12.0pt; 	font-family:"Times New Roman"; 	mso-fareast-font-family:"Times New Roman";} @page Section1 	{size:612.0pt 792.0pt; 	margin:2.0cm 42.5pt 2.0cm 3.0cm; 	mso-header-margin:36.0pt; 	mso-footer-margin:36.0pt; 	mso-paper-source:0;} div.Section1 	{page:Section1;} --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable 	{mso-style-name:"Обычная таблица"; 	mso-tstyle-rowband-size:0; 	mso-tstyle-colband-size:0; 	mso-style-noshow:yes; 	mso-style-parent:""; 	mso-padding-alt:0cm 5.4pt 0cm 5.4pt; 	mso-para-margin:0cm; 	mso-para-margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:10.0pt; 	font-family:"Times New Roman"; 	mso-ansi-language:#0400; 	mso-fareast-language:#0400; 	mso-bidi-language:#0400;} --> <!--[endif]-->
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Arial Narrow&quot;;"><a href="http://www.vesti.ru/doc.html?id=348906&amp;cid=520"><span style="color: windowtext; text-decoration: none;">На заседании Комиссии по модернизации</span></a> и технологическому развитию экономики в Ханты-Мансийске 23 марта 2010 года <a href="http://www.vesti.ru/doc.html?id=291708"><strong><span style="font-family: &quot;Arial Narrow&quot;; color: windowtext; text-decoration: none;">Дмитрий Медведев</span></strong><strong><span style="font-family: &quot;Arial Narrow&quot;; color: windowtext; font-weight: normal; text-decoration: none;"> </span></strong></a>объявил, что проект возглавят два сопредседателя: российский и международный. Российскую часть проекта возглавил <strong>Виктор Вексельберг. </strong>&laquo;Пора переходить к практической работе&raquo;, заявил Медведев. &laquo;Мы должны создать не только материальную базу, но и эффективную действующую систему, потому что мы все это затеяли не для того, чтобы построить определенное количество коттеджей или создать там нормальные производственные лаборатории. Это все инфраструктура&raquo;, - подчеркнул президент. Самое главное, по мнению Дмитрия Медведева, чтобы там появились люди, для чего, <a href="http://www.vesti.ru/doc.html?id=348909&amp;cid=520"><span style="color: windowtext; text-decoration: none;">должна появиться внятная система управления</span></a>. &laquo;С учетом масштабности этого проекта, а с другой стороны того, что в реализации его должны быть заинтересованы не только государственные структуры, но прежде всего и российский бизнес, последний этим и должен заняться&raquo;, сказал Президент.</span></p>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Arial Narrow&quot;;">&nbsp;</span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-align: justify;"><span style="font-family: &quot;Arial Narrow&quot;;">Тогда же было принято решения, в рамках Проекта Сколково будут развиваться следующие перспективные направления: телекоммуникационные технологии, информационные технологии, технологии энергоэффективности, биотехнологии и фармацевтика, а также ядерные технологии. При этом Проект предполагает не только строительство исследовательских центров, но и возведение жилых кварталов. Создаваемый город, технополис должен формировать творческую атмосферу, стимулирующую инновационную активность своих жителей.</span></p>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tail-footer clear">
+			<div class="main">
+				<div class="footer"><!--copyrights--><p style="line-height:10px;"><small>&copy; Рабочая группа по разработке проекта создания территориального обособленного комплекса<br /> для развития исследований и разработок и коммерциализации их результатов, 2010</small></p>
+<p><small>При использовании информации ссылка на i-Gorod.com обязательна</small></p></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-16088512-1");
+			pageTracker._trackPageview();
+			} catch(err) {}</script>
+	</body>
+</html>
